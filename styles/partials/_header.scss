@@ -1,0 +1,89 @@
+header {
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 30px;
+  .logo {
+    position: relative;
+    h1 {
+      color: #10112f;
+      opacity: 0.7;
+      width: 30%;
+      line-height: 5rem;
+    }
+    .initials {
+      color: $lightGrey;
+      font-size: 13rem;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      z-index: -10;
+    }
+  }
+}
+
+.mainMenu {
+  display: flex;
+  margin: 0;
+
+  li {
+    color: $primaryPurple;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 20px;
+    position: relative;
+  }
+
+  .subMenu {
+    background-color: $darkPurple;
+    text-align: right;
+    right: 5%;
+    width: 300px;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    transition-property: all;
+    transition-duration: 0.25s;
+    li {
+      color: white;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+}
+
+hr {
+  border-top: 1px solid $darkGrey;
+  margin: 10px 0;
+}
+
+.aboutFlex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.introFlex {
+  width: 70%;
+  h3 {
+    text-transform: none;
+  }
+}
+
+.contactFlex {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  li {
+    width: 50px;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}

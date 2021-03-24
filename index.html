@@ -17,50 +17,72 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <header>
-      <nav class="navFlex">
-        <h1>andrew campbell</h1>
-        <h1 class="initials">wr</h1>
-        <ul>
+    <header class="wrapper">
+      <nav>
+        <div class="logo">
+          <h1>andrew campbell</h1>
+          <h1 class="initials">wr</h1>
+        </div>
+        <ul class="mainMenu">
           <li>contact</li>
           <li>
-            Cards
-            <i class="fas fa-chevron-left"></i>
-            <input type="checkbox" id="toggle" name="toggle" />
+            work
+            <!-- <i class="fas fa-chevron-left"></i>
+            <input type="checkbox" id="toggle" name="toggle" /> -->
             <ul class="subMenu">
-              <li><a href="#gateway">Lands</a></li>
-              <li><a href="#archive">Creatures</a></li>
-              <li><a href="#writeOn">Artifacts</a></li>
-              <li><a href="#design">Enchantments</a></li>
+              <li><a href="#gateway">mtg gateway</a></li>
+              <li><a href="#archive">veilance archive</a></li>
+              <li><a href="#writeOn">writeon</a></li>
+              <li><a href="#design">design</a></li>
             </ul>
           </li>
         </ul>
       </nav>
+      <hr />
       <div class="aboutFlex">
-        <p class="aboutText">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-          reiciendis, sed natus, reprehenderit quam dolorem quasi quo quisquam a
-          accusantium placeat nihil earum! Quos culpa dolorem at voluptas fuga
-          unde in similique aspernatur ratione sed cum dolor nisi, odio suscipit
-          optio quibusdam a exercitationem architecto autem. Neque dicta
-          cupiditate corrupti eligendi ex voluptatem ab maxime!
-        </p>
-        <div class="contactFlex">
-          <ul>
-            <li>Email</li>
-            <li>LinkedIn</li>
-            <li>Twitter</li>
-            <li>Github</li>
-          </ul>
+        <div class="introFlex">
+          <h3>Andrew WR Campbell is a Front-End Web Developer and Designer.</h3>
+          <p> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde reiciendis,
+            sed natus, reprehenderit quam dolorem quasi quo quisquam a accusantium
+            placeat nihil earum! Quos culpa dolorem at voluptas fuga unde in
+            similique aspernatur ratione sed cum dolor nisi, odio suscipit optio
+            quibusdam a exercitationem architecto autem. Neque dicta cupiditate
+            corrupti eligendi ex voluptatem ab maxime!
+          </p>
         </div>
+        <ul class="contactFlex">
+          <li>
+            <a href="mailto:awr.campbell@gmail.com" target="_blank">
+              <img src="./links/SVG/email.svg" alt="an email icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/awrcampbell/" target="_blank">
+              <img src="./links/SVG/linkedin.svg" alt="linked in icon"/>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/awrcampbell" target="_blank">
+              <img src="./links/SVG/twitter.svg" alt="twitter icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/mortultra" target="_blank">
+              <img src="./links/SVG/githubLrg.svg" alt="github icon" />
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
-      <section>
+      <section class="wrapper">
         <div class="projectFlex">
-          <div id="gateway" class="projectImg">
+          <div class="projectImg" id="gateway">
             <h2>MTG Gateway</h2>
-            <img src="#" alt="#" />
+            <div class="imgContainer">
+              <img src="#" alt="#" />
+            </div>
           </div>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
@@ -69,9 +91,11 @@
           </p>
         </div>
         <div class="projectFlex">
-          <div class="projectImg">
+          <div class="projectImg" id="archive">
             <h2>Veilance Archive</h2>
-            <img src="#" alt="#" />
+            <div class="imgContainer">
+              <img src="#" alt="#" />
+            </div>
           </div>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
@@ -80,9 +104,11 @@
           </p>
         </div>
         <div class="projectFlex">
-          <div class="projectImg">
+          <div class="projectImg" id="writeOn">
             <h2>WriteOn</h2>
-            <img src="#" alt="#" />
+            <div class="imgContainer">
+              <img src="#" alt="#" />
+            </div>
           </div>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam
@@ -91,7 +117,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <section class="wrapper">
         <h2>Toolkit</h2>
         <div class="skillsFlex">
           <ul class="skills">
@@ -108,22 +134,57 @@
           </ul>
         </div>
       </section>
-      <section>
+      <section class="wrapper" id="design">
         <h2>Design</h2>
         <div class="designFlex">
-          <ul class="design">
-            <li><a href=""><img src="#" alt="#"></a></li>
-            <li><a href=""><img src="#" alt="#"></a></li>
-            <li><a href=""><img src="#" alt="#"></a></li>
-            <li><a href=""><img src="#" alt="#"></a></li>
-            <li><a href=""><img src="#" alt="#"></a></li>
-            <li><a href=""><img src="#" alt="#"></a></li>
+          <ul class="designItems">
+            <li>
+              <a href="">
+                <div class="designContainer">
+                  <img src="#" alt="#" /></div
+              ></a>
+            </li>
+            <li>
+              <a href="">
+                <div class="designContainer">
+                  <img src="#" alt="#" /></div
+              ></a>
+            </li>
+            <li>
+              <a href="">
+                <div class="designContainer">
+                  <img src="#" alt="#" /></div
+              ></a>
+            </li>
+            <li>
+              <a href="">
+                <div class="designContainer">
+                  <img src="#" alt="#" /></div
+              ></a>
+            </li>
+            <li>
+              <a href="">
+                <div class="designContainer">
+                  <img src="#" alt="#" /></div
+              ></a>
+            </li>
+            <li>
+              <a href="">
+                <div class="designContainer">
+                  <img src="#" alt="#" /></div
+              ></a>
+            </li>
           </ul>
         </div>
       </section>
-      <footer>
+      <footer class="wrapper">
         <p>Designed by Andrew WR Campbell 2021</p>
       </footer>
     </main>
+    <script
+      src="https://kit.fontawesome.com/016d83bf62.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

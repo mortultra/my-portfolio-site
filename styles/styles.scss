@@ -1,1 +1,60 @@
 @import './partials/setup.scss';
+@import './partials/variables';
+@import './partials/header';
+
+* {
+  box-sizing: border-box;
+  // border: 1px solid coral;
+}
+
+body {
+  font-family: $bodyFont;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: none;
+  margin: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $primaryFont;
+  margin: 0;
+  text-transform: capitalize;
+  color: $primaryPurple;
+}
+
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+a,
+li {
+  font-family: $primaryFont;
+  font-size: 2.5rem;
+}
