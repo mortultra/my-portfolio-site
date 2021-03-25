@@ -1,0 +1,123 @@
+header {
+  height: 80vh;
+  position: relative;
+  .bgBox1 {
+    width: 10%;
+    height: 162%;
+    background-color: $bgGrey;
+    position: absolute;
+    z-index: -20;
+    top: 3%;
+    left: 21%;
+  }
+}
+
+#navScroll {
+  background-color: #f5f4f4;
+  border-bottom: 2px solid $darkGrey;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 50px 0 40px 0;
+  position: fixed;
+  top: 0;
+  transition: 0.25s ease-in-out;
+    #fullName {
+      color: #10112f;
+      opacity: 0.7;
+      width: 30%;
+      line-height: 5rem;
+      transition: 0.25s ease-in-out;
+    }
+    #initials {
+      color: $lightGrey;
+      font-size: 13rem;
+      position: absolute;
+      top: 45%;
+      left: 10%;
+      transition: 0.25s ease-in-out;
+  }
+}
+
+.mainMenu {
+  display: flex;
+  margin: 0;
+
+  li {
+    color: $primaryPurple;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: $darkPurple;
+    }
+  }
+
+  .subMenu {
+    background-color: $darkPurple;
+    text-align: right;
+    right: 5%;
+    width: 300px;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    transition-property: all;
+    transition-duration: 0.25s;
+    li {
+      color: white;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+}
+
+hr {
+  border-top: 1px solid $darkGrey;
+  margin: 10px 0;
+}
+
+.aboutFlex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17%;
+  padding-top: 20px;
+}
+
+.introFlex {
+  width: 70%;
+  h3 {
+    width: 70%;
+    text-transform: none;
+    line-height: 3rem;
+    margin-bottom: 20px;
+  }
+}
+
+.contactFlex {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  li {
+    width: 50px;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.designContainer {
+  img{
+    transition: 0.25s ease-in-out;
+    &:hover,
+    &:focus {
+      opacity: .5;
+    }
+  }
+}
