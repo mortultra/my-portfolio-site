@@ -1,12 +1,23 @@
 header {
   height: 100vh;
+  position: relative;
+  .bgBox1{
+    width: 10%;
+    height: 162%;
+    background-color: $bgGrey;
+    // box-shadow: 70px 0 25px $bgGrey;
+    position: absolute;
+    z-index: -20;
+    top: 3%;
+    left: 21%;
+  }
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 30px;
+  padding-top: 50px;
   .logo {
     position: relative;
     h1 {
@@ -20,7 +31,7 @@ nav {
       font-size: 13rem;
       position: absolute;
       top: 25%;
-      left: 25%;
+      left: 20%;
       z-index: -10;
     }
   }
@@ -37,6 +48,11 @@ nav {
     text-transform: uppercase;
     margin-left: 20px;
     position: relative;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: $darkPurple;
+    }
   }
 
   .subMenu {
@@ -72,6 +88,8 @@ hr {
   width: 70%;
   h3 {
     text-transform: none;
+    line-height: 3rem;
+    margin-bottom: 20px;
   }
 }
 

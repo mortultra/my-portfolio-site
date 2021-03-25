@@ -1,6 +1,7 @@
 @import './partials/setup.scss';
 @import './partials/variables';
 @import './partials/header';
+@import './partials/main';
 
 * {
   box-sizing: border-box;
@@ -8,6 +9,7 @@
 }
 
 body {
+  background-color: #f5f4f4;
   font-family: $bodyFont;
   font-size: 2rem;
   line-height: 2.5rem;
@@ -57,4 +59,9 @@ a,
 li {
   font-family: $primaryFont;
   font-size: 2.5rem;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
