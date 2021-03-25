@@ -19,27 +19,16 @@
   <body>
     <header class="wrapper">
       <div class="bgBox1"></div>
-      <nav>
-        <div class="logo">
-          <h1>andrew campbell</h1>
-          <h1 class="initials">wr</h1>
-        </div>
+      <div id="navScroll">
+
+          <h1 id="initials">wr</h1>
+          <h1 id="fullName">andrew campbell</h1>
+
         <ul class="mainMenu">
-          <li>development</li>
-          <li>
-            work
-            <!-- <i class="fas fa-chevron-left"></i>
-            <input type="checkbox" id="toggle" name="toggle" /> -->
-            <ul class="subMenu">
-              <li><a href="#gateway">mtg gateway</a></li>
-              <li><a href="#archive">veilance archive</a></li>
-              <li><a href="#writeOn">writeon</a></li>
-              <li><a href="#design">design</a></li>
-            </ul>
-          </li>
+          <li class="webDev" tabindex="0">development</li>
+          <li class="design" tabindex="0">design</li>
         </ul>
-      </nav>
-      <hr />
+      </div>
       <div class="aboutFlex">
         <div class="introFlex">
           <h3>Andrew WR Campbell is a humanoid Front-End Web Developer and Multi-disciplinary Designer.</h3>
@@ -55,7 +44,7 @@
         <ul class="contactFlex">
           <li>
             <a href="mailto:awr.campbell@gmail.com" target="_blank" rel="noreferrer noopener">
-              <img src="./links/SVG/email.svg" alt="an email icon"/>
+              <img src="./links/SVG/email.svg" alt="email"/>
             </a>
           </li>
           <li>
@@ -78,6 +67,24 @@
     </header>
     <main>
       <section class="wrapper">
+        <h2>Toolkit</h2>
+        <div class="toolkitFlex">
+          <hr>
+          <ul class="toolkit">
+            <li><img src="./links/SVG/html.svg" alt="html 5 icon"/><p>HTML5</p></li>
+            <li><img src="./links/SVG/css.svg" alt="css 3 icon"/><p>CSS3</p></li>
+            <li><img src="./links/SVG/sass.svg" alt="sass icon"/><p>SASS/SCSS</p></li>
+            <li><img src="./links/SVG/javascript.svg" alt="javascript icon"/><p>JAVASCRIPT</p></li>
+            <li><img src="./links/SVG/react.svg" alt="react icon"/><p>REACT</p></li>
+            <li><img src="./links/SVG/firebase.svg" alt="firebase icon"/><p>FIREBASE</p></li>
+            <li><img src="./links/SVG/github.svg" alt="github icon"/><p>GITHUB</p></li>
+            <li><img src="./links/SVG/creativecloud.svg" alt="adobe creative cloud icon"/><p>ADOBE CS</p></li>
+            <li><img src="./links/SVG/accessibility.svg" alt="accessibility icon"/><p>ACCESSIBILTY</p></li>
+            <li><img src="./links/SVG/responsive.svg" alt="computer and smartphone icon"/><p>RESPONSIVE</p></li>
+          </ul>
+        </div>
+      </section>
+      <section class="wrapper" id="webDev">
         <div class="projectFlex" id="gateway">
           <div class="projectImg">
             <h2>MTG Gateway</h2>
@@ -121,24 +128,6 @@
           </p>
         </div>
       </section>
-      <section class="wrapper">
-        <h2>Toolkit</h2>
-        <div class="toolkitFlex">
-          <hr>
-          <ul class="toolkit">
-            <li><img src="./links/SVG/html.svg" alt="html 5 icon"/><p>HTML5</p></li>
-            <li><img src="./links/SVG/css.svg" alt="css 3 icon"/><p>CSS3</p></li>
-            <li><img src="./links/SVG/sass.svg" alt="sass icon"/><p>SASS/SCSS</p></li>
-            <li><img src="./links/SVG/javascript.svg" alt="javascript icon"/><p>JAVASCRIPT</p></li>
-            <li><img src="./links/SVG/react.svg" alt="react icon"/><p>REACT</p></li>
-            <li><img src="./links/SVG/firebase.svg" alt="firebase icon"/><p>FIREBASE</p></li>
-            <li><img src="./links/SVG/github.svg" alt="github icon"/><p>GITHUB</p></li>
-            <li><img src="./links/SVG/creativecloud.svg" alt="adobe creative cloud icon"/><p>ADOBE CS</p></li>
-            <li><img src="./links/SVG/accessibility.svg" alt="accessibility icon"/><p>ACCESSIBILTY</p></li>
-            <li><img src="./links/SVG/responsive.svg" alt="computer and smartphone icon"/><p>RESPONSIVE</p></li>
-          </ul>
-        </div>
-      </section>
       <section class="wrapper" id="design">
         <h2>Design</h2>
         <hr>
@@ -167,13 +156,13 @@
       </section>
       <footer class="wrapper">
         <hr>
-        <p>Designed by Andrew WR Campbell 2021</p>
+        <p>Designed and developed by Andrew WR Campbell 2021</p>
       </footer>
     </main>
     <script
       src="https://kit.fontawesome.com/016d83bf62.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
