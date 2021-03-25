@@ -1,3 +1,4 @@
+// nav menu smooth scroll to section
 const menuOption = document.querySelector('.mainMenu');
 
 menuOption.addEventListener('click', (event) => {
@@ -8,13 +9,14 @@ menuOption.addEventListener('click', (event) => {
   }
 });
 
+// nav bar shrink on scroll
 const navScroll = document.getElementById('navScroll');
 const fullName = document.getElementById('fullName');
 const initials = document.getElementById('initials');
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = () => {scrollFunction()};
 
-function scrollFunction() {
+scrollFunction = () => {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     navScroll.style.padding = '20px 0 15px 0';
     fullName.style.fontSize = '4rem';

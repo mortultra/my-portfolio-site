@@ -347,6 +347,7 @@ hr {
 }
 
 .introFlex h3 {
+  width: 70%;
   text-transform: none;
   line-height: 3rem;
   margin-bottom: 20px;
@@ -370,6 +371,15 @@ hr {
 .contactFlex li:hover, .contactFlex li:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.designContainer img {
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.designContainer img:hover, .designContainer img:focus {
+  opacity: .5;
 }
 
 .projectFlex {
