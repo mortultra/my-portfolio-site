@@ -2,16 +2,29 @@
   display: flex;
   margin-bottom: 10%;
   p {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 2.2rem;
+  }
+  p,
+  h4 {
     padding: 0 0 0 50px;
+    margin-bottom: 20px;
   }
 }
 
 #gateway,
 #writeOn {
   flex-direction: row-reverse;
-  p {
+  p,
+  h4 {
     padding: 0 50px 0 0;
   }
+}
+
+.txtContainer {
+  padding-top: 60px;
 }
 
 .projectImg {

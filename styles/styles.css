@@ -390,7 +390,17 @@ hr {
 }
 
 .projectFlex p {
+  font-size: 1.8rem;
+}
+
+.projectFlex h4 {
+  font-size: 2.2rem;
+}
+
+.projectFlex p,
+.projectFlex h4 {
   padding: 0 0 0 50px;
+  margin-bottom: 20px;
 }
 
 #gateway,
@@ -402,8 +412,14 @@ hr {
 }
 
 #gateway p,
-#writeOn p {
+#gateway h4,
+#writeOn p,
+#writeOn h4 {
   padding: 0 50px 0 0;
+}
+
+.txtContainer {
+  padding-top: 60px;
 }
 
 .projectImg {
@@ -504,7 +520,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   text-transform: capitalize;
