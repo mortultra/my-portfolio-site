@@ -1,16 +1,28 @@
 .projectFlex {
   display: flex;
   margin-bottom: 10%;
-  p {
+  p,
+  a {
     font-size: 1.8rem;
   }
   h4 {
     font-size: 2.2rem;
+    &:hover,
+    &:focus {
+      color: $darkPurple;
+    }
   }
   p,
   h4 {
     padding: 0 0 0 50px;
     margin-bottom: 20px;
+  }
+  a {
+    color: $primaryPurple;
+    &:hover,
+    &:focus {
+      color: $darkPurple;
+    }
   }
 }
 
@@ -30,7 +42,7 @@
 .projectImg {
   display: flex;
   flex-direction: column;
-  max-width: 750px;
+  max-width: 650px;
   img {
     margin-top: 15px;
   }

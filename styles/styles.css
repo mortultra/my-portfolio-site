@@ -353,6 +353,10 @@ hr {
   margin-bottom: 20px;
 }
 
+.introFlex p {
+  margin-bottom: 25px;
+}
+
 .contactFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,7 +393,8 @@ hr {
   margin-bottom: 10%;
 }
 
-.projectFlex p {
+.projectFlex p,
+.projectFlex a {
   font-size: 1.8rem;
 }
 
@@ -397,10 +402,22 @@ hr {
   font-size: 2.2rem;
 }
 
+.projectFlex h4:hover, .projectFlex h4:focus {
+  color: #10112f;
+}
+
 .projectFlex p,
 .projectFlex h4 {
   padding: 0 0 0 50px;
   margin-bottom: 20px;
+}
+
+.projectFlex a {
+  color: #59576d;
+}
+
+.projectFlex a:hover, .projectFlex a:focus {
+  color: #10112f;
 }
 
 #gateway,
@@ -430,7 +447,7 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 750px;
+  max-width: 650px;
 }
 
 .projectImg img {
