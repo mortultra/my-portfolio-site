@@ -231,7 +231,6 @@ html {
 }
 
 header {
-  height: 80vh;
   position: relative;
 }
 
@@ -338,8 +337,8 @@ hr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 17%;
-  padding-top: 20px;
+  padding-top: 18%;
+  margin-bottom: 5%;
 }
 
 .introFlex {
@@ -390,7 +389,7 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .projectFlex p,
@@ -420,8 +419,7 @@ hr {
   color: #10112f;
 }
 
-#gateway,
-#writeOn {
+#gateway {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -429,7 +427,18 @@ hr {
 }
 
 #gateway p,
-#gateway h4,
+#gateway h4 {
+  padding: 0 50px 0 0;
+}
+
+#writeOn {
+  margin-bottom: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 #writeOn p,
 #writeOn h4 {
   padding: 0 50px 0 0;
@@ -454,6 +463,10 @@ hr {
   margin-top: 15px;
 }
 
+.toolkitContainter {
+  padding-top: 5%;
+}
+
 .toolkit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,7 +480,6 @@ hr {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 10%;
 }
 
 .toolkit li {
@@ -490,7 +502,6 @@ hr {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 10%;
 }
 
 .designContainer {
@@ -498,6 +509,7 @@ hr {
 }
 
 footer {
+  padding-top: 5%;
   height: 10vh;
 }
 
@@ -563,5 +575,10 @@ li {
 
 p {
   margin: 0;
+}
+
+#webDev,
+#design {
+  padding-top: 8%;
 }
 /*# sourceMappingURL=styles.css.map */
