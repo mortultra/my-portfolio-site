@@ -514,6 +514,12 @@ footer {
   height: 10vh;
 }
 
+footer .contactFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .imageMain {
   padding-top: 250px;
 }
