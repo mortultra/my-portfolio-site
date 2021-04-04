@@ -305,26 +305,6 @@ header .bgBox1 {
   color: #10112f;
 }
 
-.mainMenu .subMenu {
-  background-color: #10112f;
-  text-align: right;
-  right: 5%;
-  width: 300px;
-  padding: 10px;
-  display: none;
-  position: absolute;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-}
-
-.mainMenu .subMenu li {
-  color: white;
-  font-weight: 600;
-  margin: 0;
-}
-
 hr {
   border-top: 1px solid #A6A8AB;
   margin: 10px 0;
