@@ -77,6 +77,16 @@
   }
 }
 
+#design {
+  h4 {
+    text-align: center;
+    &:hover,
+    &:focus {
+      color: $darkPurple;
+    }
+  }
+}
+
 .designItems {
   display: flex;
   justify-content: space-between;
@@ -90,9 +100,14 @@
 
 footer {
   padding-top: 5%;
-  height: 10vh;
+}
+
+.footerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   .contactFlex {
     display: flex;
-
-  }
+    flex-direction: row;
+    }
 }

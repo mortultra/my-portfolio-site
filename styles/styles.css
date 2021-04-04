@@ -246,7 +246,6 @@ header .bgBox1 {
 
 #navScroll {
   background-color: #f5f4f4;
-  border-bottom: 2px solid #A6A8AB;
   width: 100%;
   max-width: 1200px;
   display: -webkit-box;
@@ -493,6 +492,14 @@ hr {
   color: #10112f;
 }
 
+#design h4 {
+  text-align: center;
+}
+
+#design h4:hover, #design h4:focus {
+  color: #10112f;
+}
+
 .designItems {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,13 +518,28 @@ hr {
 
 footer {
   padding-top: 5%;
-  height: 10vh;
 }
 
-footer .contactFlex {
+.footerFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footerFlex .contactFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .imageMain {
@@ -530,7 +552,7 @@ footer .contactFlex {
 
 .carousel {
   height: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
 .carousel-cell {
