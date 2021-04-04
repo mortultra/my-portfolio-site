@@ -34,3 +34,5 @@ scrollFunction = () => {
     initials.style.left = '10%';
   }
 }
+
+// flickity carousel code

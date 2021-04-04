@@ -23,6 +23,7 @@ header {
   position: fixed;
   top: 0;
   transition: 0.25s ease-in-out;
+  z-index: 10;
     #fullName {
       color: #10112f;
       opacity: 0.7;

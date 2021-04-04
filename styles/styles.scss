@@ -2,11 +2,7 @@
 @import './partials/variables';
 @import './partials/header';
 @import './partials/main';
-
-* {
-  box-sizing: border-box;
-  // border: 1px solid coral;
-}
+@import './partials/design';
 
 body {
   background-color: #f5f4f4;

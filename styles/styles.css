@@ -263,6 +263,7 @@ header .bgBox1 {
   top: 0;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
+  z-index: 10;
 }
 
 #navScroll #fullName {
@@ -513,9 +514,29 @@ footer {
   height: 10vh;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.imageMain {
+  padding-top: 250px;
+}
+
+.imageMain hr {
+  margin-bottom: 20px;
+}
+
+.carousel {
+  height: 100%;
+  margin-bottom: 5%;
+}
+
+.carousel-cell {
+  width: 66%;
+  margin-right: 10px;
+  counter-increment: carousel-cell;
+}
+
+/* gallery focus */
+.flickity-enabled:focus .flickity-viewport {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 body {
