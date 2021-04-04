@@ -536,7 +536,7 @@ footer {
 }
 
 .carousel-cell {
-  width: 66%;
+  width: 75%;
   margin-right: 10px;
   counter-increment: carousel-cell;
 }
