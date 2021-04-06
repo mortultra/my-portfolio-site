@@ -1,0 +1,42 @@
+@media(max-width:$desktopSmall) {
+  .mainMenu {
+    flex-direction: column;
+  }
+  .aboutFlex {
+    padding-top: 27%;
+  }
+  .projectFlex {
+    flex-direction: column;
+    h4,
+    p {
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+  }
+  .txtContainer,
+  .projectImg {
+    width: 100%;
+  }
+
+  .designItems {
+    justify-content: center;
+  }
+
+  .designContainer {
+    max-width: 350px;
+    margin: 15px;
+  }
+}
+
+@media(max-width:$tabletVertical) {
+  .mainMenu {
+    li {
+      font-size: 2rem;
+    }
+  }
+  .wrapper {
+    h2 {
+      font-size: 2.75rem;
+    }
+  }
+}

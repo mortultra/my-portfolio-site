@@ -26,16 +26,8 @@
   }
 }
 
-#gateway {
-  flex-direction: row-reverse;
-  p,
-  h4 {
-    padding: 0 50px 0 0;
-  }
-}
-
-#writeOn {
-  margin-bottom: 0;
+.gateway,
+.writeOn {
   flex-direction: row-reverse;
   p,
   h4 {
@@ -45,14 +37,15 @@
 
 .txtContainer {
   padding-top: 60px;
+  width: 50%;
 }
 
 .projectImg {
-  display: flex;
-  flex-direction: column;
-  max-width: 650px;
-  img {
-    margin-top: 15px;
+  width: 50%;
+  imgContainer {
+    img {
+      margin-top: 15px;
+    }
   }
 }
 
@@ -70,6 +63,7 @@
   li {
     width: 120px;
     text-align: center;
+    padding-top: 15px;
     p {
       font-size: 1.2rem;
       color: $darkPurple;

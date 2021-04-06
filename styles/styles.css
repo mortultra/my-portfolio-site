@@ -246,7 +246,7 @@ header .bgBox1 {
 
 #navScroll {
   background-color: #f5f4f4;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,47 +399,31 @@ hr {
   color: #10112f;
 }
 
-#gateway {
+.gateway,
+.writeOn {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-#gateway p,
-#gateway h4 {
-  padding: 0 50px 0 0;
-}
-
-#writeOn {
-  margin-bottom: 0;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-#writeOn p,
-#writeOn h4 {
+.gateway p,
+.gateway h4,
+.writeOn p,
+.writeOn h4 {
   padding: 0 50px 0 0;
 }
 
 .txtContainer {
   padding-top: 60px;
+  width: 50%;
 }
 
 .projectImg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 650px;
+  width: 50%;
 }
 
-.projectImg img {
+.projectImg imgContainer img {
   margin-top: 15px;
 }
 
@@ -465,6 +449,7 @@ hr {
 .toolkit li {
   width: 120px;
   text-align: center;
+  padding-top: 15px;
 }
 
 .toolkit li p {
@@ -545,6 +530,51 @@ footer {
 .flickity-enabled:focus .flickity-viewport {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
+}
+
+@media (max-width: 900px) {
+  .mainMenu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutFlex {
+    padding-top: 27%;
+  }
+  .projectFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projectFlex h4,
+  .projectFlex p {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .txtContainer,
+  .projectImg {
+    width: 100%;
+  }
+  .designItems {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .designContainer {
+    max-width: 350px;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainMenu li {
+    font-size: 2rem;
+  }
+  .wrapper h2 {
+    font-size: 2.75rem;
+  }
 }
 
 body {
