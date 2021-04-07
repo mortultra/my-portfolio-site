@@ -276,9 +276,9 @@ header .bgBox1 {
 
 #navScroll #initials {
   color: #D0D2D3;
-  font-size: 13rem;
+  font-size: 13.25rem;
   position: absolute;
-  top: 45%;
+  top: 45.5%;
   left: 10%;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
@@ -569,11 +569,16 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .wrapper h2 {
+    font-size: 2.75rem;
+  }
   .mainMenu li {
     font-size: 2rem;
   }
-  .wrapper h2 {
-    font-size: 2.75rem;
+  h1 #initials {
+    font-size: 8.35rem;
+    top: 47.5%;
+    left: 12.5%;
   }
 }
 

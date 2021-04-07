@@ -17,20 +17,29 @@ const initials = document.getElementById('initials');
 window.onscroll = () => {scrollFunction()};
 
 scrollFunction = () => {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (document.body.clientWidth < 768) {
     navScroll.style.padding = '20px 0 15px 0';
     fullName.style.fontSize = '4rem';
     fullName.style.lineHeight = '3rem'
-    initials.style.fontSize = '8rem';
-    initials.style.top = '40%';
-    initials.style.left = '7%';
+    initials.style.fontSize = '8.35rem';
+    initials.style.top = '47.5%';
+    initials.style.left = '13.5%';
   }
-  else {
+  else if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    navScroll.style.padding = '20px 0 15px 0';
+    fullName.style.fontSize = '4rem';
+    fullName.style.lineHeight = '3rem'
+    initials.style.fontSize = '8.35rem';
+    initials.style.top = '39.5%';
+    initials.style.left = '7.5%';
+  }
+  else if (document.body.clientWidth > 768){
     navScroll.style.padding = '50px 0 40px 0';
     fullName.style.fontSize = '6rem';
     fullName.style.lineHeight = '5rem';
-    initials.style.fontSize = '13rem';
-    initials.style.top = '45%';
+    initials.style.fontSize = '13.25rem';
+    initials.style.top = '45.5%';
     initials.style.left = '10%';
   }
+
 }
