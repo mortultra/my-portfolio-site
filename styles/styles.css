@@ -532,6 +532,12 @@ footer {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
+@media (max-width: 1145px) {
+  .aboutFlex {
+    padding-top: 25%;
+  }
+}
+
 @media (max-width: 900px) {
   .mainMenu {
     -webkit-box-orient: vertical;
@@ -579,6 +585,74 @@ footer {
     font-size: 8.35rem;
     top: 47.5%;
     left: 12.5%;
+  }
+  .toolkit li {
+    width: 85px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .mainMenu {
+    background-color: #f5f4f4;
+    position: fixed;
+    top: 14%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0;
+  }
+  .mainMenu li {
+    padding: 5px;
+    margin: 0 auto;
+  }
+  .contactFlex {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 414px) {
+  p {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .aboutFlex {
+    padding-top: 45%;
+  }
+  .introFlex {
+    width: 100%;
+  }
+  .introFlex h3 {
+    width: 100%;
+    padding-top: 10px;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .txtContainer {
+    padding-top: 30px;
+  }
+  .footerFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .footerFlex p {
+    padding: 0 10px;
+  }
+  .footerFlex .contactFlex {
+    padding: 15px 0;
+  }
+  .imageMain {
+    padding-top: 160px;
+  }
+  .carousel {
+    margin-bottom: 20%;
   }
 }
 

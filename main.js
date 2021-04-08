@@ -33,7 +33,7 @@ scrollFunction = () => {
     initials.style.top = '39.5%';
     initials.style.left = '7.5%';
   }
-  else if (document.body.clientWidth > 768){
+  else if (document.body.clientWidth > 768) {
     navScroll.style.padding = '50px 0 40px 0';
     fullName.style.fontSize = '6rem';
     fullName.style.lineHeight = '5rem';
@@ -41,5 +41,4 @@ scrollFunction = () => {
     initials.style.top = '45.5%';
     initials.style.left = '10%';
   }
-
 }
