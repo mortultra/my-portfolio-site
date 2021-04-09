@@ -24,12 +24,12 @@ scrollFunction = () => {
     navScroll.style.padding = '20px 0 20px 0';
     logoBox.style.width = '40%';
   }
-  else if (document.body.clientWidth > 768) {
-    navScroll.style.padding = '50px 0 20px 0';
-    logoBox.style.width = '30%';
-  }
   else if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     navScroll.style.padding = '20px 0 15px 0';
     logoBox.style.width = '25%';
+  }
+  else if (document.body.clientWidth > 768) {
+    navScroll.style.padding = '50px 0 20px 0';
+    logoBox.style.width = '30%';
   }
 }
