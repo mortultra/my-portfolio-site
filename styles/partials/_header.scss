@@ -24,21 +24,11 @@ header {
   top: 0;
   transition: 0.25s ease-in-out;
   z-index: 10;
-    #fullName {
-      color: #10112f;
-      opacity: 0.7;
-      width: 30%;
-      line-height: 5rem;
-      transition: 0.25s ease-in-out;
-    }
-    #initials {
-      color: $lightGrey;
-      font-size: 13.25rem;
-      position: absolute;
-      top: 45.5%;
-      left: 10%;
-      transition: 0.25s ease-in-out;
-  }
+}
+
+#logoContainer {
+  transition: 0.25s ease-in-out;
+  width: 30%;
 }
 
 .mainMenu {

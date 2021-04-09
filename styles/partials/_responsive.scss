@@ -60,11 +60,15 @@
   }
 }
 
-@media(max-width:450px) {
+@media(max-width:$mobileVertical) {
+  p {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
   .mainMenu {
     background-color: #f5f4f4;
     position: fixed;
-    top: 14%;
+    top: 12%;
     flex-direction: row;
     padding: 0;
     li {
@@ -76,12 +80,6 @@
     padding-left: 15px;
   }
 }
-
-@media(max-width:$mobileVertical) {
-  p {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
   .aboutFlex {
     padding-top: 45%;
   }
