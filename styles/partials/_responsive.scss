@@ -59,9 +59,9 @@
     line-height: 2.25rem;
   }
   .mainMenu {
-    background-color: #f5f4f4;
+    // background-color: #f5f4f4;
     position: fixed;
-    top: 13%;
+    top: 11%;
     flex-direction: row;
     padding: 0;
     li {
@@ -72,7 +72,6 @@
   .contactFlex {
     padding-left: 15px;
   }
-}
   .aboutFlex {
     padding-top: 45%;
   }

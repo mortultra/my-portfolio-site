@@ -568,26 +568,20 @@ footer {
   .mainMenu li {
     font-size: 2rem;
   }
-  h1 #initials {
-    font-size: 8.35rem;
-    top: 47.5%;
-    left: 12.5%;
-  }
   .toolkit li {
     width: 85px;
     margin: 0 5px;
   }
 }
 
-@media (max-width: 450px) and (max-width: 450px) {
+@media (max-width: 450px) {
   p {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
   .mainMenu {
-    background-color: #f5f4f4;
     position: fixed;
-    top: 12%;
+    top: 11%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -601,9 +595,6 @@ footer {
   .contactFlex {
     padding-left: 15px;
   }
-}
-
-@media (max-width: 450px) {
   .aboutFlex {
     padding-top: 45%;
   }
