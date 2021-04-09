@@ -586,7 +586,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 0;
+    padding: 5px 0;
   }
   .mainMenu li {
     padding: 5px;
