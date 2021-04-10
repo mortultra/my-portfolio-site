@@ -1,14 +1,38 @@
 header {
   position: relative;
-  .bgBox1 {
-    width: 10%;
-    height: 162%;
-    background-color: $bgGrey;
-    position: absolute;
-    z-index: -20;
-    top: 3%;
-    left: 21%;
-  }
+}
+
+#topBlock {
+  width: 10%;
+  height: 162%;
+  background-color: $bgGrey;
+  position: absolute;
+  z-index: -20;
+  top: 3%;
+  left: 21%;
+  transition: 4s;
+}
+
+#devBlock {
+  width: 22%;
+  height: 32%;
+  background-color: $bgGrey;
+  position: absolute;
+  z-index: -20;
+  top: 229%;
+  right: 0%;
+  transition: 6s;
+}
+
+#bottomBlock {
+  width: 30%;
+  height: 27%;
+  background-color: $bgGrey;
+  position: absolute;
+  z-index: -20;
+  top: 410%;
+  left:74.5%;
+  transition: 3s;
 }
 
 #navScroll {

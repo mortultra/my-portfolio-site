@@ -12,8 +12,11 @@ menuOption.addEventListener('click', (event) => {
 // nav bar shrink on scroll
 const navScroll = document.getElementById('navScroll');
 const logoBox = document.getElementById('logoContainer');
+const topBlock = document.getElementById('topBlock');
+const devBlock = document.getElementById('devBlock');
+const bottomBlock = document.getElementById('bottomBlock')
 
-window.onscroll = () => {scrollFunction()};
+window.onscroll = () => {scrollFunction(), topBoxMovement(), devBoxMovement(), bottomBoxMovement()};
 
 scrollFunction = () => {
   if (document.body.clientWidth < 450) {
@@ -31,5 +34,30 @@ scrollFunction = () => {
   else if (document.body.clientWidth > 768) {
     navScroll.style.padding = '50px 0 20px 0';
     logoBox.style.width = '30%';
+  }
+}
+
+topBoxMovement = () => {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    topBlock.style.left = '90%';
+    }
+  else {
+    topBlock.style.left = '23%';
+    }
+}
+
+devBoxMovement = () => {
+  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+    devBlock.style.right = '30%';
+  } else {
+    devBlock.style.right = '0%';
+  }
+}
+
+bottomBoxMovement = () => {
+  if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
+    bottomBlock.style.left = '75%';
+  } else {
+    bottomBlock.style.left = '30%';
   }
 }

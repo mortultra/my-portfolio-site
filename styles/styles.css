@@ -234,7 +234,7 @@ header {
   position: relative;
 }
 
-header .bgBox1 {
+#topBlock {
   width: 10%;
   height: 162%;
   background-color: #ebebeb;
@@ -242,6 +242,32 @@ header .bgBox1 {
   z-index: -20;
   top: 3%;
   left: 21%;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+
+#devBlock {
+  width: 22%;
+  height: 32%;
+  background-color: #ebebeb;
+  position: absolute;
+  z-index: -20;
+  top: 229%;
+  right: 0%;
+  -webkit-transition: 6s;
+  transition: 6s;
+}
+
+#bottomBlock {
+  width: 30%;
+  height: 27%;
+  background-color: #ebebeb;
+  position: absolute;
+  z-index: -20;
+  top: 410%;
+  left: 74.5%;
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
 #navScroll {
