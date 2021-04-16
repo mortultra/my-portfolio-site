@@ -613,8 +613,17 @@ section {
   .wrapper h2 {
     font-size: 2.75rem;
   }
-  .mainMenu li {
+  .mainMenu a {
     font-size: 2rem;
+  }
+  .introFlex {
+    width: 100%;
+  }
+  .introFlex h3 {
+    width: 100%;
+    padding-top: 10px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .toolkit li {
     width: 85px;
@@ -629,7 +638,7 @@ section {
   }
   .mainMenu {
     position: fixed;
-    top: 11%;
+    top: 10%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -641,12 +650,6 @@ section {
     padding: 5px;
     margin: 0 auto;
   }
-  .contactFlex {
-    padding-left: 15px;
-  }
-  .aboutFlex {
-    padding-top: 45%;
-  }
   .introFlex {
     width: 100%;
   }
@@ -655,6 +658,12 @@ section {
     padding-top: 10px;
     font-size: 2rem;
     line-height: 2.5rem;
+  }
+  .contactFlex {
+    padding-left: 15px;
+  }
+  .aboutFlex {
+    padding-top: 45%;
   }
   .txtContainer {
     padding-top: 30px;
