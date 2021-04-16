@@ -636,7 +636,8 @@ section {
             flex-direction: row;
     padding: 5px 0;
   }
-  .mainMenu li {
+  .mainMenu a {
+    font-size: 1.75rem;
     padding: 5px;
     margin: 0 auto;
   }
