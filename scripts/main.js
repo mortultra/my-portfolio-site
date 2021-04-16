@@ -35,6 +35,10 @@ const linksToAnchors = document.querySelectorAll('a[href^="#"]');
 
 linksToAnchors.forEach(each => (each.onclick = anchorLinkHandler));
 
+// accessible scroll into view from https://codepen.io/a8t/pen/JOYwLM?editors=1010
+
+
+
 // nav bar shrink on scroll
 const navScroll = document.getElementById('navScroll');
 const logoBox = document.getElementById('logoContainer');
