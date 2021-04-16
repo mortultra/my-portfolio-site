@@ -638,7 +638,7 @@ section {
   }
   .mainMenu {
     position: fixed;
-    top: 10%;
+    top: 11%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
