@@ -83,6 +83,13 @@ hr {
   justify-content: space-between;
   padding-top: 18%;
   margin-bottom: 5%;
+  a {
+    font-size: 2rem;
+    color: $primaryPurple;
+    &:hover,
+    &:focus {
+      color: $darkPurple;
+  }
 }
 
 .introFlex {
