@@ -347,6 +347,7 @@ hr {
 
 .introFlex p {
   margin-bottom: 25px;
+  line-height: 2.75rem;
 }
 
 .contactFlex {
@@ -388,6 +389,7 @@ hr {
 .projectFlex p,
 .projectFlex a {
   font-size: 1.8rem;
+  line-height: 2.75rem;
 }
 
 .projectFlex h4 {
