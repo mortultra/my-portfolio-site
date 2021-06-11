@@ -231,10 +231,11 @@ html {
 }
 
 header {
+  height: 80vh;
   position: relative;
 }
 
-#topBlock {
+header .bgBox1 {
   width: 10%;
   height: 162%;
   background-color: #ebebeb;
@@ -242,37 +243,12 @@ header {
   z-index: -20;
   top: 3%;
   left: 21%;
-  -webkit-transition: 4s;
-  transition: 4s;
-}
-
-#devBlock {
-  width: 22%;
-  height: 32%;
-  background-color: #ebebeb;
-  position: absolute;
-  z-index: -20;
-  top: 229%;
-  right: 0%;
-  -webkit-transition: 6s;
-  transition: 6s;
-}
-
-#bottomBlock {
-  width: 30%;
-  height: 27%;
-  background-color: #ebebeb;
-  position: absolute;
-  z-index: -20;
-  top: 410%;
-  left: 74.5%;
-  -webkit-transition: 3s;
-  transition: 3s;
 }
 
 #navScroll {
   background-color: #f5f4f4;
-  width: 90%;
+  border-bottom: 2px solid #A6A8AB;
+  width: 100%;
   max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,13 +264,25 @@ header {
   top: 0;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-  z-index: 10;
 }
 
-#logoContainer {
+#navScroll #fullName {
+  color: #10112f;
+  opacity: 0.7;
+  width: 30%;
+  line-height: 5rem;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-  width: 30%;
+}
+
+#navScroll #initials {
+  color: #D0D2D3;
+  font-size: 13rem;
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .mainMenu {
@@ -304,7 +292,7 @@ header {
   margin: 0;
 }
 
-.mainMenu a {
+.mainMenu li {
   color: #59576d;
   font-size: 2.5rem;
   font-weight: 700;
@@ -314,8 +302,28 @@ header {
   cursor: pointer;
 }
 
-.mainMenu a:hover, .mainMenu a:focus {
+.mainMenu li:hover, .mainMenu li:focus {
   color: #10112f;
+}
+
+.mainMenu .subMenu {
+  background-color: #10112f;
+  text-align: right;
+  right: 5%;
+  width: 300px;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+.mainMenu .subMenu li {
+  color: white;
+  font-weight: 600;
+  margin: 0;
 }
 
 hr {
@@ -330,12 +338,8 @@ hr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 18%;
-  margin-bottom: 5%;
-}
-
-.aboutFlex a {
-  font-size: 2rem;
+  margin-top: 17%;
+  padding-top: 20px;
 }
 
 .introFlex {
@@ -347,10 +351,6 @@ hr {
   text-transform: none;
   line-height: 3rem;
   margin-bottom: 20px;
-}
-
-.introFlex p {
-  margin-bottom: 25px;
 }
 
 .contactFlex {
