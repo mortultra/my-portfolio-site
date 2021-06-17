@@ -407,6 +407,10 @@ hr {
   color: #10112f;
 }
 
+.toolkitContainer {
+  margin-top: 10%;
+}
+
 .projectFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -475,10 +479,6 @@ hr {
 
 .projectImg hr {
   margin: 10px 0 40px 0;
-}
-
-.toolkitContainter {
-  padding-top: 5%;
 }
 
 #design h4 {
@@ -765,6 +765,6 @@ p {
 
 #webDev,
 #design {
-  padding-top: 9%;
+  margin-top: 10%;
 }
 /*# sourceMappingURL=styles.css.map */
