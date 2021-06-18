@@ -544,6 +544,7 @@ hr {
 
 .projectDesc p {
   color: #10112f;
+  font-size: 1.8rem;
 }
 
 footer {
@@ -806,5 +807,27 @@ p {
 #webDev,
 #design {
   margin-top: 10%;
+}
+
+.underline {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.underline:before, .underline:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0px;
+  height: 5px;
+  margin: 5px 0 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+  opacity: 0;
+  background-color: #e69500;
+  left: 0;
 }
 /*# sourceMappingURL=styles.css.map */
