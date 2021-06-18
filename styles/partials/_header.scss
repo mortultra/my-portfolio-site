@@ -86,7 +86,7 @@ hr {
 }
 
 .introFlex {
-  width: 70%;
+  width: 60%;
   h3 {
     width: 70%;
     text-transform: none;
@@ -96,6 +96,15 @@ hr {
   p {
     margin-bottom: 25px;
     line-height: 2.75rem;
+  }
+  a {
+    color: $primaryPurple;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    &:hover,
+    &:focus {
+      color: $darkPurple;
+    }
   }
 }
 

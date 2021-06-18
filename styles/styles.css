@@ -335,7 +335,7 @@ hr {
 }
 
 .introFlex {
-  width: 70%;
+  width: 60%;
 }
 
 .introFlex h3 {
@@ -348,6 +348,16 @@ hr {
 .introFlex p {
   margin-bottom: 25px;
   line-height: 2.75rem;
+}
+
+.introFlex a {
+  color: #59576d;
+  font-size: 2rem;
+  line-height: 2.75rem;
+}
+
+.introFlex a:hover, .introFlex a:focus {
+  color: #10112f;
 }
 
 .contactFlex {
