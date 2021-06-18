@@ -69,22 +69,3 @@ p {
 #design {
   margin-top: 10%;
 }
-
-.underline {
-  transition: $underlineAni;
-  position: relative;
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    width: 0px;
-    height: 5px;
-    margin: 5px 0 0;
-    transition: $underlineAni;
-    transition-duration: 0.75s;
-    opacity: 0;
-    background-color: darken(orange,5%);
-    left: 0;
-  }
-}
