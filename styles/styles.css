@@ -370,15 +370,6 @@ hr {
           transform: scale(1.1);
 }
 
-.designContainer img {
-  -webkit-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-
-.designContainer img:hover, .designContainer img:focus {
-  opacity: .5;
-}
-
 .toolkit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -501,9 +492,48 @@ hr {
   padding: 0;
 }
 
-.designContainer {
+.designItems li {
+  position: relative;
   max-width: 340px;
   margin: 20px;
+}
+
+.designItems li img {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.designItems li img:hover, .designItems li img:focus {
+  opacity: 0;
+}
+
+.projectDesc {
+  width: 100%;
+  height: 100%;
+  max-width: 340px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.projectDesc p {
+  color: #10112f;
 }
 
 footer {
