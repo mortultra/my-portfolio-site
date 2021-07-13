@@ -115,13 +115,34 @@ const descriptions = [
 // const randDesc = Math.floor(Math.random() * descriptions.length);
 
 //a function that fills the span with random descriptions every 2.5 seconds
-descFunction = () => {
-    setInterval(() => {
-    const randDesc = Math.floor(Math.random() * descriptions.length);
-    document.getElementById('selfDesc').textContent = descriptions[randDesc];
-    // console.log(descriptions[randDesc]);
-  }, 2500);
+// descFunction = () => {
+//     setInterval(() => {
+//     const randDesc = Math.floor(Math.random() * descriptions.length);
+//     document.getElementById('selfDesc').textContent = descriptions[randDesc];
+//     // console.log(descriptions[randDesc]);
+//   }, 2500);
+// }
+
+// descFunction();
+
+const descSpan = document.getElementById("selfDesc");
+let index = 0;
+let iterations = 0;
+const updateDesc = () => {
+  // reset index to zero if current index is greater than number of descriptions.
+  if (index >= descriptions.length) {
+    index = 0;
+    iterations++;
+  }
+  descSpan.textContent = descriptions[index];
+
+  if (iterations >= 10000000) {
+    clearInterval(interval);
+  } else {
+    index++;
+  }
 }
 
-descFunction();
+updateDesc();
 
+let interval = setInterval(updateDesc, 2500);
