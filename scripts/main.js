@@ -101,23 +101,27 @@ bottomBoxMovement = () => {
 // time the descriptions to change every 2 seconds
 
 //get span element
-const descSpan = document.getElementById('selfDesc');
+// const descSpan = document.getElementById('selfDesc');
 
 //store descriptions in an array
 const descriptions = [
   'developer',
   'designer',
+  'thinker',
   'human'
 ]
 
-const randDesc = Math.floor(Math.random() * descriptions.length);
+//randomize the description 
+// const randDesc = Math.floor(Math.random() * descriptions.length);
 
-//a function that fills the span with random descriptions every two seconds
+//a function that fills the span with random descriptions every 2.5 seconds
 descFunction = () => {
-    setInterval(function () {
-    descSpan.textContent = descriptions[randDesc];
-    // console.log('developer');
-  }, 3000);
+    setInterval(() => {
+    const randDesc = Math.floor(Math.random() * descriptions.length);
+    document.getElementById('selfDesc').textContent = descriptions[randDesc];
+    // console.log(descriptions[randDesc]);
+  }, 2500);
 }
 
 descFunction();
+
