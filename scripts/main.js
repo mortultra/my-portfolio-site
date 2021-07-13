@@ -125,6 +125,8 @@ const descriptions = [
 
 // descFunction();
 
+//code below adapted from https://cmsdk.com/javascript/change-backgroundimage-from-array-using-setinterval-but-only-twice.html
+
 const descSpan = document.getElementById("selfDesc");
 let index = 0;
 let iterations = 0;
@@ -136,8 +138,9 @@ const updateDesc = () => {
   }
   descSpan.textContent = descriptions[index];
 
-  if (iterations >= 10000000) {
-    clearInterval(interval);
+  // need to clean this up and combine it into the above if statement.
+  if (iterations === Infinity) {
+    interval();
   } else {
     index++;
   }
@@ -145,4 +148,4 @@ const updateDesc = () => {
 
 updateDesc();
 
-let interval = setInterval(updateDesc, 2500);
+const interval = setInterval(updateDesc, 1750);
