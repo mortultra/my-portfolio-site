@@ -67,6 +67,7 @@ scrollFunction = () => {
   }
 }
 
+// the element behind the header description moves on scroll of 200px from top
 topBoxMovement = () => {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     topBlock.style.left = '90%';
@@ -76,6 +77,7 @@ topBoxMovement = () => {
     }
 }
 
+// the background element behind development moves after 1250px of scrolling from top
 devBoxMovement = () => {
   if (document.body.scrollTop > 1250 || document.documentElement.scrollTop > 1250) {
     devBlock.style.right = '30%';
@@ -84,6 +86,7 @@ devBoxMovement = () => {
   }
 }
 
+// the background element behind design moves after 2000px of scrolling from top
 bottomBoxMovement = () => {
   if (document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000) {
     bottomBlock.style.left = '75%';
@@ -91,3 +94,30 @@ bottomBoxMovement = () => {
     bottomBlock.style.left = '30%';
   }
 }
+
+
+
+// use the span with the id of selfDesc to update with descriptions
+// time the descriptions to change every 2 seconds
+
+//get span element
+const descSpan = document.getElementById('selfDesc');
+
+//store descriptions in an array
+const descriptions = [
+  'developer',
+  'designer',
+  'human'
+]
+
+const randDesc = Math.floor(Math.random() * descriptions.length);
+
+//a function that fills the span with random descriptions every two seconds
+descFunction = () => {
+    setInterval(function () {
+    descSpan.textContent = descriptions[randDesc];
+    // console.log('developer');
+  }, 3000);
+}
+
+descFunction();

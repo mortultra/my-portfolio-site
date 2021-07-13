@@ -338,7 +338,8 @@ hr {
   width: 60%;
 }
 
-.introFlex h3 {
+.introFlex h3,
+.introFlex span {
   width: 70%;
   text-transform: none;
   line-height: 3rem;
@@ -777,7 +778,8 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+span {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   text-transform: capitalize;
