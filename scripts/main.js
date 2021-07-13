@@ -77,7 +77,7 @@ topBoxMovement = () => {
 }
 
 devBoxMovement = () => {
-  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+  if (document.body.scrollTop > 1250 || document.documentElement.scrollTop > 1250) {
     devBlock.style.right = '30%';
   } else {
     devBlock.style.right = '0%';

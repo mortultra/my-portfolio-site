@@ -252,7 +252,7 @@ header {
   background-color: #ebebeb;
   position: absolute;
   z-index: -20;
-  top: 229%;
+  top: 290%;
   right: 0%;
   -webkit-transition: 6s;
   transition: 6s;
@@ -264,7 +264,7 @@ header {
   background-color: #ebebeb;
   position: absolute;
   z-index: -20;
-  top: 410%;
+  top: 490%;
   left: 74.5%;
   -webkit-transition: 3s;
   transition: 3s;
