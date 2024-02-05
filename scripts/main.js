@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 //------------------------------------------------
 // Nav Menu Scroll-Into-View
 //------------------------------------------------
@@ -157,3 +159,8 @@ const interval = setInterval(updateDesc, 1750);
 // GSAP Portfolio Animations
 //------------------------------------------------
 
+
+
+const tl = gsap.timeline();
+
+tl.to(".portfolioCardInfo", {duration: 1.5, top: 0, width: "100%", height: "100%", });
