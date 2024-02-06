@@ -397,7 +397,7 @@ hr {
   height: 16px;
   background-color: #10112f;
   position: absolute;
-  top: -22px;
+  bottom: 102.5%;
   left: 0;
   right: 0;
   margin-left: auto;
