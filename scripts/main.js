@@ -161,19 +161,14 @@ const interval = setInterval(updateDesc, 1750);
 
 const tl = gsap.timeline();
 
-const portfolioAnimation = tl.from(".portfolioCardInfo", { duration: 0.5, bottom: "102.5%", ease:"bounce.inOut" });
-tl.to(".portfolioCardInfo", { duration: 0.75, bottom: 0, ease: "back.inOut" });
-tl.to(".portfolioCardInfo", { duration: 0.5, height: "100%", width: "100%", ease: "power4.in" });
-
-let hover = false;
+// const portfolioAnimation = tl.from(".portfolioCardInfo", { duration: 0.5, bottom: "102.5%", ease:"bounce.inOut" });
+// tl.to(".portfolioCardInfo", { duration: 0.75, bottom: 0, ease: "back.inOut" });
+// tl.to(".portfolioCardInfo", { duration: 0.5, height: "100%", width: "100%", ease: "power4.in" });
 
 const portfolioArray = document.querySelectorAll(".portfolioCard");
 
 portfolioArray.forEach((item) => {
-  item.addEventListener("mouseover", hoverOn);
+  item.addEventListener("mouseenter", hoverOn);
 
-  function hoverOn() {
-    
-  }
 })
 
