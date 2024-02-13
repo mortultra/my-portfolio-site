@@ -159,16 +159,72 @@ const interval = setInterval(updateDesc, 1750);
 // GSAP Portfolio Animations
 //------------------------------------------------
 
-const tl = gsap.timeline();
+// get all portfolio preview images (PPI) by class
+// add PPI to array
+// iterate over array adding GSAP animations to each
+// add event listener mouseenter to trigger animation
 
-// const portfolioAnimation = tl.from(".portfolioCardInfo", { duration: 0.5, bottom: "102.5%", ease:"bounce.inOut" });
-// tl.to(".portfolioCardInfo", { duration: 0.75, bottom: 0, ease: "back.inOut" });
-// tl.to(".portfolioCardInfo", { duration: 0.5, height: "100%", width: "100%", ease: "power4.in" });
+// without GSAP utility classes
 
-const portfolioArray = document.querySelectorAll(".portfolioCard");
+// const portfolioList = document.querySelectorAll(".portfolioCard");
 
-portfolioArray.forEach((item) => {
-  item.addEventListener("mouseenter", hoverOn);
+// const portfolioArray = Array.from(portfolioList);
 
-})
+// const arrayEvents = () => {
+//   portfolioArray.forEach((item) => {
+//     let hover = item.querySelectorAll(".portfolioCardInfo")
+//     let tl = gsap.timeline({paused: true});
 
+//     tl.from(hover, {
+//       bottom: "102.5%",
+//       ease: "bounce.inOut",
+//     });
+//     tl.to(hover, { 
+//       duration: 0.75, 
+//       bottom: 0, 
+//       ease: "back.inOut" 
+//     });
+//     tl.to(hover, { 
+//       duration: 0.5, 
+//       height: "100%", 
+//       width: "100%", 
+//       ease: "power4.in" 
+//     });
+
+//     item.addEventListener("mouseenter", () => tl.play(0));
+//   }); 
+// };
+
+// arrayEvents();
+
+// Using GSAP utilities
+
+const portfolioList = gsap.utils.toArray(".portfolioCard");
+
+const listEvents = () => {
+  portfolioList.forEach((item) => {
+    let hover = item.querySelectorAll(".portfolioCardInfo");
+    let tl = gsap.timeline({ paused: true });
+
+    tl.from(hover, {
+      bottom: "102.5%",
+      ease: "bounce.inOut",
+    });
+    tl.to(hover, { 
+      duration: 0.75, 
+      bottom: 0, 
+      ease: "back.inOut" 
+    });
+    tl.to(hover, { 
+      duration: 0.5, 
+      height: "100%", 
+      width: "100%", 
+      ease: "power4.in" 
+    });
+
+    item.addEventListener("mouseenter", () => tl.play(0));
+    item.addEventListener("mouseleave", () => tl.reverse());
+  })
+}
+
+listEvents()
