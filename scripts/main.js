@@ -206,10 +206,6 @@ const listEvents = () => {
     let hover = item.querySelectorAll(".portfolioCardInfo");
     let tl = gsap.timeline({ paused: true });
 
-    tl.from(hover, {
-      bottom: "102.5%",
-      ease: "bounce.inOut",
-    });
     tl.to(hover, { 
       duration: 0.75, 
       bottom: 0, 
