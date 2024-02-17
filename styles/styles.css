@@ -387,7 +387,6 @@ hr {
 .portfolioCardContents {
   width: 100%;
   max-width: 468px;
-  height: 225px;
   position: relative;
   margin-bottom: 16px;
 }
@@ -395,13 +394,23 @@ hr {
 .portfolioCardInfo {
   width: 16px;
   height: 16px;
-  background-color: #10112f;
+  background-color: #59576d;
   position: absolute;
   bottom: 102.5%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.portfolioCardDesc {
+  position: absolute;
+  top: 0;
+  margin: 10% auto;
+  text-align: center;
+  opacity: 0;
+  color: white;
+  display: none;
 }
 
 .projectFlex {

@@ -48,7 +48,6 @@
 .portfolioCardContents {
   width: 100%;
   max-width: 468px;
-  height: 225px;
   position: relative;
   margin-bottom: 16px;
 }
@@ -56,13 +55,23 @@
 .portfolioCardInfo {
   width: 16px;
   height: 16px;
-  background-color: $darkPurple;
+  background-color: $primaryPurple;
   position: absolute;
   bottom: 102.5%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.portfolioCardDesc {
+  position: absolute;
+  top: 0;
+  margin:10% auto;
+  text-align: center;
+  opacity: 0;
+  color: white;
+  display: none;
 }
 
 // -----------------
