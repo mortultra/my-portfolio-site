@@ -386,9 +386,11 @@ hr {
 
 .portfolioCardContents {
   width: 100%;
-  max-width: 468px;
   position: relative;
   margin-bottom: 16px;
+  border: 1px solid #59576d;
+  background-color: coral;
+  display: block;
 }
 
 .portfolioCardInfo {
@@ -603,7 +605,6 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 ul {

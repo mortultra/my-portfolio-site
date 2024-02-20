@@ -38,7 +38,7 @@
 
 .portfolioCard {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 500px; 
   padding: 0 16px;
   h3 {
     font-size: 22px;
@@ -47,9 +47,11 @@
 
 .portfolioCardContents {
   width: 100%;
-  max-width: 468px;
   position: relative;
   margin-bottom: 16px;
+  border: 1px solid $primaryPurple;
+  background-color: coral;
+  display: block;
 }
 
 .portfolioCardInfo {
