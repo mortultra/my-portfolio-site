@@ -389,7 +389,6 @@ hr {
   position: relative;
   margin-bottom: 16px;
   border: 1px solid #59576d;
-  background-color: coral;
   display: flex;
 }
 
@@ -413,6 +412,11 @@ hr {
   opacity: 0;
   color: white;
   display: none;
+  padding: 0 20px;
+  font-size: 1.75rem;
+}
+.portfolioCardDesc p:first-child {
+  padding-bottom: 20px;
 }
 
 .projectFlex {
