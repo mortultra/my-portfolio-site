@@ -390,7 +390,7 @@ hr {
   margin-bottom: 16px;
   border: 1px solid #59576d;
   background-color: coral;
-  display: block;
+  display: flex;
 }
 
 .portfolioCardInfo {
