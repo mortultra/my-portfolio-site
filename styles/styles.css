@@ -610,7 +610,7 @@ footer {
   .aboutFlex {
     padding-top: 45%;
   }
-  .txtContainer {
+  .txtContainer p:first-of-type {
     padding-top: 30px;
   }
   .footerFlex {

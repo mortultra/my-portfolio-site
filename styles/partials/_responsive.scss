@@ -131,7 +131,11 @@
     padding-top: 45%;
   }
   .txtContainer {
-    padding-top: 30px
+    p {
+      &:first-of-type {
+        padding-top: 30px
+      }
+    }
   }
   .footerFlex {
     flex-direction: column;

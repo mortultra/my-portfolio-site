@@ -114,7 +114,7 @@ const scrollFunction = () => {
 // const descSpan = document.getElementById('selfDesc');
 
 //store descriptions in an array
-const descriptions = ["developer", "designer", "thinker", "human"];
+const descriptions = ["dev", "thinker", "human"];
 
 //randomize the description
 // const randDesc = Math.floor(Math.random() * descriptions.length);
