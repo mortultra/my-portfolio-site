@@ -60,6 +60,42 @@
       margin: 0 5px;
     }
   }
+
+  .portfolioCard {
+    padding: 0;
+  }
+
+  .portfolioContainer {
+    flex-direction: column;
+    margin: 64px 0;
+    &:first-child {
+      margin: 28px 0;
+    }
+  }
+
+  .portfolioCardContents {
+    flex-direction: column;
+  }
+
+  .portfolioCard {
+    &:first-child {
+      margin-bottom: 64px;
+    }
+  }
+
+  .portfolioCardInfo {
+    display: none;
+  }
+
+  .portfolioCardDescMobile {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75rem;
+
+    p {
+      margin-top: 18px
+    }
+  }
 }
 
 @media(max-width:$mobileVertical) {
@@ -113,5 +149,32 @@
   }
   .carousel {
     margin-bottom: 20%;
+  }
+
+  .portfolioContainer {
+    flex-direction: column;
+    margin: 64px 0;
+  }
+
+  .portfolioCardContents {
+    flex-direction: column;
+  }
+
+  .portfolioCard {
+    &:first-child {
+      margin-bottom: 64px;
+    }
+  }
+
+  .portfolioCardInfo {
+    display: none;
+  }
+
+  .portfolioCardDescMobile {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin-top: 18px
+    }
   }
 }
