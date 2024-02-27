@@ -107,7 +107,6 @@
   }
   p,
   h4 {
-    padding: 0 0 0 50px;
     margin-bottom: 20px;
   }
   a {
@@ -116,22 +115,6 @@
     &:focus {
       color: $darkPurple;
     }
-  }
-}
-
-.gateway,
-.writeOn {
-  flex-direction: row-reverse;
-  p,
-  h4 {
-    padding: 0 50px 0 0;
-  }
-}
-
-.txtContainer {
-  width: 50%;
-  p:first-of-type {
-    padding-top: 70px;
   }
 }
 
@@ -147,7 +130,14 @@
   }
 }
 
-
+.projectLinks {
+  display: flex;
+  h4{
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+}
 
 #other {
   h4 {

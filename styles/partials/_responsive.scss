@@ -13,15 +13,21 @@
   }
   .projectFlex {
     flex-direction: column;
-    h4,
-    p {
-      padding-left: 3%;
-      padding-right: 3%;
+    margin: 28px 0;
+  }
+  .txtContainer {
+    h4 {
+      font-size: 1.75rem;
     }
   }
   .txtContainer,
   .projectImg {
     width: 100%;
+  }
+
+  .archive,
+  .writeOn {
+    margin-top: 48px;
   }
 
   .designItems {
@@ -94,6 +100,15 @@
 
     p {
       margin-top: 18px
+    }
+  }
+
+  .projectImg {
+    margin-bottom: 16px;
+    border: 1px solid $primaryPurple;
+
+    .imgContainer {
+      display: flex;
     }
   }
 }

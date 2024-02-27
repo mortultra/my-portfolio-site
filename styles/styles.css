@@ -264,7 +264,8 @@ header {
 
 #navScroll {
   background-color: #f5f4f4;
-  width: 90%;
+  border-bottom: 2px solid #A6A8AB;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -440,7 +441,6 @@ hr {
 }
 .projectFlex p,
 .projectFlex h4 {
-  padding: 0 0 0 50px;
   margin-bottom: 20px;
 }
 .projectFlex a {
@@ -448,24 +448,6 @@ hr {
 }
 .projectFlex a:hover, .projectFlex a:focus {
   color: #10112f;
-}
-
-.gateway,
-.writeOn {
-  flex-direction: row-reverse;
-}
-.gateway p,
-.gateway h4,
-.writeOn p,
-.writeOn h4 {
-  padding: 0 50px 0 0;
-}
-
-.txtContainer {
-  width: 50%;
-}
-.txtContainer p:first-of-type {
-  padding-top: 70px;
 }
 
 .projectImg {
@@ -476,6 +458,13 @@ hr {
 }
 .projectImg hr {
   margin: 10px 0 40px 0;
+}
+
+.projectLinks {
+  display: flex;
+}
+.projectLinks h4:first-child {
+  margin-right: 24px;
 }
 
 #other h4 {
@@ -513,15 +502,18 @@ footer {
   }
   .projectFlex {
     flex-direction: column;
+    margin: 28px 0;
   }
-  .projectFlex h4,
-  .projectFlex p {
-    padding-left: 3%;
-    padding-right: 3%;
+  .txtContainer h4 {
+    font-size: 1.75rem;
   }
   .txtContainer,
   .projectImg {
     width: 100%;
+  }
+  .archive,
+  .writeOn {
+    margin-top: 48px;
   }
   .designItems {
     justify-content: center;
@@ -577,6 +569,13 @@ footer {
   }
   .portfolioCardDescMobile p {
     margin-top: 18px;
+  }
+  .projectImg {
+    margin-bottom: 16px;
+    border: 1px solid #59576d;
+  }
+  .projectImg .imgContainer {
+    display: flex;
   }
 }
 @media (max-width: 450px) {
