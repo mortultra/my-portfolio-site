@@ -265,7 +265,7 @@ header {
 #navScroll {
   background-color: #f5f4f4;
   border-bottom: 2px solid #A6A8AB;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -316,7 +316,7 @@ hr {
 }
 .introFlex h3,
 .introFlex span {
-  width: 80%;
+  width: 100%;
   text-transform: none;
   line-height: 3rem;
   margin-bottom: 20px;
@@ -424,14 +424,24 @@ hr {
   display: none;
 }
 
+.projectContainer {
+  display: flex;
+  margin: 72px 0 0;
+}
+
 .projectFlex {
   display: flex;
+  flex-direction: column;
   margin-bottom: 7%;
+  padding: 0 16px;
 }
 .projectFlex p,
 .projectFlex a {
   font-size: 1.8rem;
   line-height: 2.75rem;
+}
+.projectFlex h3 {
+  margin-bottom: 16px;
 }
 .projectFlex h4 {
   font-size: 2.2rem;
@@ -439,8 +449,7 @@ hr {
 .projectFlex h4:hover, .projectFlex h4:focus {
   color: #10112f;
 }
-.projectFlex p,
-.projectFlex h4 {
+.projectFlex p {
   margin-bottom: 20px;
 }
 .projectFlex a {
@@ -451,20 +460,12 @@ hr {
 }
 
 .projectImg {
-  width: 50%;
-}
-.projectImg imgContainer img {
-  margin-top: 15px;
-}
-.projectImg hr {
-  margin: 10px 0 40px 0;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .projectLinks {
   display: flex;
-}
-.projectLinks h4:first-child {
-  margin-right: 24px;
 }
 
 #other h4 {
@@ -500,9 +501,14 @@ footer {
   .aboutFlex {
     padding-top: 27%;
   }
+  .projectContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 28px 0 0;
+  }
   .projectFlex {
     flex-direction: column;
-    margin: 28px 0;
+    padding: 0;
   }
   .txtContainer h4 {
     font-size: 1.75rem;
@@ -608,9 +614,6 @@ footer {
   }
   .aboutFlex {
     padding-top: 45%;
-  }
-  .txtContainer p:first-of-type {
-    padding-top: 30px;
   }
   .footerFlex {
     flex-direction: column;

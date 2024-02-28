@@ -90,13 +90,23 @@
 // -----------------
 // PROJECTS
 // -----------------
+.projectContainer {
+  display: flex;
+  margin: 72px 0 0;
+}
+
 .projectFlex {
   display: flex;
+  flex-direction: column;
   margin-bottom: 7%;
+  padding: 0 16px;
   p,
   a {
     font-size: 1.8rem;
     line-height: 2.75rem;
+  }
+  h3 {
+    margin-bottom: 16px;
   }
   h4 {
     font-size: 2.2rem;
@@ -105,8 +115,7 @@
       color: $darkPurple;
     }
   }
-  p,
-  h4 {
+  p {
     margin-bottom: 20px;
   }
   a {
@@ -119,24 +128,12 @@
 }
 
 .projectImg {
-  width: 50%;
-  imgContainer {
-    img {
-      margin-top: 15px;
-    }
-  }
-  hr {
-    margin: 10px 0 40px 0;
-  }
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .projectLinks {
   display: flex;
-  h4{
-    &:first-child {
-      margin-right: 24px;
-    }
-  }
 }
 
 #other {

@@ -11,9 +11,14 @@
   .aboutFlex {
     padding-top: 27%;
   }
+  .projectContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 28px 0 0;
+  }
   .projectFlex {
     flex-direction: column;
-    margin: 28px 0;
+    padding: 0;
   }
   .txtContainer {
     h4 {
@@ -103,6 +108,8 @@
     }
   }
 
+  
+
   .projectImg {
     margin-bottom: 16px;
     border: 1px solid $primaryPurple;
@@ -145,13 +152,7 @@
   .aboutFlex {
     padding-top: 45%;
   }
-  .txtContainer {
-    p {
-      &:first-of-type {
-        padding-top: 30px
-      }
-    }
-  }
+
   .footerFlex {
     flex-direction: column;
     justify-content: center;
