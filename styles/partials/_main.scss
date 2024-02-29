@@ -68,7 +68,7 @@
 .portfolioCardDesc {
   position: absolute;
   top: 0;
-  margin:10% auto;
+  margin: 10% auto;
   text-align: center;
   opacity: 0;
   color: white;
@@ -135,7 +135,6 @@
 
 #other {
   h4 {
-    text-align: center;
     &:hover,
     &:focus {
       color: $darkPurple;

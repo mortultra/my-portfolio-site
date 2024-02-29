@@ -465,9 +465,6 @@ hr {
   display: flex;
 }
 
-#other h4 {
-  text-align: center;
-}
 #other h4:hover, #other h4:focus {
   color: #10112f;
 }
@@ -711,9 +708,4 @@ li {
 
 p {
   margin: 0;
-}
-
-#webDev,
-#design {
-  margin-top: 10%;
 }/*# sourceMappingURL=styles.css.map */
