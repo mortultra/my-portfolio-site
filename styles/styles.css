@@ -462,9 +462,6 @@ hr {
 .projectImg {
   width: 100%;
   margin-bottom: 16px;
-}
-
-.projectLinks {
   display: flex;
 }
 
@@ -507,8 +504,9 @@ footer {
     margin: 28px 0 0;
   }
   .projectFlex {
-    flex-direction: column;
     padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
   }
   .txtContainer h4 {
     font-size: 1.75rem;
@@ -575,6 +573,9 @@ footer {
   }
   .portfolioCardDescMobile p {
     margin-top: 18px;
+  }
+  .projectFlex {
+    flex-direction: column;
   }
   .projectImg {
     margin-bottom: 16px;
