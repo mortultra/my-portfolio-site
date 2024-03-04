@@ -132,28 +132,28 @@ const descriptions = ["developer", "enthusiast", "designer", "human"];
 
 //code below adapted from https://cmsdk.com/javascript/change-backgroundimage-from-array-using-setinterval-but-only-twice.html
 
-const descSpan = document.getElementById("selfDesc");
-let index = 0;
-let iterations = 0;
-const updateDesc = () => {
-  // reset index to zero if current index is greater than number of descriptions.
-  if (index >= descriptions.length) {
-    index = 0;
-    iterations++;
-  }
-  descSpan.textContent = descriptions[index];
+// const descSpan = document.getElementById("selfDesc");
+// let index = 0;
+// let iterations = 0;
+// const updateDesc = () => {
+//   // reset index to zero if current index is greater than number of descriptions.
+//   if (index >= descriptions.length) {
+//     index = 0;
+//     iterations++;
+//   }
+//   descSpan.textContent = descriptions[index];
 
-  // need to clean this up and combine it into the above if statement.
-  if (iterations === Infinity) {
-    interval();
-  } else {
-    index++;
-  }
-};
+//   // need to clean this up and combine it into the above if statement.
+//   if (iterations === Infinity) {
+//     interval();
+//   } else {
+//     index++;
+//   }
+// };
 
-updateDesc();
+// updateDesc();
 
-const interval = setInterval(updateDesc, 1750);
+// const interval = setInterval(updateDesc, 1750);
 
 //------------------------------------------------
 // GSAP Portfolio Animations
@@ -207,6 +207,11 @@ const listEvents = () => {
     let info = item.querySelectorAll(".portfolioCardDesc");
     let tl = gsap.timeline({ paused: true });
 
+    tl.set(hover, {
+      bottom: "102.5%",
+      height: "16px",
+      width: "16px"
+    })
     tl.to(hover, { 
       duration: 0.75, 
       bottom: 0, 
@@ -228,8 +233,8 @@ const listEvents = () => {
       ease: "power2.in"
     })
 
-    item.addEventListener("mouseenter", () => tl.play(0));
-    item.addEventListener("mouseleave", () => tl.reverse());
+    item.addEventListener("mouseenter", () => tl.play());
+    item.addEventListener("mouseleave", () => tl.reverse(), tl.revert());
   })
 }
 
