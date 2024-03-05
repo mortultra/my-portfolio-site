@@ -234,8 +234,17 @@ const listEvents = () => {
     })
 
     item.addEventListener("mouseenter", () => tl.play());
-    item.addEventListener("mouseleave", () => tl.reverse(), tl.revert());
+    item.addEventListener("mouseleave", () => tl.reverse());
   })
 }
 
-listEvents()
+const portfolioReset = () => {
+  window.addEventListener("resize", (event) => {
+    if (event) {
+      listEvents();
+    }
+  });
+};
+
+listEvents();
+portfolioReset();
