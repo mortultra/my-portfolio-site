@@ -114,7 +114,7 @@ const scrollFunction = () => {
 // const descSpan = document.getElementById('selfDesc');
 
 //store descriptions in an array
-const descriptions = ["developer", "enthusiast", "designer", "human"];
+const descriptions = ["developer", "enthusiast", "designer", "illustrator", "human"];
 
 //randomize the description
 // const randDesc = Math.floor(Math.random() * descriptions.length);
@@ -132,28 +132,28 @@ const descriptions = ["developer", "enthusiast", "designer", "human"];
 
 //code below adapted from https://cmsdk.com/javascript/change-backgroundimage-from-array-using-setinterval-but-only-twice.html
 
-// const descSpan = document.getElementById("selfDesc");
-// let index = 0;
-// let iterations = 0;
-// const updateDesc = () => {
-//   // reset index to zero if current index is greater than number of descriptions.
-//   if (index >= descriptions.length) {
-//     index = 0;
-//     iterations++;
-//   }
-//   descSpan.textContent = descriptions[index];
+const descSpan = document.getElementById("selfDesc");
+let index = 0;
+let iterations = 0;
+const updateDesc = () => {
+  // reset index to zero if current index is greater than number of descriptions.
+  if (index >= descriptions.length) {
+    index = 0;
+    iterations++;
+  }
+  descSpan.textContent = descriptions[index];
 
-//   // need to clean this up and combine it into the above if statement.
-//   if (iterations === Infinity) {
-//     interval();
-//   } else {
-//     index++;
-//   }
-// };
+  // need to clean this up and combine it into the above if statement.
+  if (iterations === Infinity) {
+    interval();
+  } else {
+    index++;
+  }
+};
 
-// updateDesc();
+updateDesc();
 
-// const interval = setInterval(updateDesc, 1750);
+const interval = setInterval(updateDesc, 1750);
 
 //------------------------------------------------
 // GSAP Portfolio Animations
