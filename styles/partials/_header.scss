@@ -92,7 +92,9 @@ hr {
     width: 100%;
     text-transform: none;
     line-height: 3rem;
-    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
   }
   p {
     margin-bottom: 25px;

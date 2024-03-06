@@ -67,16 +67,23 @@
 
 .portfolioCardDesc {
   position: absolute;
-  top: 0;
-  margin: 10% auto;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
   text-align: center;
   opacity: 0;
   color: white;
   display: none;
-  padding: 0 20px;
+  padding: 0 5%;
   font-size: 1.75rem;
 
+  h4 {
+    color: $lightGrey;
+    padding-bottom: 4px;
+  }
+
   p {
+    font-family: $bodyFont;
     &:first-child {
       padding-bottom: 20px;
     }
