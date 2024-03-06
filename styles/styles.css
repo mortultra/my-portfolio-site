@@ -319,6 +319,9 @@ hr {
   width: 100%;
   text-transform: none;
   line-height: 3rem;
+}
+.introFlex h3:last-of-type,
+.introFlex span:last-of-type {
   margin-bottom: 20px;
 }
 .introFlex p {
@@ -407,14 +410,22 @@ hr {
 
 .portfolioCardDesc {
   position: absolute;
-  top: 0;
-  margin: 10% auto;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
   text-align: center;
   opacity: 0;
   color: white;
   display: none;
-  padding: 0 20px;
+  padding: 0 5%;
   font-size: 1.75rem;
+}
+.portfolioCardDesc h4 {
+  color: #D0D2D3;
+  padding-bottom: 4px;
+}
+.portfolioCardDesc p {
+  font-family: "Roboto Slab", serif;
 }
 .portfolioCardDesc p:first-child {
   padding-bottom: 20px;
@@ -536,9 +547,11 @@ footer {
   }
   .introFlex h3 {
     width: 100%;
-    padding-top: 10px;
     font-size: 2.25rem;
     line-height: 2.75rem;
+  }
+  .introFlex h3:first-child {
+    padding-top: 10px;
   }
   .toolkit li {
     width: 85px;
@@ -604,7 +617,6 @@ footer {
   }
   .introFlex h3 {
     width: 100%;
-    padding-top: 10px;
     font-size: 2rem;
     line-height: 2.5rem;
   }
