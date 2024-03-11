@@ -314,27 +314,54 @@ hr {
 .introFlex {
   width: 60%;
 }
+.introFlex h2,
 .introFlex h3,
 .introFlex span {
   width: 100%;
   text-transform: none;
   line-height: 3rem;
+  font-size: 2.5rem;
 }
+.introFlex h2:last-of-type,
 .introFlex h3:last-of-type,
 .introFlex span:last-of-type {
   margin-bottom: 20px;
 }
 .introFlex p {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
   line-height: 2.75rem;
 }
 .introFlex a {
   color: #59576d;
   font-size: 2rem;
   line-height: 2.75rem;
+  font-family: "Roboto Slab", serif;
 }
 .introFlex a:hover, .introFlex a:focus {
   color: #10112f;
+}
+.introFlex ul {
+  margin: 0 0 16px 0;
+  padding-left: 0;
+}
+.introFlex ul li {
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+}
+.introFlex ul li p {
+  margin-bottom: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.introFlex ul li p::before {
+  background-color: #59576d;
+  content: "";
+  display: flex;
+  flex-direction: row;
+  height: 6px;
+  margin-right: 6px;
+  width: 6px;
 }
 
 .contactFlex {

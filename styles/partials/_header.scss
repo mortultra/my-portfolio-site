@@ -87,26 +87,53 @@ hr {
 
 .introFlex {
   width: 60%;
+  h2,
   h3,
   span {
     width: 100%;
     text-transform: none;
     line-height: 3rem;
+    font-size: 2.5rem;
     &:last-of-type {
       margin-bottom: 20px;
     }
   }
   p {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     line-height: 2.75rem;
   }
   a {
     color: $primaryPurple;
     font-size: 2rem;
     line-height: 2.75rem;
+    font-family: $bodyFont;
     &:hover,
     &:focus {
       color: $darkPurple;
+    }
+  }
+  ul {
+    margin: 0 0 16px 0;
+    padding-left: 0;
+    li {
+      font-family: $bodyFont;
+      font-size: 2rem;
+      
+      p {
+        margin-bottom: 3px;  
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &::before {
+          background-color: $primaryPurple;
+          content: "";
+          display: flex;
+          flex-direction: row;
+          height: 6px;
+          margin-right: 6px;
+          width: 6px;
+        }
+      }
     }
   }
 }
