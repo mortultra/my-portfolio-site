@@ -1,6 +1,6 @@
-import gsap from "../node_modules/gsap/all.js";
+// import gsap from "../node_modules/gsap/all.js";
 
-// import gsap from "https://cdn.skypack.dev/gsap";
+import gsap from "https://cdn.skypack.dev/gsap";
 
 //------------------------------------------------
 // Nav Menu Scroll-Into-View
