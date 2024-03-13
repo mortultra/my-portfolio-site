@@ -696,8 +696,11 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .portfolioCardDescMobile p {
+  .portfolioCardDescMobile h4 {
     margin-top: 18px;
+  }
+  .portfolioCardDescMobile p {
+    margin-top: 8px;
   }
 }
 body {

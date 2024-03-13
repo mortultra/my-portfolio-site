@@ -199,8 +199,11 @@
   .portfolioCardDescMobile {
     display: flex;
     flex-direction: column;
-    p {
+    h4 {
       margin-top: 18px
+    }
+    p{
+      margin-top: 8px;
     }
   }
 }
