@@ -399,11 +399,20 @@ hr {
   margin-top: 15%;
 }
 
+.sectionSubhead {
+  margin-top: 24px;
+}
+
 .portfolioContainer {
   display: flex;
   flex-direction: row;
   margin: 72px 0;
   justify-content: space-around;
+}
+
+.portfolioBlurb {
+  font-size: 1.75rem;
+  margin: 8px 0;
 }
 
 .portfolioCard {
