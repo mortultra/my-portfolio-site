@@ -581,12 +581,14 @@ footer {
   .introFlex {
     width: 100%;
   }
-  .introFlex h3 {
+  .introFlex h3,
+  .introFlex span {
     width: 100%;
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
-  .introFlex h3:first-child {
+  .introFlex h3:first-child,
+  .introFlex span:first-child {
     padding-top: 10px;
   }
   .toolkit li {
@@ -651,7 +653,8 @@ footer {
     width: 100%;
     margin-bottom: 36px;
   }
-  .introFlex h3 {
+  .introFlex h3,
+  .introFlex span {
     width: 100%;
     font-size: 2rem;
     line-height: 2.5rem;
