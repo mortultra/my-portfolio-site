@@ -5,7 +5,7 @@ header {
 #topBlock {
   width: 10%;
   height: 162%;
-  background-color: $bgGrey;
+  background-color: $white;
   position: absolute;
   z-index: -20;
   top: 3%;
@@ -16,7 +16,7 @@ header {
 #devBlock {
   width: 22%;
   height: 32%;
-  background-color: $bgGrey;
+  background-color: $white;
   position: absolute;
   z-index: -20;
   top: 310%;
@@ -27,7 +27,7 @@ header {
 #bottomBlock {
   width: 30%;
   height: 27%;
-  background-color: $bgGrey;
+  background-color: $white;
   position: absolute;
   z-index: -20;
   top: 510%;
@@ -36,8 +36,8 @@ header {
 }
 
 #navScroll {
-  background-color: #f5f4f4;
-  border-bottom: 2px solid $darkGrey;
+  background-color: $white;
+  border-bottom: 2px solid $black;
   width: 90%;
   max-width: 1200px;
   display: flex;
@@ -59,22 +59,21 @@ header {
   display: flex;
   margin: 0;
   a {
-    color: $primaryPurple;
-    font-size: 2.5rem;
-    font-weight: 700;
+    color: $black;
+    font-size: 1.5rem;
     text-transform: uppercase;
     margin-left: 20px;
     position: relative;
     cursor: pointer;
     &:hover,
     &:focus {
-      color: $darkPurple;
+      color: $volt;
     }
   }
 }
 
 hr {
-  border-top: 1px solid $darkGrey;
+  border-top: 1px solid $black;
   margin: 10px 0;
 }
 
@@ -103,13 +102,13 @@ hr {
     line-height: 2.75rem;
   }
   a {
-    color: $primaryPurple;
+    color: $black;
     font-size: 2rem;
     line-height: 2.75rem;
     font-family: $bodyFont;
     &:hover,
     &:focus {
-      color: $darkPurple;
+      color: $volt;
     }
   }
   ul {
@@ -125,7 +124,7 @@ hr {
         flex-direction: row;
         align-items: center;
         &::before {
-          background-color: $primaryPurple;
+          background-color: $black;
           content: "";
           display: flex;
           flex-direction: row;
