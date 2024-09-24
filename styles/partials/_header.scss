@@ -2,57 +2,52 @@ header {
   position: relative;
 }
 
-#topBlock {
-  width: 10%;
-  height: 162%;
-  background-color: $white;
-  position: absolute;
-  z-index: -20;
-  top: 3%;
-  left: 21%;
-  transition: 4s;
-}
-
-#devBlock {
-  width: 22%;
-  height: 32%;
-  background-color: $white;
-  position: absolute;
-  z-index: -20;
-  top: 310%;
-  right: 0%;
-  transition: 6s;
-}
-
-#bottomBlock {
-  width: 30%;
-  height: 27%;
-  background-color: $white;
-  position: absolute;
-  z-index: -20;
-  top: 510%;
-  left:74.5%;
-  transition: 3s;
-}
-
 #navScroll {
+  border: 1px solid coral;
   background-color: $white;
-  border-bottom: 2px solid $black;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 50px 0 40px 0;
+  padding: 40px 0;
   position: fixed;
   top: 0;
-  transition: 0.25s ease-in-out;
   z-index: 10;
 }
 
 #logoContainer {
-  transition: 0.25s ease-in-out;
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  max-height: 25px;
+  max-width: 54px;
+  .logo {
+    background-color: $white;
+    border: 1px solid coral;
+    margin: 0;
+    position: absolute;
+    max-height: 23px;
+  }
+  .logo1 {
+    top: 20px;
+    z-index: 50;
+  }
+  .logo2 {
+    top: 44px;
+    z-index: 40;
+  }
+  .logo3 {
+    top: 68px;
+    z-index: 30;
+  }
+  .logo4 {
+    top: 92px;
+    z-index: 20;
+  }
+  .logo5 {
+    top: 116px;
+    z-index: 10;
+  }
 }
 
 .mainMenu {

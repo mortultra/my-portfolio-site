@@ -229,57 +229,52 @@ header {
   position: relative;
 }
 
-#topBlock {
-  width: 10%;
-  height: 162%;
-  background-color: #FFFFFF;
-  position: absolute;
-  z-index: -20;
-  top: 3%;
-  left: 21%;
-  transition: 4s;
-}
-
-#devBlock {
-  width: 22%;
-  height: 32%;
-  background-color: #FFFFFF;
-  position: absolute;
-  z-index: -20;
-  top: 310%;
-  right: 0%;
-  transition: 6s;
-}
-
-#bottomBlock {
-  width: 30%;
-  height: 27%;
-  background-color: #FFFFFF;
-  position: absolute;
-  z-index: -20;
-  top: 510%;
-  left: 74.5%;
-  transition: 3s;
-}
-
 #navScroll {
+  border: 1px solid coral;
   background-color: #FFFFFF;
-  border-bottom: 2px solid #000000;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 50px 0 40px 0;
+  padding: 40px 0;
   position: fixed;
   top: 0;
-  transition: 0.25s ease-in-out;
   z-index: 10;
 }
 
 #logoContainer {
-  transition: 0.25s ease-in-out;
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  max-height: 25px;
+  max-width: 54px;
+}
+#logoContainer .logo {
+  background-color: #FFFFFF;
+  border: 1px solid coral;
+  margin: 0;
+  position: absolute;
+  max-height: 23px;
+}
+#logoContainer .logo1 {
+  top: 20px;
+  z-index: 50;
+}
+#logoContainer .logo2 {
+  top: 44px;
+  z-index: 40;
+}
+#logoContainer .logo3 {
+  top: 68px;
+  z-index: 30;
+}
+#logoContainer .logo4 {
+  top: 92px;
+  z-index: 20;
+}
+#logoContainer .logo5 {
+  top: 116px;
+  z-index: 10;
 }
 
 .mainMenu {
@@ -375,31 +370,8 @@ hr {
   transform: scale(1.1);
 }
 
-.toolkit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin-top: 30px;
-}
-.toolkit li {
-  width: 120px;
-  text-align: center;
-  padding-bottom: 30px;
-  margin: 0 30px;
-}
-.toolkit li p {
-  font-size: 1.2rem;
-  color: #DCF217;
-}
-
-.toolkitContainer {
-  margin-top: 15%;
-}
-
-.sectionSubhead {
-  margin-top: 24px;
+#webDev {
+  margin-top: 100px;
 }
 
 .portfolioContainer {
@@ -410,14 +382,11 @@ hr {
 }
 
 .portfolioBlurb {
-  font-size: 1.75rem;
   margin: 8px 0;
 }
 
 .portfolioCard {
-  margin: 0 auto;
   max-width: 500px;
-  padding: 0 16px;
 }
 .portfolioCard h3 {
   font-size: 22px;
@@ -434,11 +403,10 @@ hr {
 .portfolioCardInfo {
   width: 16px;
   height: 16px;
-  background-color: #000000;
+  background-color: #DCF217;
   position: absolute;
-  bottom: 102.5%;
+  top: 0;
   left: 0;
-  right: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -456,11 +424,12 @@ hr {
   font-size: 1.75rem;
 }
 .portfolioCardDesc h4 {
-  color: #FFFFFF;
+  color: #000000;
   padding-bottom: 4px;
 }
 .portfolioCardDesc p {
   font-family: sans-serif;
+  color: #000000;
 }
 .portfolioCardDesc p:first-child {
   padding-bottom: 20px;
@@ -637,6 +606,9 @@ footer {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
+  #navScroll {
+    padding: 25px 0;
+  }
   .mainMenu {
     position: fixed;
     top: 11%;
@@ -731,7 +703,7 @@ a {
 
 .wrapper {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 
@@ -753,7 +725,7 @@ h1,
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 a,
@@ -764,5 +736,6 @@ li {
 }
 
 p {
+  font-size: 1.25rem;
   margin: 0;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,37 +1,9 @@
 // -----------------
-// TOOLKIT
-// -----------------
-
-.toolkit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin-top: 30px;
-  li {
-    width: 120px;
-    text-align: center;
-    padding-bottom: 30px;
-    margin: 0 30px;
-    p {
-      font-size: 1.2rem;
-      color: $volt;
-    }
-  }
-}
-
-.toolkitContainer {
-  margin-top: 15%;
-}
-
-.sectionSubhead {
-  margin-top: 24px;
-}
-
-// -----------------
 // PORTFOLIO
 // -----------------
+#webDev {
+  margin-top: 100px;
+}
 
 .portfolioContainer {
   display: flex;
@@ -41,14 +13,11 @@
 }
 
 .portfolioBlurb {
-  font-size: 1.75rem;
   margin: 8px 0;
 }
 
 .portfolioCard {
-  margin: 0 auto;
   max-width: 500px; 
-  padding: 0 16px;
   h3 {
     font-size: 22px;
   }
@@ -65,11 +34,10 @@
 .portfolioCardInfo {
   width: 16px;
   height: 16px;
-  background-color: $black;
+  background-color: $volt;
   position: absolute;
-  bottom: 102.5%;
+  top: 0;
   left: 0;
-  right: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -87,12 +55,13 @@
   font-size: 1.75rem;
 
   h4 {
-    color: $white;
+    color: $black;
     padding-bottom: 4px;
   }
 
   p {
     font-family: $bodyFont;
+    color: $black;
     &:first-child {
       padding-bottom: 20px;
     }
