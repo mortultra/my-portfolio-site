@@ -230,7 +230,6 @@ header {
 }
 
 #navScroll {
-  border: 1px solid coral;
   background-color: #FFFFFF;
   width: 100%;
   max-width: 1200px;
@@ -251,7 +250,6 @@ header {
 }
 #logoContainer .logo {
   background-color: #FFFFFF;
-  border: 1px solid coral;
   margin: 0;
   position: absolute;
   max-height: 23px;
@@ -261,19 +259,19 @@ header {
   z-index: 50;
 }
 #logoContainer .logo2 {
-  top: 44px;
+  top: 43px;
   z-index: 40;
 }
 #logoContainer .logo3 {
-  top: 68px;
+  top: 67px;
   z-index: 30;
 }
 #logoContainer .logo4 {
-  top: 92px;
+  top: 91px;
   z-index: 20;
 }
 #logoContainer .logo5 {
-  top: 116px;
+  top: 115px;
   z-index: 10;
 }
 

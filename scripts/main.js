@@ -47,33 +47,18 @@ gsap.registerPlugin(ScrollTrigger);
 // nav bar shrink on scroll
 const bodyWidth = document.body.clientWidth;
 const navScroll = document.getElementById("navScroll");
-const logoBox2 = document.querySelector(".logo2");
-const logoBox3 = document.querySelector(".logo3");
-const logoBox4 = document.querySelector(".logo4");
-const logoBox5 = document.querySelector(".logo5");
+const logoParts = document.querySelectorAll(".logoBox");
+// const logoBox2 = document.querySelector(".logo2");
+// const logoBox3 = document.querySelector(".logo3");
+// const logoBox4 = document.querySelector(".logo4");
+// const logoBox5 = document.querySelector(".logo5");
+
+// update if statements to use GSAP functionality when animating navbar on scroll
 
 // window.onscroll = () => {
 //   headerChange()
   
 // };
-
-const navReduce = gsap.to(navScroll, {
-  scrollTrigger: {
-    trigger: navScroll,
-    // start: 'trigger viewport',
-    start: '110px top',
-    end: 'max',
-    markers: true,
-    onUpdate: (self) => {
-      self.direction === 1 ? navReduce.play() : navReduce.reverse()
-    },
-    duration: 0.125,
-    ease: 'power1.inOut',
-  },
-  padding: "15px 0"
-});
-
-// update if statements to use GSAP functionality when animating navbar on scroll
 // const headerChange = () => {
 //   if (bodyWidth < 667 && document.documentElement.scrollTop > 40) {
 //     navScroll.style.padding = "20px 0 35px 0";
@@ -84,7 +69,62 @@ const navReduce = gsap.to(navScroll, {
 //   }
 // };
 
+const navReduce = gsap.to(navScroll, {
+  padding: "15px 0",
+  scrollTrigger: {
+    trigger: navScroll,
+    // start: 'trigger viewport',
+    start: '110px top',
+    end: 'max',
+    // markers: true,
+    onUpdate: (self) => {
+      self.direction === 1 ? navReduce.play() : navReduce.reverse()
+    },
+    duration: 0.125,
+    ease: 'power1.inOut',
+  },
+});
 
+// const logoResize = gsap.to(logoParts, {
+//   top: () =>
+//     "-=" + logoParts.offsetTop,
+//   stagger: 0.25,
+//   scrollTrigger: {
+//     trigger: navScroll,
+//     // start: 'trigger viewport',
+//     start: "110px top",
+//     end: "max",
+//     markers: true,
+//     onUpdate: (self) => {
+//       self.direction === 1 ? logoResize.play() : logoResize.reverse();
+//     },
+//     duration: 0.125,
+//     ease: "power1.inOut",
+//   },
+// });
+
+const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
+  const logoResize = gsap.to(item, {
+    top: () =>
+      "-=" + (item.offsetTop - item.offsetHeight),
+    stagger: 0.25,
+    scrollTrigger: {
+      trigger: navScroll,
+      // start: 'trigger viewport',
+      start: "110px top",
+      end: "max",
+      onUpdate: (self) => {
+        self.direction === 1 ? logoResize.play() : logoResize.reverse();
+      },
+      duration: 0.125,
+      ease: "power1.inOut",
+    },
+  });
+});
+
+
+
+// console.log(logoList);
 
 //------------------------------------------------
 // Intro Description Updater

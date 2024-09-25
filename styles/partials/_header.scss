@@ -3,7 +3,7 @@ header {
 }
 
 #navScroll {
-  border: 1px solid coral;
+  // border: 1px solid coral;
   background-color: $white;
   width: 100%;
   max-width: 1200px;
@@ -23,7 +23,7 @@ header {
   max-width: 54px;
   .logo {
     background-color: $white;
-    border: 1px solid coral;
+    // border: 1px solid coral;
     margin: 0;
     position: absolute;
     max-height: 23px;
@@ -33,19 +33,19 @@ header {
     z-index: 50;
   }
   .logo2 {
-    top: 44px;
+    top: 43px;
     z-index: 40;
   }
   .logo3 {
-    top: 68px;
+    top: 67px;
     z-index: 30;
   }
   .logo4 {
-    top: 92px;
+    top: 91px;
     z-index: 20;
   }
   .logo5 {
-    top: 116px;
+    top: 115px;
     z-index: 10;
   }
 }
