@@ -75,7 +75,7 @@ const navReduce = gsap.to(navScroll, {
     trigger: navScroll,
     // start: 'trigger viewport',
     start: '110px top',
-    end: 'max',
+    end: '80px',
     // markers: true,
     onUpdate: (self) => {
       self.direction === 1 ? navReduce.play() : navReduce.reverse()
@@ -84,24 +84,6 @@ const navReduce = gsap.to(navScroll, {
     ease: 'power1.inOut',
   },
 });
-
-// const logoResize = gsap.to(logoParts, {
-//   top: () =>
-//     "-=" + logoParts.offsetTop,
-//   stagger: 0.25,
-//   scrollTrigger: {
-//     trigger: navScroll,
-//     // start: 'trigger viewport',
-//     start: "110px top",
-//     end: "max",
-//     markers: true,
-//     onUpdate: (self) => {
-//       self.direction === 1 ? logoResize.play() : logoResize.reverse();
-//     },
-//     duration: 0.125,
-//     ease: "power1.inOut",
-//   },
-// });
 
 const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
   const logoResize = gsap.to(item, {
@@ -112,7 +94,7 @@ const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
       trigger: navScroll,
       // start: 'trigger viewport',
       start: "110px top",
-      end: "max",
+      end: "80px",
       onUpdate: (self) => {
         self.direction === 1 ? logoResize.play() : logoResize.reverse();
       },
@@ -123,8 +105,40 @@ const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
 });
 
 
+//------------------------------------------------
+// Design Modal Functionality
+//------------------------------------------------
 
-// console.log(logoList);
+// Get all open buttons
+const openButtons = document.querySelectorAll('.modal-open');
+
+// Get all close buttons
+const closeButtons = document.querySelectorAll('.modal-close');
+
+// Attach event listeners to open buttons
+openButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'flex'; // Display modal
+  });
+});
+
+// Attach event listeners to close buttons
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none'; // Hide modal
+  });
+});
+
+// Close modal if user clicks outside of the modal content
+window.onclick = (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.style.display = 'none';
+  }
+};
 
 //------------------------------------------------
 // Intro Description Updater

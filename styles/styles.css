@@ -368,8 +368,10 @@ hr {
   transform: scale(1.1);
 }
 
+#design,
 #webDev {
   margin-top: 100px;
+  position: relative;
 }
 
 .portfolioContainer {
@@ -389,6 +391,12 @@ hr {
 .portfolioCard h3 {
   font-size: 22px;
 }
+.portfolioCard .modal-open {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: none;
+}
 
 .portfolioCardContents {
   width: 100%;
@@ -405,13 +413,13 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .portfolioCardDesc {
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
   transform: translateY(-50%);
   margin: auto;
   text-align: center;
@@ -420,6 +428,8 @@ hr {
   display: none;
   padding: 0 5%;
   font-size: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .portfolioCardDesc h4 {
   color: #000000;
@@ -435,6 +445,47 @@ hr {
 
 .portfolioCardDescMobile {
   display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  height: 90%;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  overflow-y: scroll;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .projectContainer {
