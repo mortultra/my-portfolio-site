@@ -109,36 +109,64 @@ const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
 // Design Modal Functionality
 //------------------------------------------------
 
-// Get all open buttons
 const openButtons = document.querySelectorAll('.modal-open');
-
-// Get all close buttons
 const closeButtons = document.querySelectorAll('.modal-close');
 
-// Attach event listeners to open buttons
+// Open GSAP animation
+function openModalAnimation(modal) {
+  const modalContent = modal.querySelector('.modalContent');
+  modal.style.display = 'flex';
+  gsap.fromTo(
+    modalContent,
+    { x: "100%" },
+    {
+      duration: 0.5,
+      x: "0%",
+      ease: "power2.out",
+    },
+  );
+};
+
+// Close GSAP animation
+function closeModalAnimation(modal) {
+  const modalContent = modal.querySelector('.modalContent');
+  gsap.to(modalContent, {
+    duration: 0.5,
+    x: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      modal.style.display = "none";
+    },
+  });
+};
+
+// Open event listener
 openButtons.forEach(button => {
   button.addEventListener('click', () => {
     const modalId = button.getAttribute('data-modal');
     const modal = document.getElementById(modalId);
-    modal.style.display = 'flex'; // Display modal
-  });
+    openModalAnimation(modal);
+  })
 });
 
-// Attach event listeners to close buttons
+// Close event listener
 closeButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const modalId = button.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'none'; // Hide modal
+    const modal = button.closest('.modal');
+    closeModalAnimation(modal);
   });
 });
 
 // Close modal if user clicks outside of the modal content
-window.onclick = (event) => {
-  if (event.target.classList.contains('modal')) {
-    event.target.style.display = 'none';
-  }
-};
+window.addEventListener('click', (e) => {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (e.target === modal) {
+      closeModalAnimation(modal);
+    };
+  });
+});
+
 
 //------------------------------------------------
 // Intro Description Updater
