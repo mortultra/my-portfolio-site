@@ -102,6 +102,9 @@
 
 .modalContent {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 50%;
   bottom: 0;
   right: 0;
@@ -116,7 +119,11 @@
     background-color: rgba(0, 0, 0, 0.025);
   }
   video {
+    margin-top: 10px;
     max-width: 100%;
+  }
+  .dtVideo {
+    max-width: 50%;
   }
 }
 
@@ -136,7 +143,25 @@
 }
 
 // -----------------
-// PROJECTS
+// ARTIFACTS
+// -----------------
+
+.artifactContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 72px 0;
+  justify-content: space-around;
+}
+
+.artifact {
+  width: 30%;
+  margin-bottom: 48px;
+  max-width: 500px;
+}
+
+// -----------------
+// DEV PROJECTS
 // -----------------
 .projectContainer {
   display: flex;
@@ -179,15 +204,6 @@
   width: 100%;
   margin-bottom: 16px;
   display: flex;
-}
-
-#other {
-  h4 {
-    &:hover,
-    &:focus {
-      color: $volt;
-    }
-  }
 }
 
 footer {
