@@ -1,4 +1,97 @@
 // -----------------
+// CONTACT
+// -----------------
+
+.aboutFlex {
+  background-image: url(../../links/intro/intro-placeholder.jpg);
+  border: 1px solid coral;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.introFlex {
+  border: 1px solid coral;
+
+  span {
+    color: $volt;
+    width: 100%;
+    text-transform: none;
+    font-size: 2.5rem;
+    padding: 20px 0 0 20px;
+  }
+
+  p {
+    margin-bottom: 12px;
+    line-height: 2.75rem;
+  }
+
+  a {
+    color: $black;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-family: $bodyFont;
+
+    &:hover,
+    &:focus {
+      color: $volt;
+    }
+  }
+
+  ul {
+    margin: 0 0 16px 0;
+    padding-left: 0;
+
+    li {
+      font-family: $bodyFont;
+      font-size: 2rem;
+
+      p {
+        margin-bottom: 3px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &::before {
+          background-color: $black;
+          content: "";
+          display: flex;
+          flex-direction: row;
+          height: 6px;
+          margin-right: 6px;
+          width: 6px;
+        }
+      }
+    }
+  }
+}
+
+.contactFlex {
+  border: 1px solid coral;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  li {
+    width: 25px;
+    margin: 10px;
+
+    svg {
+      transition: fill .25s ease;
+    }
+    
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $volt;
+      }
+    }
+  }
+}
+
+// -----------------
 // PORTFOLIO
 // -----------------
 #design,
@@ -35,9 +128,17 @@
   width: 100%;
   position: relative;
   margin-bottom: 16px;
-  border: 1px solid $black;
+  // border: 1px solid $black;
+  border-bottom: 1px solid $black;
+  // border-left: 1px solid $black;
   display: flex;
   // padding: 50px;
+}
+
+#webDev {
+  .portfolioCardContents {
+  padding: 30px 0;
+  }
 }
 
 .portfolioCardInfo {
@@ -147,6 +248,7 @@
 // -----------------
 
 .artifactContainer {
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -156,7 +258,7 @@
 
 .artifact {
   width: 30%;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   max-width: 500px;
 }
 

@@ -3,7 +3,7 @@ header {
 }
 
 #navScroll {
-  // border: 1px solid coral;
+  border: 1px solid coral;
   background-color: $white;
   width: 100%;
   max-width: 1200px;
@@ -17,6 +17,7 @@ header {
 }
 
 #logoContainer {
+  border: 1px solid coral;
   display: flex;
   flex-direction: column;
   max-height: 25px;
@@ -51,96 +52,20 @@ header {
 }
 
 .mainMenu {
+  border: 1px solid coral;
   display: flex;
   margin: 0;
   a {
     color: $black;
     font-size: 1.5rem;
     text-transform: uppercase;
+    transition: color .25s ease;
     margin-left: 20px;
     position: relative;
     cursor: pointer;
     &:hover,
     &:focus {
       color: $volt;
-    }
-  }
-}
-
-hr {
-  border-top: 1px solid $black;
-  margin: 10px 0;
-}
-
-.aboutFlex {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 18%;
-  margin-bottom: 5%;
-}
-
-.introFlex {
-  width: 60%;
-  h2,
-  h3,
-  span {
-    width: 100%;
-    text-transform: none;
-    line-height: 3rem;
-    font-size: 2.5rem;
-    &:last-of-type {
-      margin-bottom: 20px;
-    }
-  }
-  p {
-    margin-bottom: 12px;
-    line-height: 2.75rem;
-  }
-  a {
-    color: $black;
-    font-size: 2rem;
-    line-height: 2.75rem;
-    font-family: $bodyFont;
-    &:hover,
-    &:focus {
-      color: $volt;
-    }
-  }
-  ul {
-    margin: 0 0 16px 0;
-    padding-left: 0;
-    li {
-      font-family: $bodyFont;
-      font-size: 2rem;
-      
-      p {
-        margin-bottom: 3px;  
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        &::before {
-          background-color: $black;
-          content: "";
-          display: flex;
-          flex-direction: row;
-          height: 6px;
-          margin-right: 6px;
-          width: 6px;
-        }
-      }
-    }
-  }
-}
-
-.contactFlex {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  li {
-    width: 50px;
-    &:hover,
-    &:focus {
-      transform: scale(1.1);
     }
   }
 }
