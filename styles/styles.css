@@ -295,13 +295,16 @@ header {
   color: #DCF217;
 }
 
-.aboutFlex {
+#home {
   background-image: url(../../links/intro/intro-placeholder.jpg);
+  margin-top: 150px;
+}
+
+.aboutFlex {
   border: 1px solid coral;
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
-  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
 }
 
 .introFlex {
@@ -312,7 +315,6 @@ header {
   width: 100%;
   text-transform: none;
   font-size: 2.5rem;
-  padding: 20px 0 0 20px;
 }
 .introFlex p {
   margin-bottom: 12px;
@@ -359,7 +361,7 @@ header {
 }
 .contactFlex li {
   width: 25px;
-  margin: 10px;
+  margin: 10px 0;
 }
 .contactFlex li svg {
   transition: fill 0.25s ease;
