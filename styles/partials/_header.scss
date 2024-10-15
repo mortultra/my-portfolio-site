@@ -3,10 +3,8 @@ header {
 }
 
 #navScroll {
-  border: 1px solid coral;
   background-color: $white;
   width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -17,11 +15,11 @@ header {
 }
 
 #logoContainer {
-  border: 1px solid coral;
   display: flex;
   flex-direction: column;
   max-height: 25px;
   max-width: 54px;
+  padding-left: 20px;
   .logo {
     background-color: $white;
     // border: 1px solid coral;
@@ -52,9 +50,9 @@ header {
 }
 
 .mainMenu {
-  border: 1px solid coral;
   display: flex;
   margin: 0;
+  padding-right: 20px;
   a {
     color: $black;
     font-size: 1.5rem;

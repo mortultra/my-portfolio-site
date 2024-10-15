@@ -230,10 +230,8 @@ header {
 }
 
 #navScroll {
-  border: 1px solid coral;
   background-color: #FFFFFF;
   width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -244,11 +242,11 @@ header {
 }
 
 #logoContainer {
-  border: 1px solid coral;
   display: flex;
   flex-direction: column;
   max-height: 25px;
   max-width: 54px;
+  padding-left: 20px;
 }
 #logoContainer .logo {
   background-color: #FFFFFF;
@@ -278,9 +276,9 @@ header {
 }
 
 .mainMenu {
-  border: 1px solid coral;
   display: flex;
   margin: 0;
+  padding-right: 20px;
 }
 .mainMenu a {
   color: #000000;
@@ -296,25 +294,25 @@ header {
 }
 
 #home {
-  background-image: url(../../links/intro/intro-placeholder.jpg);
+  background-image: url(../../links/intro/intro-lrg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top: 150px;
+  height: 70vh;
 }
 
 .aboutFlex {
-  border: 1px solid coral;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.introFlex {
-  border: 1px solid coral;
-}
 .introFlex span {
   color: #DCF217;
   width: 100%;
   text-transform: none;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 .introFlex p {
   margin-bottom: 12px;
@@ -354,7 +352,6 @@ header {
 }
 
 .contactFlex {
-  border: 1px solid coral;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -578,17 +575,9 @@ footer {
   flex-direction: row;
 }
 
-@media (max-width: 1145px) {
-  .aboutFlex {
-    padding-top: 25%;
-  }
-}
 @media (max-width: 900px) {
   .mainMenu {
     flex-direction: column;
-  }
-  .aboutFlex {
-    padding-top: 27%;
   }
   .projectContainer {
     display: flex;
@@ -621,7 +610,7 @@ footer {
 }
 @media (max-width: 768px) {
   .wrapper h2 {
-    font-size: 2.75rem;
+    font-size: 2rem;
   }
   .mainMenu a {
     font-size: 2rem;
@@ -648,7 +637,7 @@ footer {
   }
   .portfolioContainer {
     flex-direction: column;
-    margin: 64px 0;
+    margin: 0;
   }
   .portfolioContainer:first-child {
     margin: 28px 0;
@@ -687,34 +676,45 @@ footer {
     line-height: 2.25rem;
   }
   #navScroll {
-    padding: 25px 0;
+    padding-top: 15px;
+  }
+  #logoContainer {
+    padding-left: 5px;
   }
   .mainMenu {
-    position: fixed;
     top: 11%;
     flex-direction: row;
     padding: 5px 0;
   }
   .mainMenu a {
-    font-size: 1.75rem;
+    font-size: 1rem;
     padding: 5px;
     margin: 0 auto;
   }
+  main .wrapper {
+    padding: 0 12px;
+  }
+  #home {
+    margin-top: 0;
+  }
+  #design,
+  #webDev,
+  #artifacts {
+    margin-top: 50px;
+  }
   .introFlex {
     width: 100%;
-    margin-bottom: 36px;
   }
-  .introFlex h3,
   .introFlex span {
     width: 100%;
     font-size: 2rem;
     line-height: 2.5rem;
   }
   .contactFlex {
-    padding-left: 15px;
+    padding: 15px 0;
   }
   .aboutFlex {
-    padding-top: 45%;
+    padding-top: 40%;
   }
   .footerFlex {
     flex-direction: column;
@@ -727,21 +727,22 @@ footer {
   .footerFlex .contactFlex {
     padding: 15px 0;
   }
-  .imageMain {
-    padding-top: 160px;
-  }
-  .carousel {
-    margin-bottom: 20%;
+  .sectionSubhead h4 {
+    font-size: 2rem;
+    margin-bottom: 4px;
   }
   .portfolioContainer {
     flex-direction: column;
-    margin: 64px 0;
+    margin: 20px 0;
   }
   .portfolioCardContents {
     flex-direction: column;
   }
+  .portfolioCard h3 {
+    font-size: 1.5rem;
+  }
   .portfolioCard:first-child {
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
   .portfolioCardInfo {
     display: none;
@@ -749,12 +750,21 @@ footer {
   .portfolioCardDescMobile {
     display: flex;
     flex-direction: column;
+    padding: 0 4px;
   }
   .portfolioCardDescMobile h4 {
-    margin-top: 18px;
+    font-size: 1.2rem;
+    margin-top: 4px;
   }
   .portfolioCardDescMobile p {
     margin-top: 8px;
+  }
+  .artifactContainer {
+    margin: 32px 0;
+    justify-content: space-between;
+  }
+  .artifact {
+    width: 48%;
   }
 }
 body {
