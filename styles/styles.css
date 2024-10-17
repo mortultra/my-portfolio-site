@@ -478,6 +478,9 @@ header {
   overflow-y: scroll;
   transform: translateY(-50%);
 }
+.modalContent h3 {
+  font-size: 2rem;
+}
 .modalContent img {
   margin: 10px 0;
   background-color: rgba(0, 0, 0, 0.025);
@@ -727,6 +730,9 @@ footer {
   .footerFlex .contactFlex {
     padding: 15px 0;
   }
+  .footerFlex .contactFlex li {
+    margin: 0 15px;
+  }
   .sectionSubhead h4 {
     font-size: 2rem;
     margin-bottom: 4px;
@@ -744,6 +750,22 @@ footer {
   .portfolioCard:first-child {
     margin-bottom: 32px;
   }
+  .modalContent {
+    background-color: #FFFFFF;
+    padding: 30px 20px 30px 20px;
+    width: 90vw;
+  }
+  .modalContent img {
+    margin: 7px 0;
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+  .modalContent video {
+    margin-top: 7px;
+    max-width: 100%;
+  }
+  .modalContent .dtVideo {
+    max-width: 100%;
+  }
   .portfolioCardInfo {
     display: none;
   }
@@ -757,7 +779,8 @@ footer {
     margin-top: 4px;
   }
   .portfolioCardDescMobile p {
-    margin-top: 8px;
+    font-size: 1.35rem;
+    margin-top: 4px;
   }
   .artifactContainer {
     margin: 32px 0;
@@ -765,6 +788,9 @@ footer {
   }
   .artifact {
     width: 48%;
+  }
+  footer hr {
+    margin-top: 60px;
   }
 }
 body {

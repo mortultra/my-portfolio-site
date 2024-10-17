@@ -184,6 +184,9 @@
     }
     .contactFlex {
       padding: 15px 0;
+      li {
+        margin: 0 15px;
+      }
     }
   }
 
@@ -212,6 +215,26 @@
     }
   }
 
+  .modalContent {
+    background-color: $white;
+    padding: 30px 20px 30px 20px;
+    width: 90vw;
+
+    img {
+      margin: 7px 0;
+      background-color: rgba(0, 0, 0, 0.025);
+    }
+
+    video {
+      margin-top: 7px;
+      max-width: 100%;
+    }
+
+    .dtVideo {
+      max-width: 100%;
+    }
+  }
+
   .portfolioCardInfo {
     display: none;
   }
@@ -225,7 +248,8 @@
       margin-top: 4px
     }
     p{
-      margin-top: 8px;
+      font-size: 1.35rem;
+      margin-top: 4px;
     }
   }
 
@@ -236,5 +260,11 @@
 
   .artifact {
     width: 48%;
+  }
+
+  footer {
+    hr {
+      margin-top: 60px;
+    }
   }
 }

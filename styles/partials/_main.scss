@@ -217,14 +217,21 @@
   width: 70vw;
   overflow-y: scroll;
   transform: translateY(-50%);
+
+  h3 {
+      font-size: 2rem;
+    }
+
   img {
     margin: 10px 0;
     background-color: rgba(0, 0, 0, 0.025);
   }
+
   video {
     margin-top: 10px;
     max-width: 100%;
   }
+  
   .dtVideo {
     max-width: 50%;
   }
