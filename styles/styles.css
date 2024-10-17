@@ -390,11 +390,13 @@ header {
 .portfolioCard h3 {
   font-size: 22px;
 }
-.portfolioCard .modal-open {
+.portfolioCard button {
+  padding: 0;
+}
+.portfolioCard .modalOpen {
   background: none;
   border: none;
   cursor: pointer;
-  padding: none;
 }
 
 .portfolioCardContents {
@@ -493,7 +495,7 @@ header {
   max-width: 50%;
 }
 
-.modal-close {
+.modalClose {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -501,8 +503,8 @@ header {
   cursor: pointer;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.modalClose:hover,
+.modalClose:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -579,9 +581,6 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .mainMenu {
-    flex-direction: column;
-  }
   .projectContainer {
     display: flex;
     flex-direction: column;
@@ -592,88 +591,8 @@ footer {
     max-width: 500px;
     margin: 0 auto;
   }
-  .txtContainer h4 {
-    font-size: 1.75rem;
-  }
-  .txtContainer,
-  .projectImg {
-    width: 100%;
-  }
-  .archive,
-  .writeOn {
-    margin-top: 48px;
-  }
-  .designItems {
-    justify-content: center;
-  }
-  .designContainer {
-    max-width: 350px;
-    margin: 15px;
-  }
 }
-@media (max-width: 768px) {
-  .wrapper h2 {
-    font-size: 2rem;
-  }
-  .mainMenu a {
-    font-size: 2rem;
-  }
-  .introFlex {
-    width: 100%;
-  }
-  .introFlex h3,
-  .introFlex span {
-    width: 100%;
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-  }
-  .introFlex h3:first-child,
-  .introFlex span:first-child {
-    padding-top: 10px;
-  }
-  .toolkit li {
-    width: 85px;
-    margin: 0 5px;
-  }
-  .portfolioCard {
-    padding: 0;
-  }
-  .portfolioContainer {
-    flex-direction: column;
-    margin: 0;
-  }
-  .portfolioContainer:first-child {
-    margin: 28px 0;
-  }
-  .portfolioCardContents {
-    flex-direction: column;
-  }
-  .portfolioCard:first-child {
-    margin-bottom: 64px;
-  }
-  .portfolioCardInfo {
-    display: none;
-  }
-  .portfolioCardDescMobile {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.75rem;
-  }
-  .portfolioCardDescMobile p {
-    margin-top: 18px;
-  }
-  .projectFlex {
-    flex-direction: column;
-  }
-  .projectImg {
-    margin-bottom: 16px;
-    border: 1px solid #000000;
-  }
-  .projectImg .imgContainer {
-    display: flex;
-  }
-}
-@media (max-width: 450px) {
+@media (max-width: 850px) {
   p {
     font-size: 1.75rem;
     line-height: 2.25rem;
@@ -699,11 +618,118 @@ footer {
   }
   #home {
     margin-top: 0;
+    height: 50vh;
   }
   #design,
   #webDev,
   #artifacts {
     margin-top: 50px;
+  }
+  .introFlex {
+    width: 100%;
+  }
+  .introFlex span {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .contactFlex {
+    padding: 15px 0;
+  }
+  .aboutFlex {
+    padding-top: 40%;
+  }
+  .footerFlex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .footerFlex p {
+    padding: 0 10px;
+  }
+  .footerFlex .contactFlex {
+    padding: 15px 0;
+  }
+  .footerFlex .contactFlex li {
+    margin: 0 15px;
+  }
+  .portfolioContainer {
+    margin: 40px 0;
+  }
+  .portfolioCardContents {
+    flex-direction: column;
+  }
+  .portfolioCard {
+    padding: 0 4px;
+  }
+  .portfolioCard h3 {
+    font-size: 1.5rem;
+  }
+  .portfolioCard:first-child {
+    margin-bottom: 32px;
+  }
+  .modalContent {
+    background-color: #FFFFFF;
+    padding: 30px 20px 30px 20px;
+    width: 90vw;
+  }
+  .modalContent img {
+    margin: 7px 0;
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+  .modalContent video {
+    margin-top: 7px;
+    max-width: 100%;
+  }
+  .modalContent .dtVideo {
+    max-width: 100%;
+  }
+  .portfolioCardInfo {
+    display: none;
+  }
+  .portfolioCardDescMobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolioCardDescMobile h4 {
+    font-size: 1.2rem;
+    margin-top: 4px;
+  }
+  .portfolioCardDescMobile p {
+    font-size: 1.35rem;
+    margin-top: 4px;
+  }
+  .artifactContainer {
+    margin: 32px 0;
+    justify-content: space-between;
+  }
+  footer hr {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 450px) {
+  p {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  #navScroll {
+    padding-top: 15px;
+  }
+  #logoContainer {
+    padding-left: 5px;
+  }
+  .mainMenu {
+    top: 11%;
+    flex-direction: row;
+    padding: 5px 0;
+  }
+  .mainMenu a {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  main .wrapper {
+    padding: 0 12px;
   }
   .introFlex {
     width: 100%;

@@ -109,8 +109,8 @@ const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
 // Design Modal Functionality
 //------------------------------------------------
 
-const openButtons = document.querySelectorAll('.modal-open');
-const closeButtons = document.querySelectorAll('.modal-close');
+const openButtons = document.querySelectorAll('.modalOpen');
+const closeButtons = document.querySelectorAll('.modalClose');
 
 // Open GSAP animation
 function openModalAnimation(modal) {
