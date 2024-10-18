@@ -580,16 +580,113 @@ footer {
   flex-direction: row;
 }
 
-@media (max-width: 900px) {
-  .projectContainer {
+@media (max-width: 1145px) {
+  p {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  #navScroll {
+    padding-top: 15px;
+  }
+  #logoContainer {
+    padding-left: 5px;
+  }
+  .mainMenu {
+    top: 11%;
+    flex-direction: row;
+    padding: 5px 0;
+  }
+  .mainMenu a {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  main .wrapper {
+    padding: 0 12px;
+  }
+  #home {
+    margin-top: 0;
+    height: 70vh;
+  }
+  #design,
+  #webDev,
+  #artifacts {
+    margin-top: 50px;
+  }
+  .introFlex {
+    width: 100%;
+  }
+  .introFlex span {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .contactFlex {
+    padding: 15px 0;
+  }
+  .footerFlex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .footerFlex p {
+    padding: 0 10px;
+  }
+  .footerFlex .contactFlex {
+    padding: 15px 0;
+  }
+  .footerFlex .contactFlex li {
+    margin: 0 15px;
+  }
+  .portfolioContainer {
+    margin: 40px 0;
+    justify-content: space-between;
+  }
+  .portfolioCardContents {
+    flex-direction: column;
+  }
+  .portfolioCard {
+    padding: 0 4px;
+  }
+  .portfolioCard h3 {
+    font-size: 1.5rem;
+  }
+  .portfolioCard:first-child {
+    margin-bottom: 32px;
+  }
+  .modalContent {
+    background-color: #FFFFFF;
+    width: 90vw;
+  }
+  .modalContent img {
+    margin: 7px 0;
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+  .modalContent video {
+    margin-top: 7px;
+    max-width: 100%;
+  }
+  .portfolioCardInfo {
+    display: none;
+  }
+  .portfolioCardDescMobile {
     display: flex;
     flex-direction: column;
-    margin: 28px 0 0;
   }
-  .projectFlex {
-    padding: 0;
-    max-width: 500px;
-    margin: 0 auto;
+  .portfolioCardDescMobile h4 {
+    font-size: 1.2rem;
+    margin-top: 4px;
+  }
+  .portfolioCardDescMobile p {
+    font-size: 1.35rem;
+    margin-top: 4px;
+  }
+  .artifactContainer {
+    margin: 32px 0;
+    justify-content: space-between;
+  }
+  footer hr {
+    margin-top: 60px;
   }
 }
 @media (max-width: 850px) {
@@ -814,9 +911,6 @@ footer {
   }
   .artifact {
     width: 48%;
-  }
-  footer hr {
-    margin-top: 60px;
   }
 }
 body {

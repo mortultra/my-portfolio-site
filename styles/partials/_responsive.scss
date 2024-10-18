@@ -1,17 +1,153 @@
-@media(max-width:$desktopSmall) {
-  .projectContainer {
-    display: flex;
-    flex-direction: column;
-    margin: 28px 0 0;
-  }
-  .projectFlex {
-    // flex-direction: column;
-    padding: 0;
-    max-width: 500px;
-    margin: 0 auto;
+// ##################
+// MOBILE HORIZONTAL
+// ##################
+
+@media(max-width:$tabletHorizontal) {
+  p {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+  
+  #navScroll {
+    padding-top: 15px;
   }
 
+  #logoContainer {
+    padding-left: 5px;
+  }
+
+  .mainMenu {
+    // background-color: #f5f4f4;
+    top: 11%;
+    flex-direction: row;
+    padding: 5px 0;
+
+    a {
+      font-size: 1rem;
+      padding: 5px;
+      margin: 0 auto;
+    }
+  }
+
+  main {
+    .wrapper {
+      padding: 0 12px;
+    }
+  }
+
+  #home {
+    margin-top: 0;
+    height: 70vh;
+  }
+
+  #design,
+  #webDev,
+  #artifacts {
+    margin-top: 50px;
+  }
+
+  .introFlex {
+    width: 100%;
+
+    span {
+      width: 100%;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .contactFlex {
+    padding: 15px 0;
+  }
+
+  .footerFlex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    p {
+      padding: 0 10px;
+    }
+
+    .contactFlex {
+      padding: 15px 0;
+
+      li {
+        margin: 0 15px;
+      }
+    }
+  }
+
+  .portfolioContainer {
+    margin: 40px 0;
+    justify-content: space-between;
+  }
+
+  .portfolioCardContents {
+    flex-direction: column;
+  }
+
+  .portfolioCard {
+    padding: 0 4px;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    &:first-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  .modalContent {
+    background-color: $white;
+    width: 90vw;
+
+    img {
+      margin: 7px 0;
+      background-color: rgba(0, 0, 0, 0.025);
+    }
+
+    video {
+      margin-top: 7px;
+      max-width: 100%;
+    }
+  }
+
+  .portfolioCardInfo {
+    display: none;
+  }
+
+  .portfolioCardDescMobile {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      font-size: 1.2rem;
+      margin-top: 4px
+    }
+
+    p {
+      font-size: 1.35rem;
+      margin-top: 4px;
+    }
+  }
+
+  .artifactContainer {
+    margin: 32px 0;
+    justify-content: space-between;
+  }
+
+  footer {
+    hr {
+      margin-top: 60px;
+    }
+  }
 }
+
+// ##################
+// TABLET VERTICAL
+// ##################
 
 @media(max-width:$tabletVertical) {
   p {
@@ -164,6 +300,10 @@
   }
 }
 
+// ##################
+// MOBILE VERTICAL
+// ##################
+
 @media(max-width:$mobileVertical) {
   p {
     font-size: 1.75rem;
@@ -296,11 +436,5 @@
 
   .artifact {
     width: 48%;
-  }
-
-  footer {
-    hr {
-      margin-top: 60px;
-    }
   }
 }
