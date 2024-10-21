@@ -407,8 +407,15 @@ header {
   display: flex;
 }
 
-#webDev .portfolioCardContents {
-  padding: 30px 0;
+.rightBorder {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  border-right: 1px solid #000000;
+}
+
+#webDev .portfolioCardContents img {
+  padding: 30px 10px;
 }
 
 .portfolioCardInfo {
@@ -456,6 +463,13 @@ header {
 
 .portfolioCardDescMobile {
   display: none;
+  border-left: 1px solid #D0D2D3;
+}
+.portfolioCardDescMobile h3,
+.portfolioCardDescMobile h4,
+.portfolioCardDescMobile p {
+  border-bottom: 1px solid #D0D2D3;
+  padding-left: 8px;
 }
 
 .modal {
@@ -471,7 +485,7 @@ header {
   align-items: center;
 }
 
-.modalContent {
+.modalSlideout {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -486,28 +500,56 @@ header {
   overflow-y: scroll;
   transform: translateY(-50%);
 }
-.modalContent h3 {
-  font-size: 2rem;
+
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #000000;
 }
-.modalContent img {
-  margin: 10px 0;
+
+.modalImgs {
+  padding-top: 20px;
+  padding-right: 20px;
+  width: 70%;
+}
+.modalImgs img {
+  margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.025);
 }
-.modalContent video {
+.modalImgs video {
   margin-top: 10px;
   max-width: 100%;
 }
-.modalContent .dtVideo {
+.modalImgs .dtVideo {
   max-width: 50%;
 }
 
+.modalText {
+  width: 30%;
+  text-align: left;
+}
+.modalText h3 {
+  font-size: 2rem;
+  padding: 20px 45px 20px 20px;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+}
+.modalText p {
+  padding-bottom: 30px;
+  padding: 20px 45px 0 20px;
+  border-left: 1px solid #000000;
+}
+.modalText p:last-child {
+  padding-bottom: 80%;
+}
+
 .modalClose {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  align-self: flex-start;
+  color: #000000;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transform: rotate(90deg);
+  margin-bottom: 18px;
   transition: color 0.25s ease;
 }
 
@@ -664,15 +706,15 @@ footer {
   .portfolioCard:first-child {
     margin-bottom: 32px;
   }
-  .modalContent {
+  .modalSlideout {
     background-color: #FFFFFF;
     width: 90vw;
   }
-  .modalContent img {
+  .modalSlideout img {
     margin: 7px 0;
     background-color: rgba(0, 0, 0, 0.025);
   }
-  .modalContent video {
+  .modalSlideout video {
     margin-top: 7px;
     max-width: 100%;
   }
@@ -767,7 +809,7 @@ footer {
     flex-direction: column;
   }
   .portfolioCard {
-    padding: 0 4px;
+    padding: 0 8px;
   }
   .portfolioCard h3 {
     font-size: 1.5rem;
@@ -775,20 +817,20 @@ footer {
   .portfolioCard:first-child {
     margin-bottom: 32px;
   }
-  .modalContent {
+  .modalSlideout {
     background-color: #FFFFFF;
     padding: 30px 20px 30px 20px;
     width: 90vw;
   }
-  .modalContent img {
+  .modalSlideout img {
     margin: 7px 0;
     background-color: rgba(0, 0, 0, 0.025);
   }
-  .modalContent video {
+  .modalSlideout video {
     margin-top: 7px;
     max-width: 100%;
   }
-  .modalContent .dtVideo {
+  .modalSlideout .dtVideo {
     max-width: 100%;
   }
   .portfolioCardInfo {
@@ -883,20 +925,20 @@ footer {
   .portfolioCard:first-child {
     margin-bottom: 32px;
   }
-  .modalContent {
+  .modalSlideout {
     background-color: #FFFFFF;
     padding: 30px 20px 30px 20px;
     width: 90vw;
   }
-  .modalContent img {
+  .modalSlideout img {
     margin: 7px 0;
     background-color: rgba(0, 0, 0, 0.025);
   }
-  .modalContent video {
+  .modalSlideout video {
     margin-top: 7px;
     max-width: 100%;
   }
-  .modalContent .dtVideo {
+  .modalSlideout .dtVideo {
     max-width: 100%;
   }
   .portfolioCardInfo {
@@ -905,7 +947,6 @@ footer {
   .portfolioCardDescMobile {
     display: flex;
     flex-direction: column;
-    padding: 0 4px;
   }
   .portfolioCardDescMobile h4 {
     font-size: 1.2rem;
@@ -960,7 +1001,6 @@ h4,
 span {
   font-family: "ocr-a-std", monospace;
   margin: 0;
-  text-transform: capitalize;
   color: #000000;
 }
 

@@ -132,16 +132,22 @@
   width: 100%;
   position: relative;
   margin-bottom: 16px;
-  // border: 1px solid $black;
   border-bottom: 1px solid $black;
-  // border-left: 1px solid $black;
   display: flex;
-  // padding: 50px;
+}
+
+.rightBorder {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  border-right: 1px solid $black;
 }
 
 #webDev {
   .portfolioCardContents {
-  padding: 30px 0;
+    img {
+      padding: 30px 10px;
+    }
   }
 }
 
@@ -194,6 +200,13 @@
 
 .portfolioCardDescMobile {
   display: none;
+  border-left: 1px solid $lightGrey;
+  h3,
+  h4,
+  p {
+    border-bottom: 1px solid $lightGrey;
+    padding-left: 8px;
+  }
 }
 
 // -----------------
@@ -213,7 +226,7 @@
   align-items: center;
 }
 
-.modalContent {
+.modalSlideout {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -227,13 +240,21 @@
   width: 90vw;
   overflow-y: scroll;
   transform: translateY(-50%);
+}
 
-  h3 {
-      font-size: 2rem;
-    }
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid $black;
+}
+
+.modalImgs {
+  padding-top: 20px;
+  padding-right: 20px;
+  width: 70%;
 
   img {
-    margin: 10px 0;
+    margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.025);
   }
 
@@ -247,13 +268,35 @@
   }
 }
 
+.modalText {
+  width: 30%;
+  text-align: left;
+
+  h3 {
+    font-size: 2rem;
+    padding: 20px 45px 20px 20px;    
+    border-bottom: 1px solid $black;
+    border-left: 1px solid $black;
+  }
+
+  p {
+    padding-bottom: 30px;
+    padding: 20px 45px 0 20px;
+    border-left: 1px solid $black;
+    &:last-child {
+      padding-bottom: 80%;
+    }
+  }
+}
+
 .modalClose {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+  align-self: flex-start;
+  color: $black;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transform: rotate(90deg);
+  margin-bottom: 18px;
+  // transform: rotate(90deg);
   transition: color .25s ease;
 }
 

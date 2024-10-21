@@ -114,7 +114,7 @@ const closeButtons = document.querySelectorAll('.modalClose');
 
 // Open GSAP animation
 function openModalAnimation(modal) {
-  const modalContent = modal.querySelector('.modalContent');
+  const modalContent = modal.querySelector('.modalSlideout');
   modal.style.display = 'flex';
   gsap.fromTo(
     modalContent,
@@ -129,7 +129,7 @@ function openModalAnimation(modal) {
 
 // Close GSAP animation
 function closeModalAnimation(modal) {
-  const modalContent = modal.querySelector('.modalContent');
+  const modalContent = modal.querySelector('.modalSlideout');
   gsap.to(modalContent, {
     duration: 0.5,
     x: "100%",
