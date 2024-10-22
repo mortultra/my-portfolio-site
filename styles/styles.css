@@ -322,7 +322,7 @@ header {
   color: #000000;
   font-size: 2rem;
   line-height: 2.75rem;
-  font-family: sans-serif;
+  font-family: "gira-sans", sans-serif;
 }
 .introFlex a:hover, .introFlex a:focus {
   color: #DCF217;
@@ -332,7 +332,7 @@ header {
   padding-left: 0;
 }
 .introFlex ul li {
-  font-family: sans-serif;
+  font-family: "gira-sans", sans-serif;
   font-size: 2rem;
 }
 .introFlex ul li p {
@@ -451,7 +451,7 @@ header {
   padding-bottom: 32px;
 }
 .portfolioCardDesc p {
-  font-family: sans-serif;
+  font-family: "gira-sans", sans-serif;
   color: #000000;
   padding-bottom: 20px;
 }
@@ -466,12 +466,12 @@ header {
 
 .portfolioCardDescMobile {
   display: none;
-  border-left: 1px solid #D0D2D3;
+  border-left: 1px solid #CBCBCB;
 }
 .portfolioCardDescMobile h3,
 .portfolioCardDescMobile h4,
 .portfolioCardDescMobile p {
-  border-bottom: 1px solid #D0D2D3;
+  border-bottom: 1px solid #CBCBCB;
   padding-left: 8px;
 }
 
@@ -514,6 +514,7 @@ header {
   padding-top: 20px;
   padding-right: 20px;
   width: 70%;
+  text-align: center;
 }
 .modalImgs img {
   margin-bottom: 20px;
@@ -561,6 +562,12 @@ header {
   color: #DCF217;
   text-decoration: none;
   cursor: pointer;
+}
+
+.sectionSubhead {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .artifactContainer {
@@ -620,17 +627,27 @@ header {
 }
 
 footer {
-  padding-top: 5%;
+  margin-top: 24px;
+  padding: 16px 12px;
+  background-color: #CBCBCB;
 }
 
 .footerFlex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 0;
+}
+.footerFlex p {
+  font-family: "ocr-a-std", monospace;
+  font-size: 12px;
 }
 .footerFlex .contactFlex {
   display: flex;
   flex-direction: row;
+}
+.footerFlex .contactFlex li {
+  margin-left: 15px;
 }
 
 @media (max-width: 1235px) {
@@ -638,7 +655,7 @@ footer {
     padding: 0 12px;
   }
 }
-@media (max-width: 1145px) {
+@media (max-width: 1080px) {
   p {
     font-size: 1.75rem;
     line-height: 2.25rem;
@@ -667,10 +684,6 @@ footer {
   #webDev,
   #artifacts {
     margin-top: 50px;
-  }
-  #webDev h2,
-  #artifacts h2 {
-    margin-bottom: 15px;
   }
   .introFlex {
     width: 100%;
@@ -705,7 +718,7 @@ footer {
     flex-direction: column;
   }
   .portfolioCard {
-    padding: 0 4px;
+    padding: 0 8px;
   }
   .portfolioCard h3 {
     font-size: 1.5rem;
@@ -743,6 +756,7 @@ footer {
   .artifactContainer {
     margin: 32px 0;
     justify-content: space-between;
+    padding: 0 8px;
   }
   footer hr {
     margin-top: 60px;
@@ -814,15 +828,6 @@ footer {
   }
   .portfolioCardContents {
     flex-direction: column;
-  }
-  .portfolioCard {
-    padding: 0 8px;
-  }
-  .portfolioCard h3 {
-    font-size: 1.5rem;
-  }
-  .portfolioCard:first-child {
-    margin-bottom: 32px;
   }
   .modalSlideout {
     background-color: #FFFFFF;
@@ -986,7 +991,7 @@ footer {
 }
 body {
   background-color: #FFFFFF;
-  font-family: sans-serif;
+  font-family: "gira-sans", sans-serif;
   font-size: 1.5rem;
   line-height: 2.5rem;
   font-weight: 400;

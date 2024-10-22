@@ -256,6 +256,7 @@
   padding-top: 20px;
   padding-right: 20px;
   width: 70%;
+  text-align: center;
 
   img {
     margin-bottom: 20px;
@@ -314,6 +315,12 @@
 // -----------------
 // ARTIFACTS
 // -----------------
+
+.sectionSubhead {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
 
 .artifactContainer {
   align-items: center;
@@ -377,15 +384,28 @@
 }
 
 footer {
-  padding-top: 5%;
+  margin-top: 24px;
+  padding: 16px 12px;
+  background-color: $lightGrey;
 }
 
 .footerFlex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 0;
+
+  p {
+    font-family: $primaryFont;
+    font-size: 12px;
+  }
+
   .contactFlex {
     display: flex;
     flex-direction: row;
+
+    li {
+        margin-left: 15px;
+      }
   }
 }
