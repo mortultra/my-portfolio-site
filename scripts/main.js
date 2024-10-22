@@ -179,7 +179,18 @@ window.addEventListener('click', (e) => {
 // const descSpan = document.getElementById('selfDesc');
 
 //store descriptions in an array
-const descriptions = ["_design", "_develop", "_seek", "_collaborate", "_ideate", "_signal/lost", "_>", "_>>", "_>>>", "_signal/found"];
+const descriptions = [
+  "_design", 
+  "_develop", 
+  "_seek", 
+  "_collaborate", 
+  "_ideate", 
+  "_signal/lost", 
+  "_>", 
+  "_>>", 
+  "_>>>", 
+  "_signal/found"
+];
 
 //randomize the description
 // const randDesc = Math.floor(Math.random() * descriptions.length);

@@ -52,6 +52,13 @@
     margin-top: 50px;
   }
 
+  #webDev,
+  #artifacts {
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+
   .introFlex {
     width: 100%;
 
@@ -414,6 +421,25 @@
 
     .dtVideo {
       max-width: 100%;
+    }
+  }
+
+  .modalContent {
+    flex-direction: column-reverse;
+  }
+
+  .modalImgs {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .modalText {
+    width: 100%;
+
+    p {
+      &:last-child {
+        padding-bottom: 10%;
+      }
     }
   }
 

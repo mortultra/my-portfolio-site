@@ -455,6 +455,9 @@ header {
   color: #000000;
   padding-bottom: 20px;
 }
+.portfolioCardDesc p:last-child {
+  padding-bottom: 0;
+}
 .portfolioCardDesc .contributions {
   padding-bottom: 8px;
   text-transform: uppercase;
@@ -664,6 +667,10 @@ footer {
   #webDev,
   #artifacts {
     margin-top: 50px;
+  }
+  #webDev h2,
+  #artifacts h2 {
+    margin-bottom: 15px;
   }
   .introFlex {
     width: 100%;
@@ -940,6 +947,19 @@ footer {
   }
   .modalSlideout .dtVideo {
     max-width: 100%;
+  }
+  .modalContent {
+    flex-direction: column-reverse;
+  }
+  .modalImgs {
+    width: 100%;
+    padding-right: 0;
+  }
+  .modalText {
+    width: 100%;
+  }
+  .modalText p:last-child {
+    padding-bottom: 10%;
   }
   .portfolioCardInfo {
     display: none;
