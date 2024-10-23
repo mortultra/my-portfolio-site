@@ -9,4 +9,4 @@
 
 [[plugins]]
   package = "netlify-plugin-node-version"
-  version = "14.19.0" # Use a version that suits your project
+  inputs = { version = "14.19.0" }
