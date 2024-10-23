@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+  // import gsap from "https://cdn.skypack.dev/gsap";
+
   //------------------------------------------------
   // Nav Menu Scroll-Into-View
   //------------------------------------------------
@@ -27,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const linksToAnchors = document.querySelectorAll('a[href^="#"]');
+
   linksToAnchors.forEach((each) => (each.onclick = anchorLinkHandler));
 
   // // accessible scroll into view from https://codepen.io/a8t/pen/JOYwLM?editors=1010
@@ -36,49 +41,44 @@ document.addEventListener("DOMContentLoaded", () => {
   //------------------------------------------------
 
   // enable scrollTrigger
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  gsap.registerPlugin(ScrollTrigger);
 
-  let lastScrollTime = 0;
-  window.addEventListener("scroll", () => {
-    const now = Date.now();
-    if (now - lastScrollTime < 100) return; // Adjust the threshold as needed
-    lastScrollTime = now;
+  // nav bar shrink on scroll
+  const bodyWidth = document.body.clientWidth;
+  const navScroll = document.getElementById("navScroll");
+  const logoParts = document.querySelectorAll(".logoBox");
 
-    // nav bar shrink on scroll
-    const bodyWidth = document.body.clientWidth;
-    const navScroll = document.getElementById("navScroll");
-    const logoParts = document.querySelectorAll(".logoBox");
+  const navReduce = gsap.to(navScroll, {
+    padding: "15px 0",
+    scrollTrigger: {
+      trigger: navScroll,
+      // start: 'trigger viewport',
+      start: "110px top",
+      end: "80px",
+      // markers: true,
+      onUpdate: (self) => {
+        self.direction === 1 ? navReduce.play() : navReduce.reverse();
+      },
+      duration: 0.125,
+      ease: "power1.inOut",
+    },
+  });
 
-    const navReduce = gsap.to(navScroll, {
-      padding: "15px 0",
+  const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
+    const logoResize = gsap.to(item, {
+      top: () => "-=" + (item.offsetTop - item.offsetHeight),
+      stagger: 0.25,
       scrollTrigger: {
         trigger: navScroll,
         // start: 'trigger viewport',
         start: "110px top",
         end: "80px",
-        // markers: true,
-        toggleActions: "play none reverse none", // Play when scrolling down, reverse when scrolling up
-        scrub: true, // This allows for smoother animations as you scroll
+        onUpdate: (self) => {
+          self.direction === 1 ? logoResize.play() : logoResize.reverse();
+        },
         duration: 0.125,
         ease: "power1.inOut",
       },
-    });
-
-    const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
-      const logoResize = gsap.to(item, {
-        top: () => "-=" + (item.offsetTop - item.offsetHeight),
-        stagger: 0.25,
-        scrollTrigger: {
-          trigger: navScroll,
-          // start: 'trigger viewport',
-          start: "110px top",
-          end: "80px",
-          toggleActions: "play none reverse none", // Play when scrolling down, reverse when scrolling up
-          scrub: true, // This allows for smoother animations as you scroll
-          duration: 0.125,
-          ease: "power1.inOut",
-        },
-      });
     });
   });
 
@@ -297,3 +297,4 @@ document.addEventListener("DOMContentLoaded", () => {
   listEvents();
   portfolioReset();
 });
+

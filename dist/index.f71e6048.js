@@ -585,6 +585,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"8VGZO":[function(require,module,exports) {
 document.addEventListener("DOMContentLoaded", ()=>{
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    // import gsap from "https://cdn.skypack.dev/gsap";
     //------------------------------------------------
     // Nav Menu Scroll-Into-View
     //------------------------------------------------
@@ -617,45 +619,41 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // Nav & Background Box Scroll Behaviour
     //------------------------------------------------
     // enable scrollTrigger
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    let lastScrollTime = 0;
-    window.addEventListener("scroll", ()=>{
-        const now = Date.now();
-        if (now - lastScrollTime < 100) return; // Adjust the threshold as needed
-        lastScrollTime = now;
-        // nav bar shrink on scroll
-        const bodyWidth = document.body.clientWidth;
-        const navScroll = document.getElementById("navScroll");
-        const logoParts = document.querySelectorAll(".logoBox");
-        const navReduce = gsap.to(navScroll, {
-            padding: "15px 0",
+    gsap.registerPlugin(ScrollTrigger);
+    // nav bar shrink on scroll
+    const bodyWidth = document.body.clientWidth;
+    const navScroll = document.getElementById("navScroll");
+    const logoParts = document.querySelectorAll(".logoBox");
+    const navReduce = gsap.to(navScroll, {
+        padding: "15px 0",
+        scrollTrigger: {
+            trigger: navScroll,
+            // start: 'trigger viewport',
+            start: "110px top",
+            end: "80px",
+            // markers: true,
+            onUpdate: (self)=>{
+                self.direction === 1 ? navReduce.play() : navReduce.reverse();
+            },
+            duration: 0.125,
+            ease: "power1.inOut"
+        }
+    });
+    const logoResizer = gsap.utils.toArray(".logoBox").forEach((item)=>{
+        const logoResize = gsap.to(item, {
+            top: ()=>"-=" + (item.offsetTop - item.offsetHeight),
+            stagger: 0.25,
             scrollTrigger: {
                 trigger: navScroll,
                 // start: 'trigger viewport',
                 start: "110px top",
                 end: "80px",
-                // markers: true,
-                toggleActions: "play none reverse none",
-                scrub: true,
+                onUpdate: (self)=>{
+                    self.direction === 1 ? logoResize.play() : logoResize.reverse();
+                },
                 duration: 0.125,
                 ease: "power1.inOut"
             }
-        });
-        const logoResizer = gsap.utils.toArray(".logoBox").forEach((item)=>{
-            const logoResize = gsap.to(item, {
-                top: ()=>"-=" + (item.offsetTop - item.offsetHeight),
-                stagger: 0.25,
-                scrollTrigger: {
-                    trigger: navScroll,
-                    // start: 'trigger viewport',
-                    start: "110px top",
-                    end: "80px",
-                    toggleActions: "play none reverse none",
-                    scrub: true,
-                    duration: 0.125,
-                    ease: "power1.inOut"
-                }
-            });
         });
     });
     //------------------------------------------------
