@@ -361,6 +361,7 @@ header {
   margin: 10px 0;
 }
 .contactFlex li svg {
+  width: 25px;
   transition: fill 0.25s ease;
 }
 .contactFlex li:hover svg, .contactFlex li:focus svg {
