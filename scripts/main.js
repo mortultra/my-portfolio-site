@@ -1,6 +1,9 @@
-import gsap from "../node_modules/gsap/all.js";
+import { gsap } from "gsap";
 
-import ScrollTrigger from "../node_modules/gsap/ScrollTrigger.js";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // import gsap from "https://cdn.skypack.dev/gsap";
 
@@ -57,7 +60,7 @@ const logoParts = document.querySelectorAll(".logoBox");
 
 // window.onscroll = () => {
 //   headerChange()
-  
+
 // };
 // const headerChange = () => {
 //   if (bodyWidth < 667 && document.documentElement.scrollTop > 40) {
@@ -74,21 +77,20 @@ const navReduce = gsap.to(navScroll, {
   scrollTrigger: {
     trigger: navScroll,
     // start: 'trigger viewport',
-    start: '110px top',
-    end: '80px',
+    start: "110px top",
+    end: "80px",
     // markers: true,
     onUpdate: (self) => {
-      self.direction === 1 ? navReduce.play() : navReduce.reverse()
+      self.direction === 1 ? navReduce.play() : navReduce.reverse();
     },
     duration: 0.125,
-    ease: 'power1.inOut',
+    ease: "power1.inOut",
   },
 });
 
 const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
   const logoResize = gsap.to(item, {
-    top: () =>
-      "-=" + (item.offsetTop - item.offsetHeight),
+    top: () => "-=" + (item.offsetTop - item.offsetHeight),
     stagger: 0.25,
     scrollTrigger: {
       trigger: navScroll,
@@ -104,18 +106,17 @@ const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
   });
 });
 
-
 //------------------------------------------------
 // Design Modal Functionality
 //------------------------------------------------
 
-const openButtons = document.querySelectorAll('.modalOpen');
-const closeButtons = document.querySelectorAll('.modalClose');
+const openButtons = document.querySelectorAll(".modalOpen");
+const closeButtons = document.querySelectorAll(".modalClose");
 
 // Open GSAP animation
 function openModalAnimation(modal) {
-  const modalContent = modal.querySelector('.modalSlideout');
-  modal.style.display = 'flex';
+  const modalContent = modal.querySelector(".modalSlideout");
+  modal.style.display = "flex";
   gsap.fromTo(
     modalContent,
     { x: "100%" },
@@ -123,13 +124,13 @@ function openModalAnimation(modal) {
       duration: 0.5,
       x: "0%",
       ease: "power2.out",
-    },
+    }
   );
-};
+}
 
 // Close GSAP animation
 function closeModalAnimation(modal) {
-  const modalContent = modal.querySelector('.modalSlideout');
+  const modalContent = modal.querySelector(".modalSlideout");
   gsap.to(modalContent, {
     duration: 0.5,
     x: "100%",
@@ -138,35 +139,34 @@ function closeModalAnimation(modal) {
       modal.style.display = "none";
     },
   });
-};
+}
 
 // Open event listener
-openButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modalId = button.getAttribute('data-modal');
+openButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-modal");
     const modal = document.getElementById(modalId);
     openModalAnimation(modal);
-  })
+  });
 });
 
 // Close event listener
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal');
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const modal = button.closest(".modal");
     closeModalAnimation(modal);
   });
 });
 
 // Close modal if user clicks outside of the modal content
-window.addEventListener('click', (e) => {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(modal => {
+window.addEventListener("click", (e) => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
     if (e.target === modal) {
       closeModalAnimation(modal);
-    };
+    }
   });
 });
-
 
 //------------------------------------------------
 // Intro Description Updater
@@ -180,16 +180,16 @@ window.addEventListener('click', (e) => {
 
 //store descriptions in an array
 const descriptions = [
-  "_design", 
-  "_develop", 
-  "_seek", 
-  "_collaborate", 
-  "_ideate", 
-  "_signal/lost", 
-  "_>", 
-  "_>>", 
-  "_>>>", 
-  "_signal/found"
+  "_design",
+  "_develop",
+  "_seek",
+  "_collaborate",
+  "_ideate",
+  "_signal/lost",
+  "_>",
+  "_>>",
+  "_>>>",
+  "_signal/found",
 ];
 
 //randomize the description
@@ -255,20 +255,20 @@ const interval = setInterval(updateDesc, 1250);
 //       bottom: "102.5%",
 //       ease: "bounce.inOut",
 //     });
-//     tl.to(hover, { 
-//       duration: 0.75, 
-//       bottom: 0, 
-//       ease: "back.inOut" 
+//     tl.to(hover, {
+//       duration: 0.75,
+//       bottom: 0,
+//       ease: "back.inOut"
 //     });
-//     tl.to(hover, { 
-//       duration: 0.5, 
-//       height: "100%", 
-//       width: "100%", 
-//       ease: "power4.in" 
+//     tl.to(hover, {
+//       duration: 0.5,
+//       height: "100%",
+//       width: "100%",
+//       ease: "power4.in"
 //     });
 
 //     item.addEventListener("mouseenter", () => tl.play(0));
-//   }); 
+//   });
 // };
 
 // arrayEvents();
@@ -287,12 +287,12 @@ const listEvents = () => {
       top: "0",
       left: "0",
       height: "16px",
-      width: "16px"
+      width: "16px",
     });
-    tl.to(hover, { 
-      duration: 0.35, 
-      height: "100%", 
-      width: "100%", 
+    tl.to(hover, {
+      duration: 0.35,
+      height: "100%",
+      width: "100%",
       ease: "power4.in",
     });
     tl.to(info, {
@@ -302,13 +302,13 @@ const listEvents = () => {
     tl.to(info, {
       duration: 0.15,
       opacity: 1,
-      ease: "power2.in"
-    })
+      ease: "power2.in",
+    });
 
     item.addEventListener("mouseenter", () => tl.play());
     item.addEventListener("mouseleave", () => tl.reverse());
-  })
-}
+  });
+};
 
 const portfolioReset = () => {
   window.addEventListener("resize", (event) => {
