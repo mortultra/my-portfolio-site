@@ -1,37 +1,106 @@
 // -----------------
-// TOOLKIT
+// CONTACT
 // -----------------
+#home {
+  background-image: url(../../links/intro/intro-lrg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 150px;
+  height: 70vh;
+}
 
-.toolkit {
+.aboutFlex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin-top: 30px;
-  li {
-    width: 120px;
-    text-align: center;
-    padding-bottom: 30px;
-    margin: 0 30px;
-    p {
-      font-size: 1.2rem;
-      color: $darkPurple;
+}
+
+.introFlex {
+
+  span {
+    color: $volt;
+    width: 100%;
+    text-transform: none;
+    font-size: 3.5rem;
+  }
+
+  p {
+    margin-bottom: 12px;
+    line-height: 2.75rem;
+  }
+
+  a {
+    color: $black;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-family: $bodyFont;
+
+    &:hover,
+    &:focus {
+      color: $volt;
+    }
+  }
+
+  ul {
+    margin: 0 0 16px 0;
+    padding-left: 0;
+
+    li {
+      font-family: $bodyFont;
+      font-size: 2rem;
+
+      p {
+        margin-bottom: 3px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &::before {
+          background-color: $black;
+          content: "";
+          display: flex;
+          flex-direction: row;
+          height: 6px;
+          margin-right: 6px;
+          width: 6px;
+        }
+      }
     }
   }
 }
 
-.toolkitContainer {
-  margin-top: 15%;
-}
+.contactFlex {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 
-.sectionSubhead {
-  margin-top: 24px;
+  li {
+    width: 25px;
+    margin: 10px 0;
+
+    svg {
+      transition: fill .25s ease;
+    }
+    
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $volt;
+      }
+    }
+  }
 }
 
 // -----------------
 // PORTFOLIO
 // -----------------
+#design,
+#webDev {
+  margin-top: 100px;
+  position: relative;
+}
 
 .portfolioContainer {
   display: flex;
@@ -41,16 +110,21 @@
 }
 
 .portfolioBlurb {
-  font-size: 1.75rem;
   margin: 8px 0;
 }
 
 .portfolioCard {
-  margin: 0 auto;
   max-width: 500px; 
-  padding: 0 16px;
   h3 {
     font-size: 22px;
+  }
+  button {
+    padding: 0;
+  }
+  .modalOpen {
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
 
@@ -58,53 +132,213 @@
   width: 100%;
   position: relative;
   margin-bottom: 16px;
-  border: 1px solid $primaryPurple;
+  border-bottom: 1px solid $black;
   display: flex;
+}
+
+.rightBorder {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  border-right: 1px solid $black;
+}
+
+#webDev {
+  .portfolioCardContents {
+    img {
+      padding: 30px 10px;
+    }
+  }
 }
 
 .portfolioCardInfo {
   width: 16px;
   height: 16px;
-  background-color: $primaryPurple;
+  background-color: $volt;
   position: absolute;
-  bottom: 102.5%;
+  top: 0;
   left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .portfolioCardDesc {
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
   transform: translateY(-50%);
   margin: auto;
   text-align: center;
   opacity: 0;
   color: white;
   display: none;
-  padding: 0 5%;
-  font-size: 1.75rem;
+  padding: 60px;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h3 {
+    padding-bottom: 24px;
+  }
 
   h4 {
-    color: $lightGrey;
-    padding-bottom: 4px;
+    color: $black;
+    padding-bottom: 32px;
   }
 
   p {
     font-family: $bodyFont;
-    &:first-child {
-      padding-bottom: 20px;
+    color: $black;
+    padding-bottom: 20px;
+
+    &:last-child {
+      padding-bottom: 0;
     }
+  }
+
+  .contributions {
+    padding-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }
 
 .portfolioCardDescMobile {
   display: none;
+  border-left: 1px solid $lightGrey;
+  h3,
+  h4,
+  p {
+    border-bottom: 1px solid $lightGrey;
+    padding-left: 8px;
+  }
 }
 
 // -----------------
-// PROJECTS
+// DESIGN MODALS
+// -----------------
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modalSlideout {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: $white;
+  height: 90%;
+  padding: 30px 180px 30px 120px;
+  width: 90vw;
+  overflow-y: scroll;
+  transform: translateY(-50%);
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid $black;
+}
+
+.modalImgs {
+  padding-top: 20px;
+  padding-right: 20px;
+  width: 70%;
+  text-align: center;
+
+  img {
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+
+  video {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .dtVideo {
+    max-width: 50%;
+  }
+}
+
+.modalText {
+  width: 30%;
+  text-align: left;
+
+  h3 {
+    font-size: 2rem;
+    padding: 20px 45px 20px 20px;    
+    border-bottom: 1px solid $black;
+    border-left: 1px solid $black;
+  }
+
+  p {
+    padding-bottom: 30px;
+    padding: 20px 45px 0 20px;
+    border-left: 1px solid $black;
+    &:last-child {
+      padding-bottom: 80%;
+    }
+  }
+}
+
+.modalClose {
+  align-self: flex-start;
+  color: $black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 18px;
+  // transform: rotate(90deg);
+  transition: color .25s ease;
+}
+
+.modalClose:hover,
+.modalClose:focus {
+  color: $volt;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// -----------------
+// ARTIFACTS
+// -----------------
+
+.sectionSubhead {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.artifactContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 72px 0;
+  justify-content: space-around;
+}
+
+.artifact {
+  width: 30%;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+// -----------------
+// DEV PROJECTS
 // -----------------
 .projectContainer {
   display: flex;
@@ -128,17 +362,17 @@
     font-size: 2.2rem;
     &:hover,
     &:focus {
-      color: $darkPurple;
+      color: $volt;
     }
   }
   p {
     margin-bottom: 20px;
   }
   a {
-    color: $primaryPurple;
+    color: $black;
     &:hover,
     &:focus {
-      color: $darkPurple;
+      color: $volt;
     }
   }
 }
@@ -149,25 +383,29 @@
   display: flex;
 }
 
-#other {
-  h4 {
-    &:hover,
-    &:focus {
-      color: $darkPurple;
-    }
-  }
-}
-
 footer {
-  padding-top: 5%;
+  margin-top: 24px;
+  padding: 16px 12px;
+  background-color: $lightGrey;
 }
 
 .footerFlex {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px 0;
+
+  p {
+    font-family: $primaryFont;
+    font-size: 12px;
+  }
+
   .contactFlex {
     display: flex;
     flex-direction: row;
+
+    li {
+        margin-left: 15px;
+      }
   }
 }

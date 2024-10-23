@@ -1,6 +1,8 @@
-// import gsap from "../node_modules/gsap/all.js";
+import gsap from "../node_modules/gsap/all.js";
 
-import gsap from "https://cdn.skypack.dev/gsap";
+import ScrollTrigger from "../node_modules/gsap/ScrollTrigger.js";
+
+// import gsap from "https://cdn.skypack.dev/gsap";
 
 //------------------------------------------------
 // Nav Menu Scroll-Into-View
@@ -39,71 +41,132 @@ linksToAnchors.forEach((each) => (each.onclick = anchorLinkHandler));
 // Nav & Background Box Scroll Behaviour
 //------------------------------------------------
 
+// enable scrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
 // nav bar shrink on scroll
+const bodyWidth = document.body.clientWidth;
 const navScroll = document.getElementById("navScroll");
-const logoBox = document.getElementById("logoContainer");
-// const topBlock = document.getElementById("topBlock");
-// const devBlock = document.getElementById("devBlock");
-// const bottomBlock = document.getElementById("bottomBlock");
+const logoParts = document.querySelectorAll(".logoBox");
+// const logoBox2 = document.querySelector(".logo2");
+// const logoBox3 = document.querySelector(".logo3");
+// const logoBox4 = document.querySelector(".logo4");
+// const logoBox5 = document.querySelector(".logo5");
 
-window.onscroll = () => {
-  scrollFunction()
+// update if statements to use GSAP functionality when animating navbar on scroll
+
+// window.onscroll = () => {
+//   headerChange()
+  
+// };
+// const headerChange = () => {
+//   if (bodyWidth < 667 && document.documentElement.scrollTop > 40) {
+//     navScroll.style.padding = "20px 0 35px 0";
+//   } else if (
+//     (bodyWidth > 768 && document.documentElement.scrollTop > 80)
+//   ) {
+//     navScroll.style.padding = "50px 0 20px 0";
+//   }
+// };
+
+const navReduce = gsap.to(navScroll, {
+  padding: "15px 0",
+  scrollTrigger: {
+    trigger: navScroll,
+    // start: 'trigger viewport',
+    start: '110px top',
+    end: '80px',
+    // markers: true,
+    onUpdate: (self) => {
+      self.direction === 1 ? navReduce.play() : navReduce.reverse()
+    },
+    duration: 0.125,
+    ease: 'power1.inOut',
+  },
+});
+
+const logoResizer = gsap.utils.toArray(".logoBox").forEach((item) => {
+  const logoResize = gsap.to(item, {
+    top: () =>
+      "-=" + (item.offsetTop - item.offsetHeight),
+    stagger: 0.25,
+    scrollTrigger: {
+      trigger: navScroll,
+      // start: 'trigger viewport',
+      start: "110px top",
+      end: "80px",
+      onUpdate: (self) => {
+        self.direction === 1 ? logoResize.play() : logoResize.reverse();
+      },
+      duration: 0.125,
+      ease: "power1.inOut",
+    },
+  });
+});
+
+
+//------------------------------------------------
+// Design Modal Functionality
+//------------------------------------------------
+
+const openButtons = document.querySelectorAll('.modalOpen');
+const closeButtons = document.querySelectorAll('.modalClose');
+
+// Open GSAP animation
+function openModalAnimation(modal) {
+  const modalContent = modal.querySelector('.modalSlideout');
+  modal.style.display = 'flex';
+  gsap.fromTo(
+    modalContent,
+    { x: "100%" },
+    {
+      duration: 0.5,
+      x: "0%",
+      ease: "power2.out",
+    },
+  );
 };
 
-const scrollFunction = () => {
-  if (document.body.clientWidth < 450) {
-    navScroll.style.padding = "20px 0 35px 0";
-    logoBox.style.width = "50%";
-  } else if (document.body.clientWidth < 768) {
-    navScroll.style.padding = "20px 0 20px 0";
-    logoBox.style.width = "40%";
-  } else if (
-    document.body.scrollTop > 80 ||
-    document.documentElement.scrollTop > 80
-  ) {
-    navScroll.style.padding = "20px 0 15px 0";
-    logoBox.style.width = "25%";
-  } else if (document.body.clientWidth > 768) {
-    navScroll.style.padding = "50px 0 20px 0";
-    logoBox.style.width = "30%";
-  }
+// Close GSAP animation
+function closeModalAnimation(modal) {
+  const modalContent = modal.querySelector('.modalSlideout');
+  gsap.to(modalContent, {
+    duration: 0.5,
+    x: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      modal.style.display = "none";
+    },
+  });
 };
 
-// // the element behind the header description moves on scroll of 200px from top
-// topBoxMovement = () => {
-//   if (
-//     document.body.scrollTop > 200 ||
-//     document.documentElement.scrollTop > 200
-//   ) {
-//     topBlock.style.left = "90%";
-//   } else {
-//     topBlock.style.left = "23%";
-//   }
-// };
+// Open event listener
+openButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    openModalAnimation(modal);
+  })
+});
 
-// // the background element behind development moves after 1250px of scrolling from top
-// devBoxMovement = () => {
-//   if (
-//     document.body.scrollTop > 1250 ||
-//     document.documentElement.scrollTop > 1250
-//   ) {
-//     devBlock.style.right = "30%";
-//   } else {
-//     devBlock.style.right = "0%";
-//   }
-// };
+// Close event listener
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModalAnimation(modal);
+  });
+});
 
-// // the background element behind design moves after 2000px of scrolling from top
-// bottomBoxMovement = () => {
-//   if (
-//     document.body.scrollTop > 2000 ||
-//     document.documentElement.scrollTop > 2000
-//   ) {
-//     bottomBlock.style.left = "75%";
-//   } else {
-//     bottomBlock.style.left = "30%";
-//   }
-// };
+// Close modal if user clicks outside of the modal content
+window.addEventListener('click', (e) => {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (e.target === modal) {
+      closeModalAnimation(modal);
+    };
+  });
+});
+
 
 //------------------------------------------------
 // Intro Description Updater
@@ -116,7 +179,18 @@ const scrollFunction = () => {
 // const descSpan = document.getElementById('selfDesc');
 
 //store descriptions in an array
-const descriptions = ["developer", "enthusiast", "designer", "illustrator", "human"];
+const descriptions = [
+  "_design", 
+  "_develop", 
+  "_seek", 
+  "_collaborate", 
+  "_ideate", 
+  "_signal/lost", 
+  "_>", 
+  "_>>", 
+  "_>>>", 
+  "_signal/found"
+];
 
 //randomize the description
 // const randDesc = Math.floor(Math.random() * descriptions.length);
@@ -155,7 +229,7 @@ const updateDesc = () => {
 
 updateDesc();
 
-const interval = setInterval(updateDesc, 1750);
+const interval = setInterval(updateDesc, 1250);
 
 //------------------------------------------------
 // GSAP Portfolio Animations
@@ -210,27 +284,23 @@ const listEvents = () => {
     let tl = gsap.timeline({ paused: true });
 
     tl.set(hover, {
-      bottom: "102.5%",
+      top: "0",
+      left: "0",
       height: "16px",
       width: "16px"
-    })
-    tl.to(hover, { 
-      duration: 0.75, 
-      bottom: 0, 
-      ease: "back.inOut" 
     });
     tl.to(hover, { 
-      duration: 0.5, 
+      duration: 0.35, 
       height: "100%", 
       width: "100%", 
-      ease: "power4.in" 
+      ease: "power4.in",
     });
     tl.to(info, {
       duration: 0.01,
       display: "block",
     });
     tl.to(info, {
-      duration: 0.35,
+      duration: 0.15,
       opacity: 1,
       ease: "power2.in"
     })

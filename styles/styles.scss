@@ -5,10 +5,12 @@
 @import './partials/responsive';
 
 body {
-  background-color: #f5f4f4;
+  background-color: #FFFFFF;
   font-family: $bodyFont;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2.5rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 img {
@@ -28,7 +30,7 @@ a {
 
 .wrapper {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   // overflow: hidden;
 }
@@ -40,18 +42,20 @@ h4,
 span {
   font-family: $primaryFont;
   margin: 0;
-  text-transform: capitalize;
-  color: $primaryPurple;
+  color: $black;
 }
 
-h1 {
-  font-size: 6rem;
+h1,
+.h1 {
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
+
+
 
 a,
 li {
@@ -61,5 +65,7 @@ li {
 }
 
 p {
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin: 0;
 }
