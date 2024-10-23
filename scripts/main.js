@@ -1,8 +1,3 @@
-import { gsap } from "gsap";
-
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // import gsap from "https://cdn.skypack.dev/gsap";
