@@ -157,31 +157,6 @@
 // ##################
 
 @media(max-width:$tabletVertical) {
-  p {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-
-  #navScroll {
-    padding-top: 15px;
-  }
-
-  #logoContainer {
-    padding-left: 5px;
-  }
-
-  .mainMenu {
-    // background-color: #f5f4f4;
-    top: 11%;
-    flex-direction: row;
-    padding: 5px 0;
-
-    a {
-      font-size: 1rem;
-      padding: 5px;
-      margin: 0 auto;
-    }
-  }
 
   main {
     .wrapper {
@@ -190,107 +165,18 @@
   }
 
   #home {
-    margin-top: 0;
     height: 50vh;
-  }
-
-  #design,
-  #webDev,
-  #artifacts {
-    margin-top: 50px;
-  }
-
-  .introFlex {
-    width: 100%;
-
-    span {
-      width: 100%;
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
-  }
-
-  .contactFlex {
-    padding: 15px 0;
   }
 
   .aboutFlex {
     padding-top: 40%;
   }
 
-  .footerFlex {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-    p {
-      padding: 0 10px;
-    }
-
-    .contactFlex {
-      padding: 15px 0;
-
-      li {
-        margin: 0 15px;
-      }
-    }
-  }
-
-  .portfolioContainer {
-    margin: 40px 0;
-  }
-
-  .portfolioCardContents {
-    flex-direction: column;
-  }
-
   .modalSlideout {
-    background-color: $white;
     padding: 30px 20px 30px 20px;
-    width: 90vw;
-
-    img {
-      margin: 7px 0;
-      background-color: rgba(0, 0, 0, 0.025);
-    }
-
-    video {
-      margin-top: 7px;
-      max-width: 100%;
-    }
 
     .dtVideo {
       max-width: 100%;
-    }
-  }
-
-  .portfolioCardInfo {
-    display: none;
-  }
-
-  .portfolioCardDescMobile {
-    display: flex;
-    flex-direction: column;
-
-    h4 {
-      font-size: 1.2rem;
-      margin-top: 4px
-    }
-
-    p {
-      font-size: 1.35rem;
-      margin-top: 4px;
-    }
-  }
-
-  .artifactContainer {
-    margin: 32px 0;
-    justify-content: space-between;
-  }
-
-  footer {
-    hr {
-      margin-top: 60px;
     }
   }
 }
@@ -300,66 +186,6 @@
 // ##################
 
 @media(max-width:$mobileVertical) {
-  p {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-
-  #navScroll {
-    padding-top: 15px;
-  }
-
-  #logoContainer {
-    padding-left: 5px;
-  }
-
-  .mainMenu {
-    // background-color: #f5f4f4;
-    top: 11%;
-    flex-direction: row;
-    padding: 5px 0;
-    a {
-      font-size: 1rem;
-      padding: 5px;
-      margin: 0 auto;
-    }
-  }
-
-  main {
-    .wrapper {
-        padding: 0 12px;
-      }
-  }
-  
-  .introFlex {
-    width: 100%;
-    span {
-      width: 100%;
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
-  }
-  .contactFlex {
-    padding: 15px 0;
-  }
-  .aboutFlex {
-    padding-top: 40%;
-  }
-
-  .footerFlex {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    p {
-      padding: 0 10px;
-    }
-    .contactFlex {
-      padding: 15px 0;
-      li {
-        margin: 0 15px;
-      }
-    }
-  }
 
   .sectionSubhead {
     h4 {
@@ -371,39 +197,6 @@
   .portfolioContainer {
     flex-direction: column;
     margin: 20px 0;
-  }
-
-  .portfolioCardContents {
-    flex-direction: column;
-  }
-
-  .portfolioCard {
-    h3 {
-      font-size: 1.5rem;
-    }
-    &:first-child {
-      margin-bottom: 32px;
-    }
-  }
-
-  .modalSlideout {
-    background-color: $white;
-    padding: 30px 20px 30px 20px;
-    width: 90vw;
-
-    img {
-      margin: 7px 0;
-      background-color: rgba(0, 0, 0, 0.025);
-    }
-
-    video {
-      margin-top: 7px;
-      max-width: 100%;
-    }
-
-    .dtVideo {
-      max-width: 100%;
-    }
   }
 
   .modalContent {
@@ -423,28 +216,6 @@
         padding-bottom: 10%;
       }
     }
-  }
-
-  .portfolioCardInfo {
-    display: none;
-  }
-
-  .portfolioCardDescMobile {
-    display: flex;
-    flex-direction: column;
-    h4 {
-      font-size: 1.2rem;
-      margin-top: 4px
-    }
-    p{
-      font-size: 1.35rem;
-      margin-top: 4px;
-    }
-  }
-
-  .artifactContainer {
-    margin: 32px 0;
-    justify-content: space-between;
   }
 
   .artifact {
