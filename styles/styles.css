@@ -450,6 +450,7 @@ h1 {
   font-size: 2rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 .portfolioCardDesc h3 {
   padding-bottom: 24px;
@@ -461,7 +462,7 @@ h1 {
 .portfolioCardDesc p {
   font-family: "gira-sans", sans-serif;
   color: #000000;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
 }
 .portfolioCardDesc p:last-child {
   padding-bottom: 0;
@@ -632,6 +633,11 @@ h1 {
   width: 100%;
   margin-bottom: 16px;
   display: flex;
+}
+
+.waybackNotice {
+  font-size: 12px;
+  font-style: italic;
 }
 
 footer {

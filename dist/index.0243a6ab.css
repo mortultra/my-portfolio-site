@@ -494,6 +494,7 @@ h1 {
   top: 50%;
   left: 0;
   right: 0;
+  overflow: hidden;
   transform: translateY(-50%);
 }
 
@@ -508,7 +509,7 @@ h1 {
 
 .portfolioCardDesc p {
   color: #000;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
   font-family: gira-sans, sans-serif;
 }
 
@@ -690,6 +691,11 @@ h1 {
   width: 100%;
   margin-bottom: 16px;
   display: flex;
+}
+
+.waybackNotice {
+  font-size: 12px;
+  font-style: italic;
 }
 
 footer {

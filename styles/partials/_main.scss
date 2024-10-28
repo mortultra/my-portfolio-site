@@ -179,6 +179,7 @@
   font-size: 2rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 
   h3 {
     padding-bottom: 24px;
@@ -192,7 +193,7 @@
   p {
     font-family: $bodyFont;
     color: $black;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
 
     &:last-child {
       padding-bottom: 0;
@@ -386,6 +387,15 @@
   margin-bottom: 16px;
   display: flex;
 }
+
+.waybackNotice {
+  font-size: 12px;
+  font-style: italic;
+}
+
+// -----------------
+// FOOTER
+// -----------------
 
 footer {
   margin-top: 24px;
