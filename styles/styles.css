@@ -229,6 +229,10 @@ header {
   position: relative;
 }
 
+h1 {
+  display: none;
+}
+
 #navScroll {
   background-color: #FFFFFF;
   width: 100%;
@@ -313,6 +317,9 @@ header {
   width: 100%;
   text-transform: none;
   font-size: 3.5rem;
+}
+.introFlex .introText {
+  display: none;
 }
 .introFlex p {
   margin-bottom: 12px;

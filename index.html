@@ -14,8 +14,9 @@
       <!-- HEADER SECTION -->
       <!-- ############## -->
     <header>
+      <h1>Andrew Campbell Portfolio</h1>
       <nav id="navScroll">
-        <div id="logoContainer" aria-hidden="true">
+        <div id="logoContainer" aria-label="Andrew Campbell Logo">
           <div class="logo logo1">
             <span class="h1">AND</span>
           </div>
@@ -44,7 +45,8 @@
       <div class="aboutFlex" id="home">
         <div class="aboutFlex wrapper">
           <div class="introFlex">
-            <span id="selfDesc"/>
+            <span aria-hidden="true" id="selfDesc"/>
+            <p class="introText">Design. Develop. Ideate. Collaborate. Create.</p>
           </div>
           <ul class="contactFlex">
             <li>
@@ -88,7 +90,11 @@
         <div class="portfolioSection">
           <div class="portfolioContainer">
             <div class="portfolioCard">
-              <button class="modalOpen" data-modal="modalInstdio">
+              <button class="modalOpen" 
+              aria-haspopup="dialog" 
+              aria-controls="modalInstdio"
+              data-modal="modalInstdio"
+              >
                 <div class="portfolioCardContents">
                   <div class="portfolioCardInfo">
                     <div class="portfolioCardDesc">
@@ -106,7 +112,11 @@
               </div>
             </div>
             <div class="portfolioCard">
-              <button class="modalOpen" data-modal="modalDinowash">
+              <button class="modalOpen" 
+              aria-haspopup="dialog" 
+              aria-controls="modalDinowash"
+              data-modal="modalDinowash"
+              >
                 <div class="portfolioCardContents">
                   <div class="portfolioCardInfo">
                     <div class="portfolioCardDesc">
@@ -126,7 +136,11 @@
           </div>
           <div class="portfolioContainer">
             <div class="portfolioCard">
-              <button class="modalOpen" data-modal="modalExplor">
+              <button class="modalOpen"
+              aria-haspopup="dialog" 
+              aria-controls="modalExplor" 
+              data-modal="modalExplor"
+              >
                 <div class="portfolioCardContents">
                   <div class="portfolioCardInfo">
                     <div class="portfolioCardDesc">
@@ -144,7 +158,11 @@
               </div>
             </div>
             <div class="portfolioCard">
-              <button class="modalOpen" data-modal="modalDark">
+              <button class="modalOpen"
+              aria-haspopup="dialog" 
+              aria-controls="modalDark" 
+              data-modal="modalDark"
+              >
                 <div class="portfolioCardContents">
                   <div class="portfolioCardInfo">
                     <div class="portfolioCardDesc">
@@ -164,7 +182,11 @@
           </div>
           <div class="portfolioContainer">
             <div class="portfolioCard">
-              <button class="modalOpen" data-modal="modalNick">
+              <button class="modalOpen" 
+              aria-haspopup="dialog" 
+              aria-controls="modalNick"
+              data-modal="modalNick"
+              >
                 <div class="portfolioCardContents">
                   <div class="portfolioCardInfo">
                     <div class="portfolioCardDesc">
@@ -182,7 +204,11 @@
               </div>
             </div>
             <div class="portfolioCard">
-              <button class="modalOpen" data-modal="modalTravel">
+              <button class="modalOpen" 
+              aria-haspopup="dialog" 
+              aria-controls="modalTravel"
+              data-modal="modalTravel"
+              >
                 <div class="portfolioCardContents">
                   <div class="portfolioCardInfo">
                     <div class="portfolioCardDesc">
@@ -205,108 +231,108 @@
         <!-- MODAL SECTION -->
         <!-- ############# -->
         <div class="modalSection">
-          <div class="modal" id="modalInstdio">
+          <div aria-hidden="true" tabindex="-1" class="modal" id="modalInstdio">
             <div class="modalSlideout">
-              <span class="modalClose" data-modal="modalInstdio">close</span>
+              <span class="modalClose">close</span>
               <div class="modalContent">
                 <div class="modalImgs">
-                  <img src="./links/design/01-instdio/in-logo.png" alt="">
-                  <img src="./links/design/01-instdio/in-wordmark.png" alt="">
-                  <img src="./links/design/01-instdio/in-bus-card.png" alt="">
-                  <img src="./links/design/01-instdio/instdio-bdd-gif.gif" alt="">
+                  <img loading="lazy" src="./links/design/01-instdio/in-logo.png" alt="">
+                  <img loading="lazy" src="./links/design/01-instdio/in-wordmark.png" alt="">
+                  <img loading="lazy" src="./links/design/01-instdio/in-bus-card.png" alt="">
+                  <img loading="lazy" src="./links/design/01-instdio/instdio-bdd-gif.gif" alt="">
                 </div>
                 <div class="modalText">
-                  <h3>Instdio Communications</h3>
+                  <h3 id="modalTitle">Instdio Communications</h3>
                   <p>Instdio is a Toronto-based corporate communications consultancy.</p>
                   <p>Deliverables: brand identity, brand guidelines, physical, digital and website assets, a secondary design element library and a digital business discovery deck product.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal" id="modalDinowash">
+          <div aria-hidden="true" tabindex="-1" class="modal" id="modalDinowash">
             <div class="modalSlideout">
               <span class="modalClose" data-modal="modalDinowash">close</span>
               <div class="modalContent">
                 <div class="modalImgs">
-                  <img src="./links/design/02-dinowash/dw-logo.png" alt="">
-                  <img src="./links/design/02-dinowash/dw-wordmark.png" alt="">
-                  <img src="./links/design/02-dinowash/dw-info-card.png" alt="">
-                  <img src="./links/design/02-dinowash/dw-mag-ad.png" alt="">
-                  <img src="./links/design/02-dinowash/dw-shirt.png" alt="">
-                  <img src="./links/design/02-dinowash/dw-deliverables.png" alt="">
+                  <img loading="lazy" src="./links/design/02-dinowash/dw-logo.png" alt="">
+                  <img loading="lazy" src="./links/design/02-dinowash/dw-wordmark.png" alt="">
+                  <img loading="lazy" src="./links/design/02-dinowash/dw-info-card.png" alt="">
+                  <img loading="lazy" src="./links/design/02-dinowash/dw-mag-ad.png" alt="">
+                  <img loading="lazy" src="./links/design/02-dinowash/dw-shirt.png" alt="">
+                  <img loading="lazy" src="./links/design/02-dinowash/dw-deliverables.png" alt="">
                   <video controls>
                     <source src="./links/design/02-dinowash/dw-trailer.mp4" />
                   </video>
                 </div>
                 <div class="modalText">
-                  <h3>Dinowash</h3>
+                  <h3 id="modalTitle">Dinowash</h3>
                   <p>Dinowash is a car-wash service platform application.</p>
                   <p>Deliverables: new logo, word mark and brand identity, physical and digital marketing materials, WordPress site redesign, uniform applications and a proof-of-concept video feature to attract investor funding.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal" id="modalExplor">
+          <div aria-hidden="true" tabindex="-1" class="modal" id="modalExplor">
             <div class="modalSlideout">
               <span class="modalClose" data-modal="modalExplor">close</span>
               <div class="modalContent">
                 <div class="modalImgs">
-                  <img src="./links/design/03-explor/explor-logo.png" alt="">
-                  <img src="./links/design/03-explor/explor-wordmark.png" alt="">
-                  <img src="./links/design/03-explor/explor-ad-1.png" alt="">
-                  <img src="./links/design/03-explor/explor-ad-2.png" alt="">
-                  <img src="./links/design/03-explor/explor-ad-3.png" alt="">
-                  <img src="./links/design/03-explor/explor-ad-4.png" alt="">
+                  <img loading="lazy" src="./links/design/03-explor/explor-logo.png" alt="">
+                  <img loading="lazy" src="./links/design/03-explor/explor-wordmark.png" alt="">
+                  <img loading="lazy" src="./links/design/03-explor/explor-ad-1.png" alt="">
+                  <img loading="lazy" src="./links/design/03-explor/explor-ad-2.png" alt="">
+                  <img loading="lazy" src="./links/design/03-explor/explor-ad-3.png" alt="">
+                  <img loading="lazy" src="./links/design/03-explor/explor-ad-4.png" alt="">
                 </div>
                 <div class="modalText">
-                  <h3>Explor VR</h3>
+                  <h3 id="modalTitle">Explor VR</h3>
                   <p>Explor VR is irtual reality platform for the travel industry.</p>
                   <p>Deliverables: brand identity, brand guidelines, packaging, physical and digital marketing materials, trade-show materials, business plan and white paper for prospective clients.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal" id="modalDark">
+          <div aria-hidden="true" tabindex="-1" class="modal" id="modalDark">
             <div class="modalSlideout">
               <span class="modalClose" data-modal="modalDark">close</span>
               <div class="modalContent">
                 <div class="modalImgs">
-                  <img src="./links/design/04-dark-tapes/darktapes-ct-front-in.png" alt="">
-                  <img src="./links/design/04-dark-tapes/darktapes-ct-front-out.png" alt="">
-                  <img src="./links/design/04-dark-tapes/darktapes-ct-back-in.png" alt="">
-                  <img src="./links/design/04-dark-tapes/darktapes-ct-back-out.png" alt="">
-                  <img src="./links/design/04-dark-tapes/darktapes-tshirt-front.png" alt="">
+                  <img loading="lazy" src="./links/design/04-dark-tapes/darktapes-ct-front-in.png" alt="">
+                  <img loading="lazy" src="./links/design/04-dark-tapes/darktapes-ct-front-out.png" alt="">
+                  <img loading="lazy" src="./links/design/04-dark-tapes/darktapes-ct-back-in.png" alt="">
+                  <img loading="lazy" src="./links/design/04-dark-tapes/darktapes-ct-back-out.png" alt="">
+                  <img loading="lazy" src="./links/design/04-dark-tapes/darktapes-tshirt-front.png" alt="">
                   <video controls class="dtVideo">
                     <source src="./links/design/04-dark-tapes/darktapes-the-rider.mp4" />
                   </video>
                 </div>
                 <div class="modalText">
-                  <h3>Dark Tapes</h3>
+                  <h3 id="modalTitle">Dark Tapes</h3>
                   <p>Dark Tapes is an electronic musician.</p>
                   <p>Deliverables: 12”-single vinyl album cover design and layout, t-shirt design, promotional Instagram visualizer.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal" id="modalNick">
+          <div aria-hidden="true" tabindex="-1" class="modal" id="modalNick">
             <div class="modalSlideout">
               <span class="modalClose" data-modal="modalNick">close</span>
               <div class="modalContent">
                 <div class="modalImgs">
-                  <img src="./links/design/05-nick-martinello/nm-stylized-hs.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-bus-card.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-web-1.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-web-2.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-web-3.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-web-4.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-web-5.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-game-podcast.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-game-posters.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-posters-1.png" alt="">
-                  <img src="./links/design/05-nick-martinello/nm-posters-2.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-stylized-hs.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-bus-card.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-web-1.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-web-2.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-web-3.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-web-4.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-web-5.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-game-podcast.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-game-posters.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-posters-1.png" alt="">
+                  <img loading="lazy" src="./links/design/05-nick-martinello/nm-posters-2.png" alt="">
                 </div>
                 <div class="modalText">
-                  <h3>Nick Martinello, Comedian</h3>
+                  <h3 id="modalTitle">Nick Martinello, Comedian</h3>
                   <p>Nick is a Halifax-based stand-up comic.</p>
                   <p>Deliverables: Visual identity and language guide, business cared and website, promotional posters.</p>
                   <p>The Game was a monthly show and podcast based out of Toronto’s Comedy Bar.</p>
@@ -315,22 +341,22 @@
               </div>
             </div>
           </div>
-          <div class="modal" id="modalTravel">
+          <div aria-hidden="true" tabindex="-1" class="modal" id="modalTravel">
             <div class="modalSlideout">
               <span class="modalClose" data-modal="modalTravel">close</span>
               <div class="modalContent">
                 <div class="modalImgs">
-                  <img src="./links/design/06-japan-tw/tw-mag-cover.png" alt="">
-                  <img src="./links/design/06-japan-tw/tw-mag-layout-1.png" alt="">
-                  <img src="./links/design/06-japan-tw/tw-mag-layout-2.png" alt="">
-                  <img src="./links/design/06-japan-tw/tw-mag-layout-3.png" alt="">
-                  <img src="./links/design/06-japan-tw/tw-jt-cover.png" alt="">
-                  <img src="./links/design/06-japan-tw/tw-jt-layout-1.png" alt="">
-                  <img src="./links/design/06-japan-tw/tw-jt-layout-2.png" alt="">
-                  <img src="./links/design/06-japan-tw/tw-jt-layout-3.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-mag-cover.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-mag-layout-1.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-mag-layout-2.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-mag-layout-3.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-jt-cover.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-jt-layout-1.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-jt-layout-2.png" alt="">
+                  <img loading="lazy" src="./links/design/06-japan-tw/tw-jt-layout-3.png" alt="">
                 </div>
                 <div class="modalText">
-                  <h3>Travelweek</h3>
+                  <h3 id="modalTitle">Travelweek</h3>
                   <p>Travelweek is a Canadian travel trade news organization.</p>
                   <p>Deliverables: weekly 24-48 page print magazine, digital edition, marketing materials, and advertising for clients. 2019 saw the magazine refreshed with new layouts, design elements and typography.</p>
                   <p>The Japan/Tokyo 2018 is an informative guide for travel agents to familiarize themselves with Japan and Tokyo. Project clients were Go Tokyo the Japan Tourism Agency.</p>
@@ -348,31 +374,31 @@
         <p class="sectionSubhead">projects / concepts / relics</p>
         <div class="artifactContainer">
           <div class="artifact">
-            <img src="./links/fragments/letterform-study-i.jpg" alt="">
+            <img loading="lazy" src="./links/fragments/letterform-study-i.jpg" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/ultramort-shade.jpg" alt="">
+            <img loading="lazy" src="./links/fragments/ultramort-shade.jpg" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/vg-album-cover.jpg" alt="">
+            <img loading="lazy" src="./links/fragments/vg-album-cover.jpg" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/AncientAlienPyramid.gif" alt="">
+            <img loading="lazy" src="./links/fragments/AncientAlienPyramid.gif" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/ih-poster.jpg" alt="">
+            <img loading="lazy" src="./links/fragments/ih-poster.jpg" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/CW_Portfolio_Thumb_750x750.jpg" alt="">
+            <img loading="lazy" src="./links/fragments/CW_Portfolio_Thumb_750x750.jpg" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/Hosaka_Loading.gif" alt="">
+            <img loading="lazy" src="./links/fragments/Hosaka_Loading.gif" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/nm-poster.jpg" alt="">
+            <img loading="lazy" src="./links/fragments/nm-poster.jpg" alt="">
           </div>
           <div class="artifact">
-            <img src="./links/fragments/ac-baseball-logo.jpg" alt="">
+            <img loading="lazy" src="./links/fragments/ac-baseball-logo.jpg" alt="">
           </div>
         </div>
       </section>
