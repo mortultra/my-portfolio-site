@@ -229,6 +229,10 @@ header {
   position: relative;
 }
 
+h1 {
+  display: none;
+}
+
 #navScroll {
   background-color: #FFFFFF;
   width: 100%;
@@ -298,7 +302,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 150px;
+  margin-top: 110px;
   height: 70vh;
 }
 
@@ -313,6 +317,9 @@ header {
   width: 100%;
   text-transform: none;
   font-size: 3.5rem;
+}
+.introFlex .introText {
+  display: none;
 }
 .introFlex p {
   margin-bottom: 12px;
@@ -370,7 +377,7 @@ header {
 
 #design,
 #webDev {
-  margin-top: 100px;
+  margin-top: 72px;
   position: relative;
 }
 
@@ -443,6 +450,7 @@ header {
   font-size: 2rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 .portfolioCardDesc h3 {
   padding-bottom: 24px;
@@ -454,7 +462,7 @@ header {
 .portfolioCardDesc p {
   font-family: "gira-sans", sans-serif;
   color: #000000;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
 }
 .portfolioCardDesc p:last-child {
   padding-bottom: 0;
@@ -627,6 +635,11 @@ header {
   display: flex;
 }
 
+.waybackNotice {
+  font-size: 12px;
+  font-style: italic;
+}
+
 footer {
   margin-top: 24px;
   padding: 16px 12px;
@@ -764,163 +777,23 @@ footer {
   }
 }
 @media (max-width: 850px) {
-  p {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-  #navScroll {
-    padding-top: 15px;
-  }
-  #logoContainer {
-    padding-left: 5px;
-  }
-  .mainMenu {
-    top: 11%;
-    flex-direction: row;
-    padding: 5px 0;
-  }
-  .mainMenu a {
-    font-size: 1rem;
-    padding: 5px;
-    margin: 0 auto;
-  }
   main .wrapper {
     padding: 0 12px;
   }
   #home {
-    margin-top: 0;
     height: 50vh;
-  }
-  #design,
-  #webDev,
-  #artifacts {
-    margin-top: 50px;
-  }
-  .introFlex {
-    width: 100%;
-  }
-  .introFlex span {
-    width: 100%;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .contactFlex {
-    padding: 15px 0;
   }
   .aboutFlex {
     padding-top: 40%;
   }
-  .footerFlex {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .footerFlex p {
-    padding: 0 10px;
-  }
-  .footerFlex .contactFlex {
-    padding: 15px 0;
-  }
-  .footerFlex .contactFlex li {
-    margin: 0 15px;
-  }
-  .portfolioContainer {
-    margin: 40px 0;
-  }
-  .portfolioCardContents {
-    flex-direction: column;
-  }
   .modalSlideout {
-    background-color: #FFFFFF;
     padding: 30px 20px 30px 20px;
-    width: 90vw;
-  }
-  .modalSlideout img {
-    margin: 7px 0;
-    background-color: rgba(0, 0, 0, 0.025);
-  }
-  .modalSlideout video {
-    margin-top: 7px;
-    max-width: 100%;
   }
   .modalSlideout .dtVideo {
     max-width: 100%;
   }
-  .portfolioCardInfo {
-    display: none;
-  }
-  .portfolioCardDescMobile {
-    display: flex;
-    flex-direction: column;
-  }
-  .portfolioCardDescMobile h4 {
-    font-size: 1.2rem;
-    margin-top: 4px;
-  }
-  .portfolioCardDescMobile p {
-    font-size: 1.35rem;
-    margin-top: 4px;
-  }
-  .artifactContainer {
-    margin: 32px 0;
-    justify-content: space-between;
-  }
-  footer hr {
-    margin-top: 60px;
-  }
 }
 @media (max-width: 450px) {
-  p {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-  }
-  #navScroll {
-    padding-top: 15px;
-  }
-  #logoContainer {
-    padding-left: 5px;
-  }
-  .mainMenu {
-    top: 11%;
-    flex-direction: row;
-    padding: 5px 0;
-  }
-  .mainMenu a {
-    font-size: 1rem;
-    padding: 5px;
-    margin: 0 auto;
-  }
-  main .wrapper {
-    padding: 0 12px;
-  }
-  .introFlex {
-    width: 100%;
-  }
-  .introFlex span {
-    width: 100%;
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .contactFlex {
-    padding: 15px 0;
-  }
-  .aboutFlex {
-    padding-top: 40%;
-  }
-  .footerFlex {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .footerFlex p {
-    padding: 0 10px;
-  }
-  .footerFlex .contactFlex {
-    padding: 15px 0;
-  }
-  .footerFlex .contactFlex li {
-    margin: 0 15px;
-  }
   .sectionSubhead h4 {
     font-size: 2rem;
     margin-bottom: 4px;
@@ -928,31 +801,6 @@ footer {
   .portfolioContainer {
     flex-direction: column;
     margin: 20px 0;
-  }
-  .portfolioCardContents {
-    flex-direction: column;
-  }
-  .portfolioCard h3 {
-    font-size: 1.5rem;
-  }
-  .portfolioCard:first-child {
-    margin-bottom: 32px;
-  }
-  .modalSlideout {
-    background-color: #FFFFFF;
-    padding: 30px 20px 30px 20px;
-    width: 90vw;
-  }
-  .modalSlideout img {
-    margin: 7px 0;
-    background-color: rgba(0, 0, 0, 0.025);
-  }
-  .modalSlideout video {
-    margin-top: 7px;
-    max-width: 100%;
-  }
-  .modalSlideout .dtVideo {
-    max-width: 100%;
   }
   .modalContent {
     flex-direction: column-reverse;
@@ -966,25 +814,6 @@ footer {
   }
   .modalText p:last-child {
     padding-bottom: 10%;
-  }
-  .portfolioCardInfo {
-    display: none;
-  }
-  .portfolioCardDescMobile {
-    display: flex;
-    flex-direction: column;
-  }
-  .portfolioCardDescMobile h4 {
-    font-size: 1.2rem;
-    margin-top: 4px;
-  }
-  .portfolioCardDescMobile p {
-    font-size: 1.35rem;
-    margin-top: 4px;
-  }
-  .artifactContainer {
-    margin: 32px 0;
-    justify-content: space-between;
   }
   .artifact {
     width: 48%;

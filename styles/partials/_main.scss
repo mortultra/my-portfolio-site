@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 150px;
+  margin-top: 110px;
   height: 70vh;
 }
 
@@ -22,6 +22,10 @@
     width: 100%;
     text-transform: none;
     font-size: 3.5rem;
+  }
+
+  .introText {
+    display: none;
   }
 
   p {
@@ -98,7 +102,7 @@
 // -----------------
 #design,
 #webDev {
-  margin-top: 100px;
+  margin-top: 72px;
   position: relative;
 }
 
@@ -175,6 +179,7 @@
   font-size: 2rem;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 
   h3 {
     padding-bottom: 24px;
@@ -188,7 +193,7 @@
   p {
     font-family: $bodyFont;
     color: $black;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
 
     &:last-child {
       padding-bottom: 0;
@@ -382,6 +387,15 @@
   margin-bottom: 16px;
   display: flex;
 }
+
+.waybackNotice {
+  font-size: 12px;
+  font-style: italic;
+}
+
+// -----------------
+// FOOTER
+// -----------------
 
 footer {
   margin-top: 24px;

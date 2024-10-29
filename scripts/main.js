@@ -93,6 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModalAnimation(modal) {
     const modalContent = modal.querySelector(".modalSlideout");
     modal.style.display = "flex";
+    modal.tabIndex = "1";
+    modal.setAttribute("aria-hidden", "false");
+    
     gsap.fromTo(
       modalContent,
       { x: "100%" },
@@ -102,6 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power2.out",
       }
     );
+
+    modalContent.querySelector(".modalClose").focus();
   }
 
   // Close GSAP animation
@@ -113,6 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power2.in",
       onComplete: () => {
         modal.style.display = "none";
+        modal.tabIndex = "-1";
+        modal.setAttribute("aria-hidden", "true");
       },
     });
   }
@@ -132,6 +139,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const modal = button.closest(".modal");
       closeModalAnimation(modal);
     });
+  });
+
+  // Close modal if Esc is pressed
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const modals = document.querySelectorAll(".modal");
+      modals.forEach((modal) => {
+        if (modal.getAttribute("aria-hidden") === "false") {
+          closeModalAnimation(modal);
+        }
+      });
+    }
   });
 
   // Close modal if user clicks outside of the modal content
