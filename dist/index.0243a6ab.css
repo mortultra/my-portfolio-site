@@ -633,17 +633,30 @@ h1 {
 }
 
 .artifactContainer {
-  flex-flow: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
+  gap: 12px;
   margin: 72px 0;
   display: flex;
 }
 
+.artifactContainer:not(:hover) {
+  flex: .5 calc(40% - 12px);
+}
+
 .artifact {
-  width: 30%;
-  max-width: 500px;
-  margin-bottom: 24px;
+  text-align: center;
+  flex: calc(25% - 12px);
+  justify-content: center;
+  align-items: center;
+  transition: flex .65s;
+  display: flex;
+}
+
+.artifact:hover, .artifact:focus {
+  flex: 8 calc(40% - 12px);
+  max-width: 50%;
 }
 
 .projectContainer {
@@ -854,9 +867,16 @@ footer {
   }
 
   .artifactContainer {
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
     margin: 32px 0;
     padding: 0 8px;
+  }
+
+  .artifact {
+    flex: 2 calc(50% - 12px);
+    max-width: 40%;
   }
 
   footer hr {
@@ -887,6 +907,10 @@ footer {
 }
 
 @media (width <= 450px) {
+  #fragments {
+    margin-top: 50px;
+  }
+
   .sectionSubhead h4 {
     margin-bottom: 4px;
     font-size: 2rem;
@@ -915,7 +939,8 @@ footer {
   }
 
   .artifact {
-    width: 48%;
+    flex: calc(100% - 12px);
+    max-width: 100%;
   }
 }
 

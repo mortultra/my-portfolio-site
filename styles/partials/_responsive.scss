@@ -140,9 +140,16 @@
   }
 
   .artifactContainer {
+    flex-wrap: wrap;
     margin: 32px 0;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
     padding: 0 8px;
+  }
+
+  .artifact {
+    flex: 2 1 calc(50% - 12px);
+    max-width: 40%;
   }
 
   footer {
@@ -187,6 +194,10 @@
 
 @media(max-width:$mobileVertical) {
 
+  #fragments {
+    margin-top: 50px
+  }
+
   .sectionSubhead {
     h4 {
       font-size: 2rem;
@@ -219,6 +230,7 @@
   }
 
   .artifact {
-    width: 48%;
+    flex: 1 1 calc(100% - 12px);
+    max-width: 100%;
   }
 }
