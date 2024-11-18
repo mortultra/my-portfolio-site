@@ -867,9 +867,16 @@ footer {
   }
 
   .artifactContainer {
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
     margin: 32px 0;
     padding: 0 8px;
+  }
+
+  .artifact {
+    flex: 2 calc(50% - 12px);
+    max-width: 40%;
   }
 
   footer hr {
@@ -900,6 +907,10 @@ footer {
 }
 
 @media (width <= 450px) {
+  #fragments {
+    margin-top: 50px;
+  }
+
   .sectionSubhead h4 {
     margin-bottom: 4px;
     font-size: 2rem;
@@ -928,7 +939,8 @@ footer {
   }
 
   .artifact {
-    width: 48%;
+    flex: calc(100% - 12px);
+    max-width: 100%;
   }
 }
 
