@@ -633,17 +633,30 @@ h1 {
 }
 
 .artifactContainer {
-  flex-flow: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: start;
   align-items: center;
+  gap: 12px;
   margin: 72px 0;
   display: flex;
 }
 
+.artifactContainer:not(:hover) {
+  flex: .5 calc(40% - 12px);
+}
+
 .artifact {
-  width: 30%;
-  max-width: 500px;
-  margin-bottom: 24px;
+  text-align: center;
+  flex: calc(25% - 12px);
+  justify-content: center;
+  align-items: center;
+  transition: flex .65s;
+  display: flex;
+}
+
+.artifact:hover, .artifact:focus {
+  flex: 8 calc(40% - 12px);
+  max-width: 50%;
 }
 
 .projectContainer {
